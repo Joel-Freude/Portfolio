@@ -2,20 +2,38 @@
 
 import { motion } from "framer-motion";
 
-export default function ScrollingLines() {
+interface ScrollingLinesProps {
+  width?: number;
+  viewBox?: string;
+  stroke?: string;
+  strokeWidth?: number;
+  animationY?: [number, number, number];
+  duration?: number;
+  className?: string;
+}
+
+export default function ScrollingLines({
+  width = 250,
+  viewBox = "0 0 300 1404",
+  stroke = "#f1f1f1",
+  strokeWidth = 1,
+  animationY = [-200, -404, -200],
+  duration = 10,
+  className = "mil-lines"
+}: ScrollingLinesProps) {
   return (
     <div className="mil-lines-place">
       <motion.svg
-        width="250"
-        viewBox="0 0 300 1404"
+        width={width}
+        viewBox={viewBox}
         fill="none"
-        stroke="#f1f1f1"
-        strokeWidth="1"
+        stroke={stroke}
+        strokeWidth={strokeWidth}
         xmlns="http://www.w3.org/2000/svg"
-        className="mil-lines"
-        animate={{ y: [-200, -404, -200] }}
+        className={className}
+        animate={{ y: animationY }}
         transition={{
-          duration: 10,
+          duration,
           repeat: Infinity,
           ease: "linear"
         }}

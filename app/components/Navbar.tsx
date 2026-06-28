@@ -32,41 +32,73 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const whiteSection = document.querySelector('.bg-white');
-      if (!whiteSection) return;
+      const whiteSections = document.querySelectorAll('.bg-white');
+      if (whiteSections.length === 0) return;
 
-      const whiteRect = whiteSection.getBoundingClientRect();
+      // Check if any white section is visible in viewport
+      let isAnyWhiteVisible = false;
+      whiteSections.forEach(section => {
+        const whiteRect = section.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        if (whiteRect.top < windowHeight && whiteRect.bottom > 0) {
+          isAnyWhiteVisible = true;
+        }
+      });
 
-      // Check logo position
+      // If no white section is visible, set all to false
+      if (!isAnyWhiteVisible) {
+        setElementPositions({
+          logo: false,
+          pageLabel: false,
+          navItems: [false, false, false, false]
+        });
+        return;
+      }
+
+      // Check logo position against all white sections
       const logoElement = document.querySelector('[data-element="logo"]');
+      let logoOverWhite = false;
       if (logoElement) {
         const logoRect = logoElement.getBoundingClientRect();
         const logoCenter = logoRect.top + logoRect.height / 2;
-        const logoOverWhite = logoCenter >= whiteRect.top && logoCenter <= whiteRect.bottom;
+        whiteSections.forEach(section => {
+          const whiteRect = section.getBoundingClientRect();
+          if (logoCenter >= whiteRect.top && logoCenter <= whiteRect.bottom) {
+            logoOverWhite = true;
+          }
+        });
         setElementPositions(prev => ({ ...prev, logo: logoOverWhite }));
       }
 
-      // Check page label position
+      // Check page label position against all white sections
       const pageLabelElement = document.querySelector('[data-element="page-label"]');
+      let labelOverWhite = false;
       if (pageLabelElement) {
         const labelRect = pageLabelElement.getBoundingClientRect();
         const labelCenter = labelRect.top + labelRect.height / 2;
-        const labelOverWhite = labelCenter >= whiteRect.top && labelCenter <= whiteRect.bottom;
+        whiteSections.forEach(section => {
+          const whiteRect = section.getBoundingClientRect();
+          if (labelCenter >= whiteRect.top && labelCenter <= whiteRect.bottom) {
+            labelOverWhite = true;
+          }
+        });
         setElementPositions(prev => ({ ...prev, pageLabel: labelOverWhite }));
       }
 
-      // Check each nav item position
+      // Check each nav item position against all white sections
       const navItemElements = document.querySelectorAll('[data-element^="nav-item"]');
+      const newNavItems = [false, false, false, false];
       navItemElements.forEach((item, index) => {
         const itemRect = item.getBoundingClientRect();
         const itemCenter = itemRect.top + itemRect.height / 2;
-        const itemOverWhite = itemCenter >= whiteRect.top && itemCenter <= whiteRect.bottom;
-        setElementPositions(prev => {
-          const newNavItems = [...prev.navItems];
-          newNavItems[index] = itemOverWhite;
-          return { ...prev, navItems: newNavItems };
+        whiteSections.forEach(section => {
+          const whiteRect = section.getBoundingClientRect();
+          if (itemCenter >= whiteRect.top && itemCenter <= whiteRect.bottom) {
+            newNavItems[index] = true;
+          }
         });
       });
+      setElementPositions(prev => ({ ...prev, navItems: newNavItems }));
     };
 
     window.addEventListener('scroll', handleScroll);

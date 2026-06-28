@@ -52,14 +52,23 @@ export default function Home() {
     const handleScroll = () => {
       setShowBackToTop(window.scrollY > 400);
 
-      if (whiteSectionRef.current) {
-        const rect = whiteSectionRef.current.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-
-        // If white section is visible in viewport
-        const isWhiteVisible = rect.top < windowHeight && rect.bottom > 0;
-        setButtonOverWhite(isWhiteVisible);
+      const whiteSections = document.querySelectorAll('.bg-white');
+      if (whiteSections.length === 0) {
+        setButtonOverWhite(false);
+        return;
       }
+
+      // Check if any white section is visible in viewport
+      let isAnyWhiteVisible = false;
+      whiteSections.forEach(section => {
+        const whiteRect = section.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        if (whiteRect.top < windowHeight && whiteRect.bottom > 0) {
+          isAnyWhiteVisible = true;
+        }
+      });
+
+      setButtonOverWhite(isAnyWhiteVisible);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -220,6 +229,7 @@ export default function Home() {
           Passionate about creating digital experiences that matter and resolve real-world problems.
         </motion.p>
       </motion.div>
+      
 
       <div className=" absolute z-0 lg:w-[100%] lg:h-[98%] w-[200%] h-[108%] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
         <PolygonBall sphereSize={isMobile ? 3 : 5}/>
