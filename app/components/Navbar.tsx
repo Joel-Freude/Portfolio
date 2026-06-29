@@ -33,7 +33,16 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const whiteSections = document.querySelectorAll('.bg-white');
-      if (whiteSections.length === 0) return;
+      
+      // If no white sections exist, set all to false (light colors)
+      if (whiteSections.length === 0) {
+        setElementPositions({
+          logo: false,
+          pageLabel: false,
+          navItems: [false, false, false, false]
+        });
+        return;
+      }
 
       // Check if any white section is visible in viewport
       let isAnyWhiteVisible = false;
@@ -116,10 +125,10 @@ export default function Navbar() {
   };
   
   const navItems = [
-    { icon: <User />, href: "/about", label: "About" },
-    { icon: <GraduationCap />, href: "/school", label: "School" },
-    { icon: <Briefcase />, href: "/projects", label: "Projects" },
-    { icon: <Mail />, href: "/contact", label: "Contact" },
+    { icon: <User style={{ color: elementPositions.navItems[0] ? '#52525b' : '#ffffff' }} />, href: "/about", label: "About" },
+    { icon: <GraduationCap style={{ color: elementPositions.navItems[1] ? '#52525b' : '#ffffff' }} />, href: "/school", label: "School" },
+    { icon: <Briefcase style={{ color: elementPositions.navItems[2] ? '#52525b' : '#ffffff' }} />, href: "/projects", label: "Projects" },
+    { icon: <Mail style={{ color: elementPositions.navItems[3] ? '#52525b' : '#ffffff' }} />, href: "/contact", label: "Contact" },
   ];
 
   const fullName = "FOFIE JOUNEWE JOEL FREUDE";
@@ -141,12 +150,12 @@ export default function Navbar() {
         className="h-[400px] flex items-start -mt-2 relative ml-2 cursor-pointer"
         data-element="logo"
       >
-        <p className={`font-sans text-xl [writing-mode:vertical-lr] [text-orientation:upright] absolute transition-opacity duration-300 ease-in-out ${elementPositions.logo ? 'text-zinc-900' : 'text-zinc-100'}`}
+        <p className={`font-sans text-xl [writing-mode:vertical-lr] [text-orientation:upright] absolute transition-opacity duration-300 ease-in-out ${elementPositions.logo ? 'text-zinc-900' : 'text-white'}`}
            style={{ opacity: isHovered ? 0 : 1 }}
         >
           {initials}
         </p>
-        <p className={`font-sans text-xl [writing-mode:vertical-lr] [text-orientation:upright] absolute transition-opacity duration-300 ease-in-out ${elementPositions.logo ? 'text-zinc-900' : 'text-zinc-100'}`}
+        <p className={`font-sans text-xl [writing-mode:vertical-lr] [text-orientation:upright] absolute transition-opacity duration-300 ease-in-out ${elementPositions.logo ? 'text-zinc-900' : 'text-white'}`}
            style={{ opacity: isHovered ? 1 : 0 }}
         >
           {fullName}
@@ -158,7 +167,7 @@ export default function Navbar() {
       transition={{ duration: 2.5, ease: "easeOut" }}
       className="flex flex-col gap-2"
       >
-        <span className={`font-sans text-sm [writing-mode:vertical-lr] rotate-180 ml-4 transition-colors duration-300 ${elementPositions.pageLabel ? 'text-zinc-900' : 'text-zinc-100'}`} data-element="page-label">
+        <span className={`font-sans text-sm [writing-mode:vertical-lr] rotate-180 ml-4 transition-colors duration-300 ${elementPositions.pageLabel ? 'text-zinc-900' : 'text-white'}`} data-element="page-label">
           {getPageLabel()}
         </span>
       </motion.div>
@@ -167,11 +176,11 @@ export default function Navbar() {
           <Link
             key={index}
             href={item.href}
-            className={`group/item relative transition-colors duration-200 text-sm font-sans ${elementPositions.navItems[index] ? 'text-zinc-600 hover:text-zinc-900' : 'text-zinc-400 hover:text-zinc-100'}`}
+            className="group/item relative transition-colors duration-200 text-sm font-sans"
             data-element={`nav-item-${index}`}
           >
             {item.icon}
-            <span className={`absolute left-8 top-1/2 -translate-y-1/2 opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300 ease-in-out whitespace-nowrap font-sans text-sm ${elementPositions.navItems[index] ? 'text-zinc-900' : 'text-zinc-100'}`}>
+            <span className={`absolute left-8 top-1/2 -translate-y-1/2 opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300 ease-in-out whitespace-nowrap font-sans text-sm ${elementPositions.navItems[index] ? 'text-zinc-900' : 'text-white'}`}>
               {item.label.toUpperCase()}
             </span>
           </Link>

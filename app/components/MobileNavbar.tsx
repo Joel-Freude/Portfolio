@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { User, Briefcase, Mail, GraduationCap, Menu, X } from "lucide-react";
+import { User, Briefcase, Mail, GraduationCap, Menu, X, Home } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
@@ -28,6 +28,7 @@ export default function MobileNavbar() {
   };
 
   const navItems = [
+    { icon: <Home size={24} />, href: "/", label: "Home" },
     { icon: <User size={24} />, href: "/about", label: "About" },
     { icon: <GraduationCap size={24} />, href: "/school", label: "School" },
     { icon: <Briefcase size={24} />, href: "/projects", label: "Projects" },

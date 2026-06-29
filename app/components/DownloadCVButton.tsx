@@ -20,7 +20,7 @@ export default function DownloadCVButton() {
       transition={{ duration: 0.2, ease: "easeOut" }}
       className={`flex items-center justify-between gap-2 border border-zinc-300 rounded-lg p-4 z-10 ${
         isMobile
-          ? 'absolute top-16 left-1/2 -translate-x-1/2 z-10'
+          ? 'absolute top-16 left-1/2 -translate-x-1/2 z-10000000000'
           : 'absolute top-4 right-[10%] z-10'
       }`}
     >
