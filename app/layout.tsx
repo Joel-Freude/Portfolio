@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Gudea, Vollkorn } from "next/font/google";
 import "./globals.css";
-import PolygonBall from "./components/PolygonBall";
+import { Analytics } from "@vercel/analytics/next"
 import Navbar from "./components/Navbar";
 import MobileNavbar from "./components/MobileNavbar";
 import PageTransition from "./components/PageTransition";
