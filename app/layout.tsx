@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Gudea, Vollkorn } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import Navbar from "./components/Navbar";
 import MobileNavbar from "./components/MobileNavbar";
 import PageTransition from "./components/PageTransition";
