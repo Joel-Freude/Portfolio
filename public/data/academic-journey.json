@@ -1,0 +1,106 @@
+{
+  "academicJourney": {
+    "title": "My Academic Journey",
+    "universityLevel": {
+      "title": "University",
+      "institutions": [
+        {
+          "name": "University of Yaounde I",
+          "period": "2016-2017",
+          "image": "/images/Universities/UY1.jpg",
+          "height": "420px"
+        },
+        {
+          "name": "Higher Institute of Science Technology and Ethics",
+          "period": "2018-2020",
+          "image": "/images/Universities/IUSTE.jpg",
+          "height": "780px"
+        },
+        {
+          "name": "Siantou Higher Institute",
+          "period": "2020-2021",
+          "image": "/images/Universities/SIANTOU.jpg",
+          "height": "780px"
+        },
+        {
+          "name": "Primetec Academy",
+          "period": "2023-2025",
+          "image": "/images/Universities/PRIMETEC.jpg",
+          "height": "420px"
+        }
+      ]
+    },
+    "certifications": {
+      "title": "Certifications",
+      "categories": [
+        {
+          "category": "Frontend Development",
+          "period": "2020-2022",
+          "certificates": [
+            {
+              "name": "HTML Basics",
+              "description":"This certificate validates the ability to create and structure web content using HTML, the standard markup language for building web pages.",
+              "date": "17 Jul 2022",
+              "image": "/images/LinkedIn/1.png"
+            },
+            {
+              "name": "CSS Basics",
+              "description":"This certificate validates the ability to style and layout web content using CSS, the language for describing the presentation of web pages.",
+              "date": "19 Jul 2022",
+              "image": "/images/LinkedIn/2.png"
+            },
+            {
+              "name": "JavaScript Basics",
+              "description":"This certificate validates the ability to add interactivity and dynamic behavior to web pages using JavaScript, the language for web development.",
+              "date": "20 Jul 2022",
+              "image": "/images/LinkedIn/3.png"
+            },
+            {
+              "name": "Full Stack and Frontend Development",
+              "description":"This certificate validates the ability to build and maintain web applications using both frontend technologies like HTML, CSS and JavaScript together with backend technologies.",
+              "date": "21 Jul 2022",
+              "image": "/images/LinkedIn/4.png"
+            }
+              
+          ]
+        },
+        {
+          "category": "Cybersecurity",
+          "period": "2024-2025",
+          "certificates": [
+            {
+              "name": "Introduction in CyberSecurity",
+              "description":"This certificate validates the ability to understand and apply fundamental cybersecurity concepts, principles, and practices to protect information systems and data.",
+              "date": "05 Jul 2024",
+              "image": "/images/Cisco/1.png"
+            },
+            {
+              "name": "Network Defense",
+              "description":"This certificate validates the ability to implement and manage network security measures to protect against unauthorized access and cyber threats.",
+              "date": "26 Aug 2024",
+              "image": "/images/Cisco/2.png"
+            },
+            {
+              "name": "Network Addressing and Troubleshooting",
+              "description":"This certificate validates the ability to configure and troubleshoot network addressing and connectivity issues to ensure reliable network operation.",
+              "date": "17 Sep 2024",
+              "image": "/images/Cisco/3.png"
+            },
+            {
+              "name": "Network Support and Security",
+              "description":"This certificate validates the ability to provide network support and security services to protect against cyber threats and ensure network reliability.",
+              "date": "18 Sep 2024",
+              "image": "/images/Cisco/4.png"
+            },
+            {
+              "name": "Network Devices and Configuration",
+              "description":"This certificate validates the ability to configure and manage network devices to ensure secure and reliable network operation.",
+              "date": "20 Sep 2024",
+              "image": "/images/Cisco/5.png"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

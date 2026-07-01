@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { FaGithub, FaInstagram, FaTwitter, FaReact, FaNodeJs, FaPython, FaDocker, FaGitAlt, FaDatabase, FaWindows, FaLinux, FaNetworkWired, FaShieldAlt, FaServer, FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaTwitter, FaReact, FaNodeJs, FaPython, FaDocker, FaGitAlt, FaDatabase, FaWindows, FaLinux, FaApple, FaNetworkWired, FaShieldAlt, FaServer, FaChevronLeft, FaChevronRight, FaHeadset } from "react-icons/fa";
 import { SiNextdotjs, SiTypescript, SiTailwindcss, SiPostgresql, SiMongodb, SiMysql, SiFramer, SiHtml5, SiCss, SiCisco } from "react-icons/si";
-import { ChessKing, Piano, Palette, Code, Database, Layout, Server, Cpu, Smartphone, Globe, Monitor, Settings, Wrench, BookOpen, Music, Camera } from "lucide-react";
+import { ChessKing, Piano, Palette, Code, Database, Layout, Server, Cpu, Smartphone, Globe, Monitor, Settings, Wrench, BookOpen, Music, Camera, Gamepad2, Stethoscope } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useAnimationDelay } from "@/app/components/useAnimationDelay";
 import PolygonBall from "../components/PolygonBall";
@@ -21,10 +21,10 @@ export default function About() {
       image: "/images/IT Support.jpg",
       iconGradient: "from-blue-500 to-cyan-500",
       skills: [
-        { icon: <FaWindows className="text-blue-600" size={18} />, name: "Windows", percentage: "95%", gradient: "from-blue-600 to-cyan-500" },
-        { icon: <FaLinux className="text-orange-500" size={18} />, name: "Linux", percentage: "85%", gradient: "from-orange-500 to-yellow-400" },
-        { icon: <Wrench className="text-zinc-600" size={18} />, name: "Troubleshooting", percentage: "90%", gradient: "from-zinc-600 to-zinc-800" },
-        { icon: <Monitor className="text-zinc-600" size={18} />, name: "Hardware", percentage: "82%", gradient: "from-zinc-500 to-zinc-700" },
+        { icon: <FaWindows className="text-blue-600" size={18} />, name: "Windows OS setup, configuration and activation for clients and servers" },
+        { icon: <FaLinux className="text-orange-500" size={18} />, name: "Linux setup and configuration for clients and servers" },
+        { icon: <Wrench className="text-zinc-600" size={18} />, name: "Hardwware Troubleshooting, diagnostics and repair together with synthesized reports" },
+        { icon: <Monitor className="text-zinc-600" size={18} />, name: "Software installation, activation and setup for adapted computer" },
       ]
     },
     {
@@ -33,22 +33,21 @@ export default function About() {
       image: "/images/Web Design.jpeg",
       iconGradient: "from-purple-500 to-pink-500",
       skills: [
-        { icon: <SiFramer className="text-zinc-900" size={18} />, name: "Framer", percentage: "88%", gradient: "from-zinc-700 to-zinc-900" },
-        { icon: <SiHtml5 className="text-orange-600" size={18} />, name: "HTML5", percentage: "92%", gradient: "from-orange-600 to-red-500" },
-        { icon: <SiCss className="text-blue-500" size={18} />, name: "CSS", percentage: "90%", gradient: "from-blue-500 to-cyan-400" },
-        { icon: <Layout className="text-zinc-600" size={18} />, name: "UI/UX Design", percentage: "85%", gradient: "from-zinc-600 to-zinc-800" },
+        { icon: <SiFramer className="text-zinc-900" size={18} />, name: "The good use of Framer for the optimum design and management of my clients website and digital network resources" },
+        { icon: <SiNextdotjs className="text-zinc-900" size={18} />, name: "The good use of Next.js for the developement and deployemeny of the clients website for it's self management" },
+        { icon: <svg xmlns="http://www.w3.org/2000/svg" width={18} height={18} viewBox="0 0 32 32" fill="#31A8FF"><path d="M0 .401v31.198h32V.401zm1.333 1.333h29.333v28.531H1.333zm6.401 5.974c0-.089.188-.156.297-.156a76 76 0 0 1 3.438-.068c3.698 0 5.135 2.026 5.135 4.62c0 3.391-2.458 4.844-5.469 4.844c-.51 0-.682-.026-1.036-.026v5.125c0 .109-.042.156-.151.156H7.885c-.109 0-.151-.042-.151-.151zm2.365 7.084c.307.021.552.021 1.083.021c1.557 0 3.026-.552 3.026-2.661c0-1.693-1.052-2.552-2.833-2.552c-.526 0-1.031.021-1.276.042zm11.479-1.589c-1.057 0-1.411.531-1.411.969c0 .484.24.813 1.651 1.542c2.089 1.016 2.75 1.979 2.75 3.411c0 2.13-1.63 3.276-3.828 3.276c-1.167 0-2.161-.245-2.734-.573c-.083-.042-.104-.109-.104-.219v-1.958c0-.13.063-.177.151-.109a4.9 4.9 0 0 0 2.682.792c1.057 0 1.495-.438 1.495-1.036c0-.484-.307-.901-1.646-1.604c-1.896-.906-2.688-1.828-2.688-3.37c0-1.719 1.344-3.146 3.672-3.146c1.146 0 1.953.177 2.396.37c.109.068.13.177.13.266v1.828c0 .109-.068.177-.198.13c-.594-.349-1.469-.573-2.323-.573z"/></svg>, name: "The design of logo and visuals with the use of Adobe Photoshop for posters and brand identity" },
       ]
     },
     {
       id: 2,
-      title: "Network Administration",
+      title: "Network Admin",
       image: "/images/Network.jpg",
       iconGradient: "from-green-500 to-emerald-500",
       skills: [
-        { icon: <SiCisco className="text-blue-600" size={18} />, name: "Cisco", percentage: "80%", gradient: "from-blue-600 to-cyan-500" },
-        { icon: <FaShieldAlt className="text-green-600" size={18} />, name: "Network Security", percentage: "85%", gradient: "from-green-600 to-emerald-500" },
-        { icon: <FaServer className="text-zinc-600" size={18} />, name: "Server Management", percentage: "78%", gradient: "from-zinc-600 to-zinc-800" },
-        { icon: <Globe className="text-zinc-600" size={18} />, name: "Routing & Switching", percentage: "75%", gradient: "from-zinc-500 to-zinc-700" },
+        { icon: <SiCisco className="text-blue-600" size={18} />, name: "The use of cisco" },
+        { icon: <FaShieldAlt className="text-green-600" size={18} />, name: "Network Security" },
+        { icon: <FaServer className="text-zinc-600" size={18} />, name: "Server Management" },
+        { icon: <Globe className="text-zinc-600" size={18} />, name: "Routing & Switching" },
       ]
     }
   ];
@@ -67,12 +66,17 @@ export default function About() {
     <div className="min-h-screen w-full flex flex-col items-center bg-zinc-950 py-20 md:py-0">
       {/* Main About Content */}
       <div className="max-w-8xl grid grid-cols-1 md:grid-cols-2 gap-20 lg:gap-10 w-full pb-20 md:pb-60 overflow-hidden z-10 relative pt-32 md:pt-60 py-20 md:py-60 z-0">
+        
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0, x: -150 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, ease: "easeOut", delay: getDelay(0) }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: getDelay(0) }}
           className="max-w-4xl lg:max-w-8xl p-4 md:p-8 rounded-lg pl-4 md:pl-60 order-2 md:order-1 "
         >
+          <div className=" relative bottom-[10vh] -left-[15vw] flex items-center gap-4">
+            <hr className="border-0.5 border-zinc-500 w-80 "/>
+            <h1 className="text-xl font-sans text-zinc-500">About</h1>
+        </div>
           <h2 className="text-4xl md:text-5xl lg:text-8xl font-bold text-zinc-100 mb-4 md:mb-8 text-center md:text-left" style={{ fontFamily: "var(--font-gued)" }}>
             About Me
           </h2>
@@ -81,9 +85,9 @@ export default function About() {
             the needs of users and businesses that seek to make a positive impact.
           </p>
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -150 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, ease: "easeOut", delay: getDelay(1) }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: getDelay(1) }}
             className="mt-4 md:mt-8 "
           >
             <h1 className="text-lg md:text-xl md:text-2xl font-bold text-zinc-100 mb-3 md:mb-4 text-center md:text-left" style={{ fontFamily: "var(--font-gued)" }}>
@@ -92,15 +96,15 @@ export default function About() {
             <ul className="list-disc list-inside text-zinc-400 font-sans text-center md:text-left text-sm md:text-base">
               <li className="flex items-center gap-2 mb-2 justify-center md:justify-start"><ChessKing size={24} className="w-5 h-5 md:w-8 md:h-8" /> Chess</li>
               <li className="flex items-center gap-2 mb-2 justify-center md:justify-start"><Palette size={24} className="w-5 h-5 md:w-8 md:h-8" /> Drawing</li>
-              <li className="flex items-center gap-2 mb-2 justify-center md:justify-start"><Piano size={24} className="w-5 h-5 md:w-8 md:h-8" /> Piano</li>
+              <li className="flex items-center gap-2 mb-2 justify-center md:justify-start"><BookOpen size={24} className="w-5 h-5 md:w-8 md:h-8" />Reading </li>
             </ul>
           </motion.div>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 150 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: "easeOut", delay: getDelay(2) }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: getDelay(2) }}
           className="socials flex flex-col w-full md:w-180 gap-4 md:gap-6 md:gap-8 items-center justify-center mt-4 md:mt-8 md:mt-0 z-10 order-1 md:order-2"
         >
           <div className="flex flex-col items-center gap-4 mb-4">
@@ -257,152 +261,129 @@ export default function About() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut", delay: getDelay(3) }}
-        className="w-full max-w-8xl flex py-[20%] md:py-[15%] px-4 md:px-40 bg-white relative overflow-hidden  "
+        className="w-full max-w-8xl flex bg-white relative overflow-hidden "
       >
-        <div className="absolute md:right-[80vw] line w-50 h-50 block">
-            <ScrollingLines animationY={[-600, -300, -600]} stroke="#a1a1a1" />
+        <div className="absolute md:right-[80vw] line w-50 h-50 block z-0">
+            <ScrollingLines animationY={[-100, -300, -100]} stroke="#c5c5c5" />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-12 md:gap-24 px-4 md:px-12">
-          <div className="text-center md:text-left">
-            <h1 className="text-3xl md:text-4xl md:text-5xl font-bold text-zinc-900 mb-3 md:mb-4" style={{ fontFamily: "var(--font-gued)" }}>
-              My Tech Skills
-            </h1>
-            <p className="text-zinc-500 max-w-2xl text-sm md:text-base" style={{ fontFamily: "var(--font-vlorentine)" }}>
-              These are the technologies and tools I use to build modern, scalable applications
-            </p>
-          </div>
-
-          <div className="w-full max-w-9xl relative px-6 md:px-0">
-            {/* Navigation Buttons */}
-            <button
-              onClick={prevSlide}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 md:-translate-x-16 z-10 w-10 h-10 md:w-14 md:h-14 rounded-full bg-zinc-900 shadow-xl flex items-center justify-center hover:bg-zinc-800 transition-all duration-300 border-2 border-zinc-700 hover:scale-110"
-            >
-              <FaChevronLeft className="text-white" size={16} />
-            </button>
-            <button
-              onClick={nextSlide}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 md:translate-x-48 z-10 w-10 h-10 md:w-14 md:h-14 rounded-full bg-zinc-900 shadow-xl flex items-center justify-center hover:bg-zinc-800 transition-all duration-300 border-2 border-zinc-700 hover:scale-110"
-            >
-              <FaChevronRight className="text-white" size={16} />
-            </button>
-
-            {/* Carousel */}
-            <div className="overflow-hidden py-4 md:py-8 w-[85%] md:w-[120%] mx-auto">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentIndex}
-                  initial={{ opacity: 0, x: 50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -50 }}
-                  transition={{ duration: 0.4, ease: "easeOut" }}
-                  className="relative group"
-                  style={{ perspective: '800px' }}
-                >
-                  {/* Flip card */}
-                  <motion.div
-                    className="relative w-full cursor-pointer min-h-[300px] md:min-h-[400px]"
-                    style={{ transformStyle: "preserve-3d" }}
-                    animate={{ rotateY: isCardFlipped ? 180 : 0 }}
-                    whileHover={{ rotateY: 180 }}
-                    onTap={() => setIsCardFlipped(!isCardFlipped)}
-                    transition={{ duration: 0.6, ease: "easeInOut" }}
-                  >
-                    {/* Front - Image */}
-                    <div
-                      className="absolute inset-0 backface-hidden rounded-2xl border border-zinc-200 overflow-hidden min-h-[300px] md:min-h-[400px]"
-                      style={{ backfaceVisibility: "hidden" }}
-                    >
-                      <img
-                        src={skillCards[currentIndex].image}
-                        alt={skillCards[currentIndex].title}
-                        className="w-full h-full object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                      <h3 className="absolute bottom-4 md:bottom-8 left-4 md:left-8 text-xl md:text-3xl font-bold text-white" style={{ fontFamily: "var(--font-gued)" }}>
-                        {skillCards[currentIndex].title}
-                      </h3>
-                    </div>
-
-                    {/* Back - Skills */}
-                    <div
-                      className="absolute inset-0 backface-hidden bg-gradient-to-br from-zinc-50 to-white rounded-2xl border border-zinc-200 p-4 md:p-8 flex flex-col overflow-hidden min-h-[300px] md:min-h-[400px]"
-                      style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
-                    >
-                      <h3 className="text-xl md:text-2xl font-bold text-zinc-900 mb-4 md:mb-6" style={{ fontFamily: "var(--font-gued)" }}>
-                        {skillCards[currentIndex].title}
-                      </h3>
-                      <div className="space-y-3 md:space-y-5 flex-1 overflow-y-auto">
-                        {skillCards[currentIndex].skills.map((skill, index) => (
-                          <div key={index} className="group/item">
-                            <div className="flex items-center gap-2 md:gap-3 mb-2">
-                              {skill.icon}
-                              <span className="text-sm md:text-base font-medium text-zinc-700" style={{ fontFamily: "var(--font-vlorentine)" }}>{skill.name}</span>
-                            </div>
-                            <div className="w-full bg-zinc-200 rounded-full h-2 overflow-hidden">
-                              <motion.div
-                                key={`${currentIndex}-${index}`}
-                                initial={{ width: 0 }}
-                                animate={{ width: skill.percentage }}
-                                transition={{ duration: 1, ease: "easeOut" }}
-                                className={`bg-gradient-to-r ${skill.gradient} h-2 rounded-full`}
-                              />
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </motion.div>
-                </motion.div>
-              </AnimatePresence>
+       <div className="flex flex-col py-[10vh] z-10000">
+          <div className="flex items-center gap-64">
+            <div className="flex items-center gap-4">
+              <hr className="border-0.5 border-zinc-500 w-40 "/>
+              <h1 className="text-xl font-sans text-zinc-500">TechStack</h1>
             </div>
-
-            {/* Dot Indicators */}
-            <div className="flex justify-center gap-2 md:gap-3 mt-4 md:mt-6">
-              {skillCards.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`h-2 md:h-3 rounded-full transition-all duration-300 ${index === currentIndex ? 'bg-zinc-900 w-6 md:w-8' : 'bg-zinc-300 hover:bg-zinc-400 w-2 md:w-3'}`}
-                />
-              ))}
+            <div className="flex items-center gap-4 ml-4">
+              <button
+                onClick={prevSlide}
+                className="p-2 rounded-full bg-zinc-200 hover:bg-zinc-300 transition-colors"
+              >
+                <FaChevronLeft className="text-zinc-700" size={20} />
+              </button>
+              <div className="flex gap-2">
+                {skillCards.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setCurrentIndex(idx)}
+                    className={`w-2 h-2 rounded-full transition-colors ${idx === currentIndex ? 'bg-zinc-700' : 'bg-zinc-300'}`}
+                  />
+                ))}
+              </div>
+              <button
+                onClick={nextSlide}
+                className="p-2 rounded-full bg-zinc-200 hover:bg-zinc-300 transition-colors"
+              >
+                <FaChevronRight className="text-zinc-700" size={20} />
+              </button>
             </div>
           </div>
-        </div>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentIndex}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -50 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+              className="pl-64 pr-32 py-[5vh] gap-4"
+            >
+              <div>
+                <h1 className="font-serif text-8xl font-bold ">{skillCards[currentIndex].title}</h1>
+              </div>
+              <p className="text-zinc-400 font-sans text-xl">
+                {skillCards[currentIndex].title === "IT Support" && "I specialize in providing comprehensive IT support solutions, ensuring your technology infrastructure runs smoothly and efficiently. I'm good with what concern known Operating systems(Windows, MacOS and Linux) and other main hardware diagnostics and maintenance."}
+                {skillCards[currentIndex].title === "Web Designer" && "I use my design skills to create my visually stunning and user-friendly websites with modern design principles. I specialize in creating responsive layouts, smooth animations, and intuitive user experiences that engage and delight visitors giving an amazing visual experience to my network audience."}
+                {skillCards[currentIndex].title === "Network Admin" && "I design, implement, deploy, and secure robust network infrastructures for small, medium and large enterprises. I ensure optimal performance, security, and reliability for enterprise networks through expert configuration and monitoring in order to garantee confidentiality, intergrity and avalaibility."}
+              </p>
+            </motion.div>
+          </AnimatePresence>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={`skills-${currentIndex}`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.4, ease: "easeOut", delay: 0.1 }}
+              className="mt-8 pl-64 pr-32 "
+            >
+              <h1 className="text-xl font-serif font-bold mb-4">Associated Skills</h1>
+              <ul className="space-y-2 font-sans text-zinc-500">
+                {skillCards[currentIndex].skills.map((skill, idx) => (
+                  <li key={idx} className="flex items-center gap-2">{skill.icon} {skill.name}</li>
+                ))}
+              </ul>
+            </motion.div>
+          </AnimatePresence>
+       </div>
+       <AnimatePresence mode="wait">
+         <motion.img
+           key={`image-${currentIndex}`}
+           src={skillCards[currentIndex].image}
+           alt=""
+           initial={{ opacity: 0, scale: 0.95 }}
+           animate={{ opacity: 1, scale: 1 }}
+           exit={{ opacity: 0, scale: 1.05 }}
+           transition={{ duration: 0.4, ease: "easeOut" }}
+           className="w-[50vw] h-[90vh] object-cover"
+         />
+       </AnimatePresence>
       </motion.section>
+
+      {/*Ohter Center of Interests section*/}
       <motion.section
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut", delay: getDelay(4) }}
-        className="w-full max-w-8xl flex py-[15%] px-4 md:px-40 bg-zinc-950 relative overflow-hidden"
+        className="w-full flex flex-col align-center max-w-8xl flex pt-[15%] px-4 md:px-40 bg-zinc-950 relative overflow-hidden flex flex-col items-center"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 px-4 md:px-12">
-          <div className="text-center md:text-left">
-            <h2 className="text-3xl md:text-4xl md:text-5xl font-bold text-zinc-100 mb-3 md:mb-4" style={{ fontFamily: "var(--font-gued)" }}>
-              Other Centers of Interest
-            </h2>
-            <p className="text-zinc-400 max-w-2xl text-sm md:text-base" style={{ fontFamily: "var(--font-vlorentine)" }}>
-              Beyond technology, I'm passionate about exploring diverse fields that enrich my perspective and creativity
-            </p>
-          </div>
+        <div className=" absolute z-0 lg:w-[400%] lg:h-[150%] left-1/2 bottom-[65vh] -translate-x-1/2">
+          <PolygonBall sphereSize={1.5} color="#444444"/>
+        </div>
 
-          <div className="space-y-6">
+        <div className="gap-12 md:gap-24 px-4 md:px-12 flex flex-col items-center">
+          <div className="relative flex items-center gap-4 left-[28vw]">
+                <p className="font-serif text-zinc-700 text-sm">Other center of Tnterests</p>
+                <hr className="border border-zinc-700 w-180"/>
+          </div>
+          <p className="text-center w-200 text-zinc-400 text-center max-w-2xl text-4xl px-0 font-serif">
+              Beyond technology, I'm passionate about exploring diverse fields that enrich my creativity and my perspective about life
+          </p>
+
+          <div className="space-y-6 grid grid-cols-3 divide-x-3 mx-24 h-[60vh] border border-zinc-800">
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, ease: "easeOut", delay: getDelay(5) }}
-              className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 hover:bg-zinc-900/70 transition-all duration-300"
+              className=" p-6 pt-60 hover:pt-10 hover:bg-zinc-900/70 transition-all duration-300"
             >
-              <div className="flex items-start gap-4">
-                <div className="bg-zinc-800 p-3 rounded-lg">
+              <div className="flex flex-col items-center text-center gap-4 ">
+                <div className="bg-zinc-800 p-3 rounded-lg ">
                   <BookOpen className="text-zinc-300" size={24} />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-zinc-100 mb-2" style={{ fontFamily: "var(--font-gued)" }}>
-                    Reading & Learning
+                    Psychology
                   </h3>
                   <p className="text-zinc-400 text-sm md:text-base" style={{ fontFamily: "var(--font-vlorentine)" }}>
-                    Science fiction, philosophy, and technology books that expand my understanding of the world
+                    Understanding human behavior and mental processes to help my in my daily life and understand my humanity
                   </p>
                 </div>
               </div>
@@ -412,18 +393,18 @@ export default function About() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, ease: "easeOut", delay: getDelay(6) }}
-              className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 hover:bg-zinc-900/70 transition-all duration-300"
+              className=" p-6 pt-60 hover:pt-10 hover:bg-zinc-900/70 transition-all duration-300"
             >
-              <div className="flex items-start gap-4">
+              <div className="flex flex-col items-center text-center gap-4 w-[20vw]">
                 <div className="bg-zinc-800 p-3 rounded-lg">
-                  <Music className="text-zinc-300" size={24} />
+                  <Stethoscope className="text-zinc-300" size={24} />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-zinc-100 mb-2" style={{ fontFamily: "var(--font-gued)" }}>
-                    Music & Audio
+                    Medecine
                   </h3>
                   <p className="text-zinc-400 text-sm md:text-base" style={{ fontFamily: "var(--font-vlorentine)" }}>
-                    Exploring different genres, attending concerts, and discovering new artists
+                    Understanding the concepts of the living human anatomy and how to enhance my survival skills
                   </p>
                 </div>
               </div>
@@ -433,18 +414,18 @@ export default function About() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, ease: "easeOut", delay: getDelay(7) }}
-              className="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 hover:bg-zinc-900/70 transition-all duration-300"
+              className=" p-6 pt-60 hover:pt-10 border-0.5 border-zinc-200 hover:bg-zinc-900/70 transition-all duration-300"
             >
-              <div className="flex items-start gap-4">
-                <div className="bg-zinc-800 p-3 rounded-lg">
-                  <Camera className="text-zinc-300" size={24} />
+              <div className="flex flex-col items-center gap-4 text-center w-[20vw]">
+                <div className="bg-zinc-800 p-3 rounded-lg ">
+                  <Music className="text-zinc-300" size={24} />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-zinc-100 mb-2" style={{ fontFamily: "var(--font-gued)" }}>
-                    Photography
+                    Music
                   </h3>
                   <p className="text-zinc-400 text-sm md:text-base" style={{ fontFamily: "var(--font-vlorentine)" }}>
-                    Capturing moments and exploring visual storytelling through the lens
+                    Exploring different genres, attending concerts, and discovering new artists
                   </p>
                 </div>
               </div>

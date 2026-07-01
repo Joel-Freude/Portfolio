@@ -20,6 +20,9 @@ interface PolygonBallProps {
   pointLightIntensity?: number;
   cameraPosition?: [number, number, number];
   cameraFov?: number;
+  verticalSpeed?: number;
+  verticalAmplitude?: number;
+  verticalEnabled?: boolean;
 }
 
 function RotatingSphere({
@@ -32,6 +35,9 @@ function RotatingSphere({
   sphereDetail = [5, 3],
   icosahedronDetail = 0,
   geometry = 'icosahedron',
+  verticalSpeed = 1,
+  verticalAmplitude = 0.5,
+  verticalEnabled = false,
 }: Partial<PolygonBallProps>) {
   const meshRef = useRef<THREE.Mesh>(null);
 
@@ -39,6 +45,10 @@ function RotatingSphere({
     if (meshRef.current) {
       meshRef.current.rotation.y += delta * rotationSpeed;
       meshRef.current.rotation.x += delta * rotationSpeed;
+      
+      if (verticalEnabled) {
+        meshRef.current.position.y = Math.sin(state.clock.elapsedTime * verticalSpeed) * verticalAmplitude;
+      }
     }
   });
 
@@ -82,6 +92,9 @@ export default function PolygonBall({
   pointLightIntensity = 1,
   cameraPosition = [0, 0, 5],
   cameraFov = 45,
+  verticalSpeed = 1,
+  verticalAmplitude = 0.5,
+  verticalEnabled = false,
 }: PolygonBallProps) {
   return (
     <div className="w-full h-full bg-transparent">
@@ -104,6 +117,9 @@ export default function PolygonBall({
           sphereDetail={sphereDetail}
           icosahedronDetail={icosahedronDetail}
           geometry={geometry}
+          verticalSpeed={verticalSpeed}
+          verticalAmplitude={verticalAmplitude}
+          verticalEnabled={verticalEnabled}
         />
       </Canvas>
     </div>

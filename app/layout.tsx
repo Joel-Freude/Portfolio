@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import MobileNavbar from "./components/MobileNavbar";
 import PageTransition from "./components/PageTransition";
 import DownloadCVButton from "./components/DownloadCVButton";
+import Footer from "./components/Footer";
 
 const gudea = Gudea({
   variable: "--font-gued",
@@ -39,6 +40,7 @@ export default function RootLayout({
         <MobileNavbar />
         <DownloadCVButton />
         <PageTransition>{children}</PageTransition>
+        <Footer />
       </body>
     </html>
   );

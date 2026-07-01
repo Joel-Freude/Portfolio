@@ -8,17 +8,17 @@ import { useState, useEffect } from "react";
  * - After a route transition → base = 3.5, each index adds 0.5  (3.5, 4.0, 4.5 …)
  */
 export function useAnimationDelay() {
-  const [base, setBase] = useState(0.5);
+  const [base, setBase] = useState(0);
 
   useEffect(() => {
     const isRouteChange = sessionStorage.getItem("pageTransitionActive");
     if (isRouteChange === "true") {
-      setBase(3.5);
+      setBase(0.8);
       sessionStorage.removeItem("pageTransitionActive");
     }
   }, []);
 
-  const getDelay = (index = 0) => base + index * 0.5;
+  const getDelay = (index = 0) => base + index * 0.3;
 
   return getDelay;
 }
