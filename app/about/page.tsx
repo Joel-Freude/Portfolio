@@ -140,11 +140,11 @@ export default function About() {
       <text
         fill="white"
         fontSize="13"
-        fontFamily="var(--font-vlorentine)"
+        fontFamily="gued"
         letterSpacing="3"
       >
         <textPath href="#topArc" startOffset="50%" textAnchor="middle">
-          fofie_joel@yahoo.fr
+          fofie_joel&#64;yahoo.fr
         </textPath>
       </text>
 

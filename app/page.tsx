@@ -333,7 +333,8 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={animationComplete ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: bodyDelay + 1.2 }}
-            className="border-b md:border-r border-zinc-800 p-6 md:p-8 hover:bg-zinc-900/50 transition-colors duration-300"
+            whileHover={{ scale: 1.02 }}
+            className="border-b md:border-r border-zinc-800 p-6 md:p-8 hover:bg-zinc-900/50 transition-colors duration-300 flex flex-col items-center"
           >
             <h3 className="text-lg md:text-xl font-bold text-zinc-100 mb-4" style={{ fontFamily: "var(--font-gued)" }}>
               Network Administration
@@ -344,6 +345,16 @@ export default function Home() {
             <div className="flex justify-center">
               <ArrowDown size={24} className="text-orange-500" />
             </div>
+            <motion.button
+              initial={{ opacity: 0, y: 20 }}
+              whileHover={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className="bg-orange-400 text-black font-serif px-6 py-4 rounded-lg transition-all duration-300 mt-12 opacity-0"
+            >
+              Contact Me
+            </motion.button>
           </motion.div>
 
           {/* Web Design Column */}
@@ -351,7 +362,8 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={animationComplete ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: bodyDelay + 1.4 }}
-            className="border-b md:border-r border-zinc-800 p-6 md:p-8 hover:bg-zinc-900/50 transition-colors duration-300"
+            whileHover={{ scale: 1.02 }}
+            className="border-b md:border-r border-zinc-800 p-6 md:p-8 hover:bg-zinc-900/50 transition-colors duration-300 flex flex-col items-center"
           >
             <h3 className="text-lg md:text-xl font-bold text-zinc-100 mb-4" style={{ fontFamily: "var(--font-gued)" }}>
               Web Design
@@ -362,6 +374,16 @@ export default function Home() {
             <div className="flex justify-center">
               <ArrowDown size={24} className="text-orange-500" />
             </div>
+            <motion.button
+              initial={{ opacity: 0, y: 20 }}
+              whileHover={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className="bg-orange-400 text-black font-serif px-6 py-4 rounded-lg transition-all duration-300 mt-12 opacity-0"
+            >
+              Contact Me
+            </motion.button>
           </motion.div>
 
           {/* IT Maintenance Column */}
@@ -369,7 +391,8 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={animationComplete ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: bodyDelay + 1.6 }}
-            className="p-6 md:p-8 hover:bg-zinc-900/50 transition-colors duration-300"
+            whileHover={{ scale: 1.02 }}
+            className="p-6 md:p-8 hover:bg-zinc-900/50 transition-colors duration-300 flex flex-col items-center"
           >
             <h3 className="text-lg md:text-xl font-bold text-zinc-100 mb-4" style={{ fontFamily: "var(--font-gued)" }}>
               IT Maintenance
@@ -380,6 +403,16 @@ export default function Home() {
             <div className="flex justify-center">
               <ArrowDown size={24} className="text-orange-500" />
             </div>
+            <motion.button
+              initial={{ opacity: 0, y: 20 }}
+              whileHover={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className="bg-orange-400 text-black font-serif px-6 py-4 rounded-lg transition-all duration-300 mt-12 opacity-0"
+            >
+              Contact Me
+            </motion.button>
           </motion.div>
         </div>
 
