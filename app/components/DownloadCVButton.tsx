@@ -21,6 +21,10 @@ export default function DownloadCVButton() {
     setIsWhiteBackground(pathname === '/education');
   }, [pathname]);
 
+  if (pathname !== '/about') {
+    return null;
+  }
+
   return (
     <motion.button
       whileHover={{ scale: 1.1 }}
@@ -31,7 +35,7 @@ export default function DownloadCVButton() {
           : 'bg-black border-zinc-300'
       } ${
         isMobile
-          ? 'absolute top-16 left-1/2 -translate-x-1/2 z-10000000000'
+          ? 'absolute top-16 left-1/2 -translate-x-1/2 z-10'
           : 'absolute top-4 right-[10%] z-10'
       }`}
     >

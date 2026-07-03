@@ -266,18 +266,18 @@ export default function About() {
         <div className="absolute md:right-[80vw] line w-50 h-50 block z-0">
             <ScrollingLines animationY={[-100, -300, -100]} stroke="#c5c5c5" />
         </div>
-       <div className="flex flex-col py-[10vh] z-10000 order-2 md:order-1">
-          <div className="flex items-center gap-64">
+       <div className="flex flex-col py-[10vh] z-10000 order-2 md:order-1 px-4 md:px-0">
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-64">
             <div className="flex items-center gap-4">
-              <hr className="border-0.5 border-zinc-500 w-40 "/>
-              <h1 className="text-xl font-sans text-zinc-500">TechStack</h1>
+              <hr className="border-0.5 border-zinc-500 w-20 md:w-40 "/>
+              <h1 className="text-base md:text-xl font-sans text-zinc-500">TechStack</h1>
             </div>
-            <div className="flex items-center gap-4 ml-4">
+            <div className="flex items-center gap-4 ml-0 md:ml-4">
               <button
                 onClick={prevSlide}
                 className="p-2 rounded-full bg-zinc-200 hover:bg-zinc-300 transition-colors"
               >
-                <FaChevronLeft className="text-zinc-700" size={20} />
+                <FaChevronLeft className="text-zinc-700" size={16} />
               </button>
               <div className="flex gap-2">
                 {skillCards.map((_, idx) => (
@@ -292,7 +292,7 @@ export default function About() {
                 onClick={nextSlide}
                 className="p-2 rounded-full bg-zinc-200 hover:bg-zinc-300 transition-colors"
               >
-                <FaChevronRight className="text-zinc-700" size={20} />
+                <FaChevronRight className="text-zinc-700" size={16} />
               </button>
             </div>
           </div>
@@ -303,12 +303,12 @@ export default function About() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -50 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
-              className="pl-64 pr-32 py-[5vh] gap-4"
+              className="pl-4 md:pl-64 pr-4 md:pr-32 py-[5vh] gap-4"
             >
               <div>
-                <h1 className="font-serif text-8xl font-bold ">{skillCards[currentIndex].title}</h1>
+                <h1 className="font-serif text-5xl md:text-8xl font-bold text-center">{skillCards[currentIndex].title}</h1>
               </div>
-              <p className="text-zinc-400 font-sans text-xl">
+              <p className="text-zinc-400 font-sans text-sm md:text-xl">
                 {skillCards[currentIndex].title === "IT Support" && "I specialize in providing comprehensive IT support solutions, ensuring your technology infrastructure runs smoothly and efficiently. I'm good with what concern known Operating systems(Windows, MacOS and Linux) and other main hardware diagnostics and maintenance."}
                 {skillCards[currentIndex].title === "Web Designer" && "I use my design skills to create my visually stunning and user-friendly websites with modern design principles. I specialize in creating responsive layouts, smooth animations, and intuitive user experiences that engage and delight visitors giving an amazing visual experience to my network audience."}
                 {skillCards[currentIndex].title === "Network Admin" && "I design, implement, deploy, and secure robust network infrastructures for small, medium and large enterprises. I ensure optimal performance, security, and reliability for enterprise networks through expert configuration and monitoring in order to garantee confidentiality, intergrity and avalaibility."}
@@ -322,10 +322,10 @@ export default function About() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.4, ease: "easeOut", delay: 0.1 }}
-              className="mt-8 pl-64 pr-32 "
+              className="mt-4 md:mt-8 pl-4 md:pl-64 pr-4 md:pr-32 "
             >
-              <h1 className="text-xl font-serif font-bold mb-4">Associated Skills</h1>
-              <ul className="space-y-2 font-sans text-zinc-500">
+              <h1 className="text-base md:text-xl font-serif font-bold mb-2 md:mb-4">Associated Skills</h1>
+              <ul className="space-y-1 md:space-y-2 font-sans text-zinc-500 text-sm md:text-base">
                 {skillCards[currentIndex].skills.map((skill, idx) => (
                   <li key={idx} className="flex items-center gap-2">{skill.icon} {skill.name}</li>
                 ))}
@@ -359,30 +359,30 @@ export default function About() {
         </div>
 
         <div className="gap-12 md:gap-24 px-4 md:px-12 flex flex-col items-center">
-          <div className="relative flex items-center gap-4 left-[28vw]">
-                <p className="font-serif text-zinc-700 text-sm">Other center of Tnterests</p>
-                <hr className="border border-zinc-700 w-180"/>
+          <div className="relative flex items-center gap-4 left-0 md:left-[28vw]">
+                <p className="font-serif text-zinc-700 text-xs md:text-sm">Other center of Tnterests</p>
+                <hr className="border border-zinc-700 w-32 md:w-180"/>
           </div>
-          <p className="text-center w-200 text-zinc-400 text-center max-w-2xl text-4xl px-0 font-serif">
+          <p className="text-center w-full text-zinc-400 max-w-2xl text-xl md:text-4xl px-0 font-serif">
               Beyond technology, I'm passionate about exploring diverse fields that enrich my creativity and my perspective about life
           </p>
 
-          <div className="space-y-6 grid grid-cols-3 divide-x-3 mx-24 h-[60vh] border border-zinc-800">
+          <div className="space-y-6 grid grid-cols-1 md:grid-cols-3 divide-y-3 md:divide-y-0 md:divide-x-3 mx-0 md:mx-24 h-auto md:h-[60vh] border border-zinc-800">
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, ease: "easeOut", delay: getDelay(5) }}
-              className=" p-6 pt-60 hover:pt-10 hover:bg-zinc-900/70 transition-all duration-300"
+              className="p-4 md:p-6 pt-8 md:pt-60 hover:pt-4 md:hover:pt-10 hover:bg-zinc-900/70 transition-all duration-300 border-b md:border-b-0 md:border-r border-zinc-800"
             >
-              <div className="flex flex-col items-center text-center gap-4 ">
-                <div className="bg-zinc-800 p-3 rounded-lg ">
-                  <BookOpen className="text-zinc-300" size={24} />
+              <div className="flex flex-col items-center text-center gap-4">
+                <div className="bg-zinc-800 p-2 md:p-3 rounded-lg">
+                  <BookOpen className="text-zinc-300" size={20} />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-zinc-100 mb-2" style={{ fontFamily: "var(--font-gued)" }}>
+                  <h3 className="text-base md:text-lg font-bold text-zinc-100 mb-2" style={{ fontFamily: "var(--font-gued)" }}>
                     Psychology
                   </h3>
-                  <p className="text-zinc-400 text-sm md:text-base" style={{ fontFamily: "var(--font-vlorentine)" }}>
+                  <p className="text-zinc-400 text-xs md:text-sm md:text-base" style={{ fontFamily: "var(--font-vlorentine)" }}>
                     Understanding human behavior and mental processes to help my in my daily life and understand my humanity
                   </p>
                 </div>
@@ -393,17 +393,17 @@ export default function About() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, ease: "easeOut", delay: getDelay(6) }}
-              className=" p-6 pt-60 hover:pt-10 hover:bg-zinc-900/70 transition-all duration-300"
+              className="p-4 md:p-6 pt-8 md:pt-60 hover:pt-4 md:hover:pt-10 hover:bg-zinc-900/70 transition-all duration-300 border-b md:border-b-0 md:border-r border-zinc-800"
             >
-              <div className="flex flex-col items-center text-center gap-4 w-[20vw]">
-                <div className="bg-zinc-800 p-3 rounded-lg">
-                  <Stethoscope className="text-zinc-300" size={24} />
+              <div className="flex flex-col items-center text-center gap-4 w-full md:w-[20vw]">
+                <div className="bg-zinc-800 p-2 md:p-3 rounded-lg">
+                  <Stethoscope className="text-zinc-300" size={20} />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-zinc-100 mb-2" style={{ fontFamily: "var(--font-gued)" }}>
+                  <h3 className="text-base md:text-lg font-bold text-zinc-100 mb-2" style={{ fontFamily: "var(--font-gued)" }}>
                     Medecine
                   </h3>
-                  <p className="text-zinc-400 text-sm md:text-base" style={{ fontFamily: "var(--font-vlorentine)" }}>
+                  <p className="text-zinc-400 text-xs md:text-sm md:text-base" style={{ fontFamily: "var(--font-vlorentine)" }}>
                     Understanding the concepts of the living human anatomy and how to enhance my survival skills
                   </p>
                 </div>
@@ -414,17 +414,17 @@ export default function About() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, ease: "easeOut", delay: getDelay(7) }}
-              className=" p-6 pt-60 hover:pt-10 border-0.5 border-zinc-200 hover:bg-zinc-900/70 transition-all duration-300"
+              className="p-4 md:p-6 pt-8 md:pt-60 hover:pt-4 md:hover:pt-10 border-0.5 border-zinc-200 hover:bg-zinc-900/70 transition-all duration-300"
             >
-              <div className="flex flex-col items-center gap-4 text-center w-[20vw]">
-                <div className="bg-zinc-800 p-3 rounded-lg ">
-                  <Music className="text-zinc-300" size={24} />
+              <div className="flex flex-col items-center gap-4 text-center w-full md:w-[20vw]">
+                <div className="bg-zinc-800 p-2 md:p-3 rounded-lg">
+                  <Music className="text-zinc-300" size={20} />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-zinc-100 mb-2" style={{ fontFamily: "var(--font-gued)" }}>
+                  <h3 className="text-base md:text-lg font-bold text-zinc-100 mb-2" style={{ fontFamily: "var(--font-gued)" }}>
                     Music
                   </h3>
-                  <p className="text-zinc-400 text-sm md:text-base" style={{ fontFamily: "var(--font-vlorentine)" }}>
+                  <p className="text-zinc-400 text-xs md:text-sm md:text-base" style={{ fontFamily: "var(--font-vlorentine)" }}>
                     Exploring different genres, attending concerts, and discovering new artists
                   </p>
                 </div>

@@ -95,7 +95,7 @@ export default function Education() {
             <div className="hidden md:block absolute -translate-x-1/2 left-1/2 line w-50 h-50 block z-0">
                 <ScrollingLines animationY={[100, 300, 100]} stroke="#e5e5e5" />
             </div>
-          <h3 className="text-2xl md:text-5xl font-bold font-sans text-zinc-700 my-6 md:my-12 pl-0 md:pl-40">
+          <h3 className="text-4xl md:text-5xl font-bold font-sans text-zinc-700 my-6 md:my-12 pl-0 md:pl-40 text-center md:text-left">
             {data.universityLevel.title}
           </h3>
           <div className="w-full">
@@ -112,8 +112,7 @@ export default function Education() {
                 <img 
                   src={inst.image} 
                   alt={inst.name} 
-                  className="w-full object-cover transition-transform duration-300 group-hover:scale-110"
-                  style={{ height: inst.height }}
+                  className="w-full h-[200px] md:h-auto object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="text-left text-black p-3 md:p-4">
                     <h4 className="font-bold font-serif text-sm md:text-lg">{inst.name}</h4>
@@ -134,7 +133,7 @@ export default function Education() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: getDelay(0) }} 
           className="px-4 md:px-40 min-w-[100vw] py-10 md:py-20 bg-black">
-          <h3 className="text-2xl md:text-5xl text-center font-bold font-sans text-zinc-200 my-6 md:my-12" >
+          <h3 className="text-4xl md:text-5xl text-center font-bold font-sans text-zinc-200 my-6 md:my-12" >
             {data.certifications.title}
           </h3>
 
