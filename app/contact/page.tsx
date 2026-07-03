@@ -32,7 +32,7 @@ export default function Contact() {
       <img src="/images/Moi.jpg" alt="my image" className="opacity-20 w-[50%] h-full object-cover" />
       <div className="contact flex flex-col gap-6 w-[50%] px-20 mb-[10%]">
         <div className=" absolute z-0 lg:w-[100%] lg:h-[98%] w-[200%] h-[108%] left-1/3 bottom-[50vh] ">
-          <PolygonBall sphereSize={1.5}/>
+          <PolygonBall sphereSize={1.5} verticalEnabled={true} verticalAmplitude={0.2} verticalSpeed={0.1}/>
         </div>
         <motion.div
           initial={{ opacity: 0, x: 50 }}
