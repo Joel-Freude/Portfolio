@@ -261,12 +261,12 @@ export default function About() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut", delay: getDelay(3) }}
-        className="w-full max-w-8xl flex bg-white relative overflow-hidden "
+        className="w-full max-w-8xl flex flex-col md:flex-row bg-white relative overflow-hidden "
       >
         <div className="absolute md:right-[80vw] line w-50 h-50 block z-0">
             <ScrollingLines animationY={[-100, -300, -100]} stroke="#c5c5c5" />
         </div>
-       <div className="flex flex-col py-[10vh] z-10000">
+       <div className="flex flex-col py-[10vh] z-10000 order-2 md:order-1">
           <div className="flex items-center gap-64">
             <div className="flex items-center gap-4">
               <hr className="border-0.5 border-zinc-500 w-40 "/>
@@ -342,7 +342,7 @@ export default function About() {
            animate={{ opacity: 1, scale: 1 }}
            exit={{ opacity: 0, scale: 1.05 }}
            transition={{ duration: 0.4, ease: "easeOut" }}
-           className="w-[50vw] h-[90vh] object-cover"
+           className="w-full md:w-[50vw] h-[30vh] md:h-[90vh] object-cover order-1 md:order-2"
          />
        </AnimatePresence>
       </motion.section>

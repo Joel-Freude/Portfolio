@@ -76,12 +76,12 @@ export default function Education() {
           className=""
         >
           <div ref={whiteSectionRef} className="bg-white max-w-[120vw]">
-            <div className="absolute -top-140 -translate-x-1/2 left-1/2 w-[80vw] h-[90vh]">
+            <div className="absolute -top-140 -translate-x-1/2 left-1/2 w-[80vw] h-[60vh] md:h-[90vh]">
               <PolygonBall sphereSize={1.5} color="#efefef" verticalEnabled={true} verticalAmplitude={0.2}/>
           </div>
-       <div className=" flex items-center relative left-[0vw] gap-4 pt-40">
-        <hr className="border border-zinc-300 w-80"/>
-         <h2 className="text-xl font-bold font-sans text-zinc-300 text-center">
+       <div className=" flex items-center relative left-[0vw] gap-2 md:gap-4 pt-20 md:pt-40 px-4 md:px-0">
+        <hr className="border border-zinc-300 w-20 md:w-80"/>
+         <h2 className="text-base md:text-xl font-bold font-sans text-zinc-300 text-center">
           SCHOOL
         </h2>
        </div>
@@ -91,16 +91,16 @@ export default function Education() {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: getDelay(0) }} 
-          className="px-40 min-w-[90vw] py-40">
-            <div className="absolute -translate-x-1/2 left-1/2 line w-50 h-50 block z-0">
+          className="px-4 md:px-40 min-w-[90vw] py-20 md:py-40">
+            <div className="hidden md:block absolute -translate-x-1/2 left-1/2 line w-50 h-50 block z-0">
                 <ScrollingLines animationY={[100, 300, 100]} stroke="#e5e5e5" />
             </div>
-          <h3 className="text-5xl font-bold font-sans text-zinc-700 my-12 pl-40">
-              {data.universityLevel.title}
+          <h3 className="text-2xl md:text-5xl font-bold font-sans text-zinc-700 my-6 md:my-12 pl-0 md:pl-40">
+            {data.universityLevel.title}
           </h3>
           <div className="w-full">
             <motion.div
-            className="columns-2 gap-24 pl-40 space-y-24"
+            className="columns-1 md:columns-2 gap-8 md:gap-24 pl-0 md:pl-40 space-y-8 md:space-y-24"
             >
             {data.universityLevel.institutions.map((inst: any, index: number) => (
               <div 
@@ -115,9 +115,9 @@ export default function Education() {
                   className="w-full object-cover transition-transform duration-300 group-hover:scale-110"
                   style={{ height: inst.height }}
                 />
-                <div className="text-left text-black p-4">
-                    <h4 className="font-bold font-serif text-lg">{inst.name}</h4>
-                    <p className="text-sm font-sans text-zinc-500">{inst.period}</p>
+                <div className="text-left text-black p-3 md:p-4">
+                    <h4 className="font-bold font-serif text-sm md:text-lg">{inst.name}</h4>
+                    <p className="text-xs md:text-sm font-sans text-zinc-500">{inst.period}</p>
                   </div>
               </div>
             ))}
@@ -133,12 +133,36 @@ export default function Education() {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: getDelay(0) }} 
-          className="px-40 min-w-[100vw] py-20 bg-black">
-          <h3 className="text-5xl text-center font-bold font-sans text-zinc-200 my-12" >
+          className="px-4 md:px-40 min-w-[100vw] py-10 md:py-20 bg-black">
+          <h3 className="text-2xl md:text-5xl text-center font-bold font-sans text-zinc-200 my-6 md:my-12" >
             {data.certifications.title}
           </h3>
 
-          <div className="">
+          {/* Mobile Display */}
+          <div className="md:hidden">
+            {data.certifications.categories.map((category: any, catIndex: number) => (
+              <div key={catIndex} className="mb-8">
+                <h4 className="text-lg font-bold text-zinc-300 mb-4 font-serif">{category.category}</h4>
+                <div className="space-y-4">
+                  {category.certificates.map((cert: any, certIndex: number) => (
+                    <div key={certIndex} className="bg-zinc-900 rounded-lg p-4 border border-zinc-800">
+                      <img 
+                        src={cert.image} 
+                        alt={cert.name} 
+                        className="w-full h-[200px] object-cover rounded-lg mb-3"
+                      />
+                      <h3 className="text-base font-bold text-zinc-100 font-serif mb-1">{cert.name}</h3>
+                      <p className="text-xs text-zinc-300 font-sans mb-2">{cert.description}</p>
+                      <time className="text-xs font-medium text-zinc-400 font-sans">{cert.date}</time>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop Display */}
+          <div className="hidden md:block">
             {data.certifications.categories.map((category: any, catIndex: number) => (
           <div key={catIndex} className={catIndex < data.certifications.categories.length - 1 ? "mb-12" : ""}>
             
