@@ -25,8 +25,8 @@ export const metadata: Metadata = {
   title: "Freude Portfolio",
   description: "Freude's personal portfolio together with his projects, skills and experience",
   icons:{
-    icon:"",
-    apple:"",
+    icon:"/images/icon.png",
+    apple:"/images/icon.png",
   },
 };
 
