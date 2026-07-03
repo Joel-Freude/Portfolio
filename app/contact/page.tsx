@@ -13,11 +13,35 @@ export default function Contact() {
     subject: "",
     message: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Add form submission logic here
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -32,7 +56,7 @@ export default function Contact() {
       {/* Desktop Layout */}
       <div className="hidden md:flex w-full">
         <img src="/images/Moi.jpg" alt="my image" className="opacity-20 w-[50%] h-full object-cover" />
-        <div className="contact flex flex-col gap-6 w-[50%] px-20 mb-[10%]">
+        <div className="contact flex flex-col gap-6 w-[50%] px-20 mb-[10%] pt-50 z-100">
           <div className=" absolute z-0 lg:w-[100%] lg:h-[98%] w-[200%] h-[108%] left-1/3 bottom-[50vh] ">
             <PolygonBall sphereSize={1.5} verticalEnabled={true} verticalAmplitude={0.2} verticalSpeed={0.1}/>
           </div>
@@ -110,10 +134,17 @@ export default function Contact() {
               type="submit"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="px-8 py-4 bg-orange-400 text-black font-bold font-sans rounded-lg hover:bg-orange-300 transition-colors"
+              disabled={isSubmitting}
+              className="px-8 py-4 bg-orange-400 text-black font-bold font-sans rounded-lg hover:bg-orange-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Send Message
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </motion.button>
+            {submitStatus === 'success' && (
+              <p className="text-green-400 font-sans">Message sent successfully!</p>
+            )}
+            {submitStatus === 'error' && (
+              <p className="text-red-400 font-sans">Failed to send message. Please try again.</p>
+            )}
           </motion.form>
         </div>
       </div>
@@ -131,8 +162,8 @@ export default function Contact() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <h1 className="text-3xl font-bold font-sans text-zinc-300 mb-2">Get In Touch</h1>
-            <p className="text-zinc-500 font-sans">I'd love to hear from you. Send me a message!</p>
+            <h1 className="text-5xl font-bold font-sans text-zinc-300 mb-2 text-center lg:text-start">Get In Touch</h1>
+            <p className="text-zinc-500 font-sans text-center lg:text-start">I'd love to hear from you. Send me a message!</p>
           </motion.div>
 
           <motion.form
@@ -198,10 +229,17 @@ export default function Contact() {
               type="submit"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="px-8 py-4 bg-orange-400 text-black font-bold font-sans rounded-lg hover:bg-orange-300 transition-colors"
+              disabled={isSubmitting}
+              className="px-8 py-4 bg-orange-400 text-black font-bold font-sans rounded-lg hover:bg-orange-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Send Message
+              {isSubmitting ? 'Sending...' : 'Send Message'}
             </motion.button>
+            {submitStatus === 'success' && (
+              <p className="text-green-400 font-sans">Message sent successfully!</p>
+            )}
+            {submitStatus === 'error' && (
+              <p className="text-red-400 font-sans">Failed to send message. Please try again.</p>
+            )}
           </motion.form>
         </div>
       </div>

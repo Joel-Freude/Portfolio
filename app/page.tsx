@@ -187,7 +187,7 @@ export default function Home() {
         initial={{ opacity: 0, x: -50 }}
         animate={animationComplete ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
         transition={{ duration: 0.5, ease: "easeOut", delay: h1Delay }}
-        className="w-full grid grid-cols-1 md:grid-cols-2 lg:gap-20 lg:-mb-20 overflow-hidden lg:pt-0 my-32"
+        className="w-full grid grid-cols-1 md:grid-cols-2 lg:gap-20 lg:-mb-20 overflow-hidden lg:pt-0 my-8 md:my-16 lg:my-32"
       >
 
       <motion.div
@@ -195,10 +195,10 @@ export default function Home() {
         -50 }}
       animate={animationComplete ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
       transition={{ duration: 0.5, ease: "easeOut", delay: h1Delay }}
-      className="h-64 z-10 pl-4 md:pl-32 lg:pt-4 h-0"
+      className="h-auto z-10 pl-4 md:pl-32 lg:pt-4"
       >
         <h1
-          className="text-7xl md:text-7xl lg:text-8xl font-bold text-zinc-100 mb-6 text-center md:text-left lg:text-left pt-60 lg:pt-30 "
+          className="text-4xl md:text-6xl lg:text-8xl font-bold text-zinc-100 mb-6 text-center md:text-left lg:text-left pt-8 md:pt-16 lg:pt-30"
           style={{ fontFamily: "var(--font-gued)" }}
         >
           Hello, I'm {fullName}
@@ -223,7 +223,7 @@ export default function Home() {
           initial={{ opacity: 0, x: -50 }}
           animate={animationComplete ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: bodyDelay }}
-          className="text-base md:text-lg text-zinc-500 max-w-2xl text-center md:text-left lg:text-left xl:text-left px-24 lg:px-0 "
+          className="text-base md:text-lg text-zinc-500 max-w-2xl text-center md:text-left lg:text-left xl:text-left px-4 md:px-8 lg:px-0"
           style={{ fontFamily: "var(--font-vlorentine)" }}
         >
           Passionate about creating digital experiences that matter and resolve real-world problems.
@@ -239,7 +239,7 @@ export default function Home() {
 
       {/* My Approach Section */}
       <motion.section
-        className="w-full max-w-9xl px-4 md:px-70 py-20 md:mt-12 bg-white relative overflow-hidden"
+        className="w-full max-w-9xl px-4 md:px-20 py-20 md:mt-12 bg-white relative overflow-hidden"
       >
         <div className="absolute left-[80vw] md:left-[80vw] line w-50 h-50 hidden md:block">
           <ScrollingLines />
@@ -320,14 +320,14 @@ export default function Home() {
         initial={{ opacity: 0, y: 50 }}
         animate={animationComplete ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
         transition={{ duration: 0.6, ease: "easeOut", delay: bodyDelay + 1 }}
-        className="w-full grid grid-cols-1 md:grid-cols-2 items-center px-4 md:px-0"
+        className="w-full grid grid-cols-1 items-center px-4 md:px-0"
       >
 
         <h2 className="text-4xl md:text-5xl mb-12 text-center">
           <span className="font-bold text-zinc-100 text-5xl md:text-6xl lg:text-8xl" style={{ fontFamily: "var(--font-gued)" }}>My Services</span>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-zinc-800 items-center h-full ">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-zinc-800 items-center h-full w-full">
             {/* Network Administration Column */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
