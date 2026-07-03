@@ -118,7 +118,7 @@ export default function Navbar() {
   const getPageLabel = () => {
     if (pathname === "/") return "HOME";
     if (pathname === "/about") return "ABOUT";
-    if (pathname === "/school") return "SCHOOL";
+    if (pathname === "/education") return "EDUCATION";
     if (pathname === "/projects") return "PROJECTS";
     if (pathname === "/contact") return "CONTACT";
     return "HOME";
@@ -126,7 +126,7 @@ export default function Navbar() {
   
   const navItems = [
     { icon: <User style={{ color: elementPositions.navItems[0] ? '#52525b' : '#ffffff' }} />, href: "/about", label: "About" },
-    { icon: <GraduationCap style={{ color: elementPositions.navItems[1] ? '#52525b' : '#ffffff' }} />, href: "/school", label: "School" },
+    { icon: <GraduationCap style={{ color: elementPositions.navItems[1] ? '#52525b' : '#ffffff' }} />, href: "/education", label: "education" },
     { icon: <Briefcase style={{ color: elementPositions.navItems[2] ? '#52525b' : '#ffffff' }} />, href: "/projects", label: "Projects" },
     { icon: <Mail style={{ color: elementPositions.navItems[3] ? '#52525b' : '#ffffff' }} />, href: "/contact", label: "Contact" },
   ];

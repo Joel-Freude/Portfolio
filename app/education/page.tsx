@@ -7,7 +7,7 @@ import CustomCursor from "@/app/components/CustomCursor";
 import ScrollingLines from "@/app/components/ScrollingLines";
 import PolygonBall from "../components/PolygonBall";
 
-export default function School() {
+export default function Education() {
   const getDelay = useAnimationDelay();
   const [data, setData] = useState<any>(null);
   const [hoveredInstitution, setHoveredInstitution] = useState<string>("");

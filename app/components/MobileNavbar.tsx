@@ -21,7 +21,7 @@ export default function MobileNavbar() {
   const getPageLabel = () => {
     if (pathname === "/") return "HOME";
     if (pathname === "/about") return "ABOUT";
-    if (pathname === "/school") return "SCHOOL";
+    if (pathname === "/education") return "EDUCATION";
     if (pathname === "/projects") return "PROJECTS";
     if (pathname === "/contact") return "CONTACT";
     return "HOME";
@@ -30,7 +30,7 @@ export default function MobileNavbar() {
   const navItems = [
     { icon: <Home size={24} />, href: "/", label: "Home" },
     { icon: <User size={24} />, href: "/about", label: "About" },
-    { icon: <GraduationCap size={24} />, href: "/school", label: "School" },
+    { icon: <GraduationCap size={24} />, href: "/education", label: "Education" },
     { icon: <Briefcase size={24} />, href: "/projects", label: "Projects" },
     { icon: <Mail size={24} />, href: "/contact", label: "Contact" },
   ];

@@ -1,0 +1,106 @@
+{
+  "webDesign": [
+    {
+      "name": "Food Folio",
+      "date": "19 Feb 2026",
+      "description": "It's a project that aimed at producing a design for a multinational restaurant that serves and delivers all kinds of cultural food for all connected restaurants.",
+      "technologies": [
+        "Adobe Photoshop for logo and image design",
+        "Framer for web template design and animation"
+      ],
+      "link": "https://foodfo.framer.website/",
+      "image": "/images/Web Design/FoodFolio.png"
+    },
+    {
+      "name": "VitaCura",
+      "date": "23 March 2026",
+      "description": "It's a web template of a central Hospital app aiming at collecting the requests and the feedback of different clinical services to ease hospital care and service rendering",
+      "technologies": [
+        "Adobe Photoshop for logo and image design",
+        "Framer for web template design and animation"
+      ],
+      "link": "https://vitacuracenter.framer.website/",
+      "image": "/images/Web Design/Vitacura.png"
+    },
+    {
+      "name": "UrbanVista",
+      "date": "6 March 2026",
+      "description": "It's a web template of a real estate enterprise who aims at rendering the digital real estate delivery simple for tenant in search of a better place",
+      "technologies": [
+        "Adobe Photoshop for logo and image design",
+        "Framer for web template design and animation"
+      ],
+      "link": "https://urbanvista.framer.website/",
+      "image": "/images/Web Design/UrbanViste.png"
+    },
+    {
+      "name": "Vigoradum",
+      "date": "22 March 2026",
+      "description": "IT's a template for a fitness survey to collect data and feedbacks on the different athlete berserkers to enhance the development of a fitness app",
+      "technologies": [
+        "Adobe Photoshop for logo and image design",
+        "Framer for web template design and animation"
+      ],
+      "link": "https://vigoratum.framer.website/",
+      "image": "/images/Web Design/Vigoratum.png"
+    },
+    {
+      "name": "ArchiMax",
+      "date": "18 June 2026",
+      "description": "Seeking architectural and building projection top tier services, visit ArchiMax, The top project seeking low budget architectural and real estate services.",
+      "technologies": [
+        "Adobe Photoshop for logo and image design",
+        "Framer for web template design and animation"
+      ],
+      "link": "",
+      "image": "/images/Web Design/ArchiMax.png"
+    }
+  ],
+  "mobileDev": [
+    {
+      "name": "Apex Mobile App",
+      "date": "15 November 2025",
+      "description": "Just a flutter mobile app available on all smartphone (android and IOs) that enhance and update personal social and physical skills in a gamified way",
+      "technologies": [
+        "FlutterFlow for the app design",
+        "Adobe Illustrator for Icon design",
+        "Adobe photoshop for logo and image design",
+        "Android Studio for project coding",
+        "Github for project hosting",
+        "Supabase for database handling"
+      ],
+      "status": "Ongoing",
+      "image": "/images/Mobile Dev/Apex.png"
+    },
+    {
+      "name": "Cypher Mobile and Desktop App",
+      "date": "19 March 2026",
+      "description": "A personal device tracking app that helps you locate your device in real time to prevent theft and increase in crime rate. Available on any platform",
+      "technologies": [
+        "Adobe Illustrator for icon design",
+        "Adobe Photoshop for logo and image design",
+        "Flutterflow for desktop and mobile design",
+        "Android Studio for project coding",
+        "Github for project hosting",
+        "Supabase for database management"
+      ],
+      "status": "Ongoing",
+      "image": "/images/Mobile Dev/Cypher.png"
+    },
+    {
+      "name": "Maka Real estate app",
+      "date": "03 May 2026",
+      "description": "",
+      "technologies": [
+        "Adobe Illustrator for icon design",
+        "Adobe Photoshop for logo and image design",
+        "Flutterflow for desktop and mobile design",
+        "Android Studio for project coding",
+        "Github for project hosting",
+        "Supabase for database management"
+      ],
+      "status": "Ongoing",
+      "image": "/images/Mobile Dev/Maka.png"
+    }
+  ]
+}

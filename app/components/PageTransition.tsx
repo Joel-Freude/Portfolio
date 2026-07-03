@@ -22,7 +22,7 @@ export default function PageTransition({ children }: { children: React.ReactNode
     const map: Record<string, string> = {
       "/": "HOME",
       "/about": "ABOUT",
-      "/school": "SCHOOL",
+      "/education": "EDUCATION",
       "/projects": "PROJECTS",
       "/contact": "CONTACT",
     };

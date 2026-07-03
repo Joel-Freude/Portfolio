@@ -18,8 +18,8 @@ export default function Footer() {
     <footer className="w-full bg-zinc-950 text-zinc-300 py-16 px-8 mt-auto">
       <div className="max-w-7xl mx-auto">
         {/* Main Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-16">
-          {/* Brand & Newsletter */}
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-32 mb-16 ">
+          {/* Contact*/}
           <div className="lg:col-span-1">
             <h2 className="text-4xl font-bold text-white mb-4 font-serif" >
               Joel Freude.
@@ -44,60 +44,63 @@ export default function Footer() {
             </form>
           </div>
 
-          {/* Navigation Links */}
-          <div>
-            <h4 className="text-lg font-semibold text-white mb-6 font-serif">Navigation</h4>
-            <ul className="space-y-3 font-sans">
-              <li>
-                <Link href="/" className="text-sm text-orange-400 hover:text-orange-300 transition-colors font-medium">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/projects" className="text-sm text-zinc-400 hover:text-white transition-colors">
-                  Portfolio
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-sm text-zinc-400 hover:text-white transition-colors">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-sm text-zinc-400 hover:text-white transition-colors">
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link href="/school" className="text-sm text-zinc-400 hover:text-white transition-colors">
-                  Education
-                </Link>
-              </li>
-            </ul>
-          </div>
+          <div className="flex gap-30 ml-96">
+            {/* Navigation Links */}
+              <div>
+                <h4 className="text-lg font-semibold text-white mb-6 font-serif">Navigation</h4>
+                <ul className="space-y-3 font-sans">
+                  <li>
+                    <Link href="/" className="text-sm hover:text-white transition-colors font-medium">
+                      Home
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/about" className="text-sm hover:text-white transition-colors">
+                      About
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/education" className="text-sm hover:text-white transition-colors">
+                      Education
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/projects" className="text-sm hover:text-white transition-colors">
+                      Projects
+                    </Link>
+                  </li>
+                  
+                  <li>
+                    <Link href="/contact" className="text-sm hover:text-white transition-colors">
+                      Contact
+                    </Link>
+                  </li>
+                </ul>
+              </div>
 
 
-          {/* Contact Info */}
-          <div>
-            <h4 className="text-lg font-semibold text-white mb-6 font-serif">Contact</h4>
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-orange-400 mt-1 flex-shrink-0 font-sans" />
-                <div>
-                  <p className="text-sm text-zinc-400 font-sans">Yaoundé, Cameroon</p>
+            {/* Contact Info */}
+              <div>
+                <h4 className="text-lg font-semibold text-white mb-6 font-serif">Contact</h4>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <MapPin className="w-5 h-5 text-orange-400 mt-1 flex-shrink-0 font-sans" />
+                    <div>
+                      <p className="text-sm text-zinc-400 font-sans">Yaoundé, Cameroon</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Mail className="w-5 h-5 text-orange-400 flex-shrink-0 font-sans" />
+                    <a href="mailto:contact@example.com" className="text-sm text-zinc-400 hover:text-white transition-colors font-sans">
+                      fofie_joel&#64;yahoo.fr
+                    </a>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Phone className="w-5 h-5 text-orange-400 flex-shrink-0 font-sans" />
+                    <p className="text-sm text-zinc-400 font-sans">+237 650812141</p>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-orange-400 flex-shrink-0 font-sans" />
-                <a href="mailto:contact@example.com" className="text-sm text-zinc-400 hover:text-white transition-colors font-sans">
-                  fofie_joel&#64;yahoo.fr
-                </a>
-              </div>
-              <div className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-orange-400 flex-shrink-0 font-sans" />
-                <p className="text-sm text-zinc-400 font-sans">+237 650812141</p>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -107,7 +110,7 @@ export default function Footer() {
             {/* Social Icons */}
             <div className="flex gap-4">
               <a
-                href="https://github.com"
+                href="https://github.com/Joel-Freude"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-zinc-700 transition-colors"
@@ -117,7 +120,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.instagram.com/joelfofie/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-zinc-700 transition-colors"
@@ -127,7 +130,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://twitter.com"
+                href="https://x.com/JoelFofie"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-zinc-700 transition-colors"
@@ -139,7 +142,7 @@ export default function Footer() {
             </div>
 
             {/* Copyright */}
-            <p className="text-sm text-zinc-500 flex items-center gap-2">
+            <p className="text-sm text-zinc-500 flex items-center gap-2 font-sans">
               © {new Date().getFullYear()} FOFIE JOUNEWE JOEL FREUDE. All rights reserved.
             </p>
           </div>

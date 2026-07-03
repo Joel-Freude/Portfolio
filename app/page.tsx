@@ -327,93 +327,84 @@ export default function Home() {
           <span className="font-bold text-zinc-100 text-5xl md:text-6xl lg:text-8xl" style={{ fontFamily: "var(--font-gued)" }}>My Services</span>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-zinc-800 items-center ">
-          {/* Network Administration Column */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={animationComplete ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: bodyDelay + 1.2 }}
-            whileHover={{ scale: 1.02 }}
-            className="border-b md:border-r border-zinc-800 p-6 md:p-8 hover:bg-zinc-900/50 transition-colors duration-300 flex flex-col items-center"
-          >
-            <h3 className="text-lg md:text-xl font-bold text-zinc-100 mb-4" style={{ fontFamily: "var(--font-gued)" }}>
-              Network Administration
-            </h3>
-            <p className="text-sm md:text-base text-zinc-400 leading-relaxed mb-8" style={{ fontFamily: "var(--font-vlorentine)" }}>
-              Design, implement, and maintain robust network infrastructures ensuring optimal performance, security, and reliability for your business operations.
-            </p>
-            <div className="flex justify-center">
-              <ArrowDown size={24} className="text-orange-500" />
-            </div>
-            <motion.button
-              initial={{ opacity: 0, y: 20 }}
-              whileHover={{ opacity: 1, y: 0 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
-              className="bg-orange-400 text-black font-serif px-6 py-4 rounded-lg transition-all duration-300 mt-12 opacity-0"
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-0 border border-zinc-800 items-center h-full ">
+            {/* Network Administration Column */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={animationComplete ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: bodyDelay + 1.2 }}
+              className="border-b md:border-r border-zinc-800 p-6 md:p-8 hover:bg-zinc-900/50 transition-colors duration-300 flex flex-col items-center justify-center h-full group"
             >
-              Contact Me
-            </motion.button>
-          </motion.div>
+              <h3 className="text-lg md:text-xl font-bold text-zinc-100 mb-4" style={{ fontFamily: "var(--font-gued)" }}>
+                Network Administration
+              </h3>
+              <p className="text-sm md:text-base text-zinc-400 leading-relaxed mb-8" style={{ fontFamily: "var(--font-vlorentine)" }}>
+                Design, implement, and maintain robust network infrastructures ensuring optimal performance, security, and reliability for your business operations.
+              </p>
+              <div className="flex justify-center">
+                <ArrowDown size={24} className="text-orange-500" />
+              </div>
+              <motion.button
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 0, y: 20 }}
+                whileHover={{ opacity: 1, y: 0 }}
+                className="group-hover:opacity-100 group-hover:translate-y-0 bg-orange-400 text-black font-serif px-6 py-4 rounded-lg transition-all duration-300 mt-12"
+              >
+                Contact Me
+              </motion.button>
+            </motion.div>
 
-          {/* Web Design Column */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={animationComplete ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: bodyDelay + 1.4 }}
-            whileHover={{ scale: 1.02 }}
-            className="border-b md:border-r border-zinc-800 p-6 md:p-8 hover:bg-zinc-900/50 transition-colors duration-300 flex flex-col items-center"
-          >
-            <h3 className="text-lg md:text-xl font-bold text-zinc-100 mb-4" style={{ fontFamily: "var(--font-gued)" }}>
-              Web Design
-            </h3>
-            <p className="text-sm md:text-base text-zinc-400 leading-relaxed mb-8" style={{ fontFamily: "var(--font-vlorentine)" }}>
-              Create stunning, responsive websites that deliver exceptional user experiences and drive engagement with modern design principles.
-            </p>
-            <div className="flex justify-center">
-              <ArrowDown size={24} className="text-orange-500" />
-            </div>
-            <motion.button
-              initial={{ opacity: 0, y: 20 }}
-              whileHover={{ opacity: 1, y: 0 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
-              className="bg-orange-400 text-black font-serif px-6 py-4 rounded-lg transition-all duration-300 mt-12 opacity-0"
+            {/* Web Design Column */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={animationComplete ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: bodyDelay + 1.4 }}
+              className="border-b md:border-r border-zinc-800 p-6 md:p-8 hover:bg-zinc-900/50 transition-colors duration-300 flex flex-col items-center justify-center h-full group"
             >
-              Contact Me
-            </motion.button>
-          </motion.div>
+              <h3 className="text-lg md:text-xl font-bold text-zinc-100 mb-4" style={{ fontFamily: "var(--font-gued)" }}>
+                Web Design
+              </h3>
+              <p className="text-sm md:text-base text-zinc-400 leading-relaxed mb-8" style={{ fontFamily: "var(--font-vlorentine)" }}>
+                Create stunning, responsive websites that deliver exceptional user experiences and drive engagement with modern design principles.
+              </p>
+              <div className="flex justify-center">
+                <ArrowDown size={24} className="text-orange-500" />
+              </div>
+              <motion.button
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 0, y: 20 }}
+                whileHover={{ opacity: 1, y: 0 }}
+                className="group-hover:opacity-100 group-hover:translate-y-0 bg-orange-400 text-black font-serif px-6 py-4 rounded-lg transition-all duration-300 mt-12"
+              >
+                Contact Me
+              </motion.button>
+            </motion.div>
 
-          {/* IT Maintenance Column */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={animationComplete ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: bodyDelay + 1.6 }}
-            whileHover={{ scale: 1.02 }}
-            className="p-6 md:p-8 hover:bg-zinc-900/50 transition-colors duration-300 flex flex-col items-center"
-          >
-            <h3 className="text-lg md:text-xl font-bold text-zinc-100 mb-4" style={{ fontFamily: "var(--font-gued)" }}>
-              IT Maintenance
-            </h3>
-            <p className="text-sm md:text-base text-zinc-400 leading-relaxed mb-8" style={{ fontFamily: "var(--font-vlorentine)" }}>
-              Provide comprehensive IT support and maintenance services to keep your systems running smoothly and minimize downtime for your organization.
-            </p>
-            <div className="flex justify-center">
-              <ArrowDown size={24} className="text-orange-500" />
-            </div>
-            <motion.button
-              initial={{ opacity: 0, y: 20 }}
-              whileHover={{ opacity: 1, y: 0 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
-              className="bg-orange-400 text-black font-serif px-6 py-4 rounded-lg transition-all duration-300 mt-12 opacity-0"
+            {/* IT Maintenance Column */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={animationComplete ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: bodyDelay + 1.6 }}
+              className="border-b md:border-r border-zinc-800 p-6 md:p-8 hover:bg-zinc-900/50 transition-colors duration-300 flex flex-col items-center justify-center h-full group"
             >
-              Contact Me
-            </motion.button>
-          </motion.div>
+              <h3 className="text-lg md:text-xl font-bold text-zinc-100 mb-4" style={{ fontFamily: "var(--font-gued)" }}>
+                IT Maintenance
+              </h3>
+              <p className="text-sm md:text-base text-zinc-400 leading-relaxed mb-8" style={{ fontFamily: "var(--font-vlorentine)" }}>
+                Provide comprehensive IT support and maintenance services to keep your systems running smoothly and minimize downtime for your organization.
+              </p>
+              <div className="flex justify-center">
+                <ArrowDown size={24} className="text-orange-500" />
+              </div>
+              <motion.button
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 0, y: 20 }}
+                whileHover={{ opacity: 1, y: 0 }}
+                className="group-hover:opacity-100 group-hover:translate-y-0 bg-orange-400 text-black font-serif px-6 py-4 rounded-lg transition-all duration-300 mt-12"
+              >
+                Contact Me
+              </motion.button>
+            </motion.div>
         </div>
 
         

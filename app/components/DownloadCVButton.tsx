@@ -18,7 +18,7 @@ export default function DownloadCVButton() {
   }, []);
 
   useEffect(() => {
-    setIsWhiteBackground(pathname === '/school');
+    setIsWhiteBackground(pathname === '/education');
   }, [pathname]);
 
   return (
