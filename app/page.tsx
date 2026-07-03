@@ -198,7 +198,7 @@ export default function Home() {
       className="h-auto z-10 pl-4 md:pl-32 lg:pt-4"
       >
         <h1
-          className="text-4xl md:text-6xl lg:text-8xl font-bold text-zinc-100 mb-6 text-center md:text-left lg:text-left pt-8 md:pt-16 lg:pt-30"
+          className="text-6xl md:text-6xl lg:text-8xl font-bold text-zinc-100 mb-6 text-center md:text-left lg:text-left pt-8 md:pt-16 lg:pt-30 pt-60"
           style={{ fontFamily: "var(--font-gued)" }}
         >
           Hello, I'm {fullName}
