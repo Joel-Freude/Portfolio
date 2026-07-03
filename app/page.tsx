@@ -21,6 +21,7 @@ export default function Home() {
   const [isFreshLoad, setIsFreshLoad] = useState(true);
   const [currentJobIndex, setCurrentJobIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
   const [buttonOverWhite, setButtonOverWhite] = useState(false);
   const [isSectionVisible, setIsSectionVisible] = useState(false);
@@ -42,6 +43,7 @@ export default function Home() {
   const getDelay = useAnimationDelay();
 
   useEffect(() => {
+    setIsMounted(true);
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
     checkMobile();
     window.addEventListener('resize', checkMobile);
@@ -176,6 +178,10 @@ export default function Home() {
   const h1Delay    = isFreshLoad ? 2.1 : getDelay(0);
   const subDelay   = isFreshLoad ? 3.1 : getDelay(1);
   const bodyDelay  = isFreshLoad ? 4.1 : getDelay(2);
+
+  if (!isMounted) {
+    return null;
+  }
 
   return (
     <main className="min-h-screen w-full grid grid-rows-3">
@@ -320,7 +326,7 @@ export default function Home() {
         initial={{ opacity: 0, y: 50 }}
         animate={animationComplete ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
         transition={{ duration: 0.6, ease: "easeOut", delay: bodyDelay + 1 }}
-        className="w-full grid grid-cols-1 items-center px-4 md:px-0"
+        className="flex flex-col items-center px-4 pt-8 md:pt-0 lg:flex-row lg:gap-40 lg:items-center lg:ml-40"
       >
 
         <h2 className="text-4xl md:text-5xl mb-12 text-center">

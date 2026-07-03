@@ -266,7 +266,7 @@ export default function About() {
         <div className="absolute md:right-[80vw] line w-50 h-50 block z-0">
             <ScrollingLines animationY={[-100, -300, -100]} stroke="#c5c5c5" />
         </div>
-       <div className="flex flex-col py-[10vh] z-10000 order-2 md:order-1 px-4 md:px-0">
+       <div className="flex flex-col py-[10vh] pt-20 md:pt-[10vh] z-10 order-2 md:order-1 px-4 md:px-0">
           <div className="flex flex-col md:flex-row items-center gap-4 md:gap-64">
             <div className="flex items-center gap-4">
               <hr className="border-0.5 border-zinc-500 w-20 md:w-40 "/>
@@ -359,30 +359,30 @@ export default function About() {
         </div>
 
         <div className="gap-12 md:gap-24 px-4 md:px-12 flex flex-col items-center">
-          <div className="relative flex items-center gap-4 left-0 md:left-[28vw]">
-                <p className="font-serif text-zinc-700 text-xs md:text-sm">Other center of Tnterests</p>
-                <hr className="border border-zinc-700 w-32 md:w-180"/>
+          <div className="relative flex items-center gap-4">
+                <p className="font-serif text-zinc-700 text-sm md:text-base">Other center of Tnterests</p>
+                <hr className="border border-zinc-700 w-20 md:w-40"/>
           </div>
-          <p className="text-center w-full text-zinc-400 max-w-2xl text-xl md:text-4xl px-0 font-serif">
+          <p className="text-center text-zinc-400 max-w-2xl text-xl md:text-4xl px-0 font-serif">
               Beyond technology, I'm passionate about exploring diverse fields that enrich my creativity and my perspective about life
           </p>
 
-          <div className="space-y-6 grid grid-cols-1 md:grid-cols-3 divide-y-3 md:divide-y-0 md:divide-x-3 mx-0 md:mx-24 h-auto md:h-[60vh] border border-zinc-800">
+          <div className="space-y-6 grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x border border-zinc-800 w-full md:w-auto md:mx-24">
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, ease: "easeOut", delay: getDelay(5) }}
-              className="p-4 md:p-6 pt-8 md:pt-60 hover:pt-4 md:hover:pt-10 hover:bg-zinc-900/70 transition-all duration-300 border-b md:border-b-0 md:border-r border-zinc-800"
+              className="p-6 md:p-6 pt-8 md:pt-60 hover:bg-zinc-900/70 transition-all duration-300 border-b md:border-b-0 md:border-r border-zinc-800"
             >
-              <div className="flex flex-col items-center text-center gap-4">
-                <div className="bg-zinc-800 p-2 md:p-3 rounded-lg">
-                  <BookOpen className="text-zinc-300" size={20} />
+              <div className="flex flex-col items-center text-center gap-4 ">
+                <div className="bg-zinc-800 p-3 rounded-lg ">
+                  <BookOpen className="text-zinc-300" size={24} />
                 </div>
                 <div>
-                  <h3 className="text-base md:text-lg font-bold text-zinc-100 mb-2" style={{ fontFamily: "var(--font-gued)" }}>
+                  <h3 className="text-lg font-bold text-zinc-100 mb-2" style={{ fontFamily: "var(--font-gued)" }}>
                     Psychology
                   </h3>
-                  <p className="text-zinc-400 text-xs md:text-sm md:text-base" style={{ fontFamily: "var(--font-vlorentine)" }}>
+                  <p className="text-zinc-400 text-sm md:text-base" style={{ fontFamily: "var(--font-vlorentine)" }}>
                     Understanding human behavior and mental processes to help my in my daily life and understand my humanity
                   </p>
                 </div>
@@ -393,17 +393,17 @@ export default function About() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, ease: "easeOut", delay: getDelay(6) }}
-              className="p-4 md:p-6 pt-8 md:pt-60 hover:pt-4 md:hover:pt-10 hover:bg-zinc-900/70 transition-all duration-300 border-b md:border-b-0 md:border-r border-zinc-800"
+              className="p-6 md:p-6 pt-8 md:pt-60 hover:bg-zinc-900/70 transition-all duration-300 border-b md:border-b-0 md:border-r border-zinc-800"
             >
               <div className="flex flex-col items-center text-center gap-4 w-full md:w-[20vw]">
-                <div className="bg-zinc-800 p-2 md:p-3 rounded-lg">
-                  <Stethoscope className="text-zinc-300" size={20} />
+                <div className="bg-zinc-800 p-3 rounded-lg">
+                  <Stethoscope className="text-zinc-300" size={24} />
                 </div>
                 <div>
-                  <h3 className="text-base md:text-lg font-bold text-zinc-100 mb-2" style={{ fontFamily: "var(--font-gued)" }}>
+                  <h3 className="text-lg font-bold text-zinc-100 mb-2" style={{ fontFamily: "var(--font-gued)" }}>
                     Medecine
                   </h3>
-                  <p className="text-zinc-400 text-xs md:text-sm md:text-base" style={{ fontFamily: "var(--font-vlorentine)" }}>
+                  <p className="text-zinc-400 text-sm md:text-base" style={{ fontFamily: "var(--font-vlorentine)" }}>
                     Understanding the concepts of the living human anatomy and how to enhance my survival skills
                   </p>
                 </div>
@@ -414,17 +414,17 @@ export default function About() {
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, ease: "easeOut", delay: getDelay(7) }}
-              className="p-4 md:p-6 pt-8 md:pt-60 hover:pt-4 md:hover:pt-10 border-0.5 border-zinc-200 hover:bg-zinc-900/70 transition-all duration-300"
+              className="p-6 md:p-6 pt-8 md:pt-60 hover:bg-zinc-900/70 transition-all duration-300"
             >
               <div className="flex flex-col items-center gap-4 text-center w-full md:w-[20vw]">
-                <div className="bg-zinc-800 p-2 md:p-3 rounded-lg">
-                  <Music className="text-zinc-300" size={20} />
+                <div className="bg-zinc-800 p-3 rounded-lg ">
+                  <Music className="text-zinc-300" size={24} />
                 </div>
                 <div>
-                  <h3 className="text-base md:text-lg font-bold text-zinc-100 mb-2" style={{ fontFamily: "var(--font-gued)" }}>
+                  <h3 className="text-lg font-bold text-zinc-100 mb-2" style={{ fontFamily: "var(--font-gued)" }}>
                     Music
                   </h3>
-                  <p className="text-zinc-400 text-xs md:text-sm md:text-base" style={{ fontFamily: "var(--font-vlorentine)" }}>
+                  <p className="text-zinc-400 text-sm md:text-base" style={{ fontFamily: "var(--font-vlorentine)" }}>
                     Exploring different genres, attending concerts, and discovering new artists
                   </p>
                 </div>

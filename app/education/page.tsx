@@ -8,6 +8,7 @@ import ScrollingLines from "@/app/components/ScrollingLines";
 import PolygonBall from "../components/PolygonBall";
 
 export default function Education() {
+  const [isMounted, setIsMounted] = useState(false);
   const getDelay = useAnimationDelay();
   const [data, setData] = useState<any>(null);
   const [hoveredInstitution, setHoveredInstitution] = useState<string>("");
@@ -15,6 +16,10 @@ export default function Education() {
   const [mouseY, setMouseY] = useState<number>(0);
   const blackSectionRef = useRef<HTMLDivElement>(null);
   const whiteSectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   useEffect(() => {
     fetch("/data/academic-journey.json")
@@ -65,6 +70,8 @@ export default function Education() {
   }, []);
 
   if (!data) return null;
+
+  if (!isMounted) return null;
 
   return (
     <div className="min-h-screen w-full">

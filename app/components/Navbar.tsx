@@ -16,6 +16,7 @@ function getInitials(name: string): string {
 export default function Navbar() {
   const [isHovered, setIsHovered] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
   const [elementPositions, setElementPositions] = useState({
     logo: false,
     pageLabel: false,
@@ -24,6 +25,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
+    setIsMounted(true);
     const checkDesktop = () => setIsDesktop(window.innerWidth >= 768);
     checkDesktop();
     window.addEventListener('resize', checkDesktop);
@@ -134,12 +136,16 @@ export default function Navbar() {
   const fullName = "FOFIE JOUNEWE JOEL FREUDE";
   const initials = getInitials(fullName);
 
+  if (!isMounted) {
+    return null;
+  }
+
   return (
     <motion.nav
       initial={{ x: -100, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="fixed left-4 top-0 w-30 z-50 bg-transparent  flex flex-col items-start justify-between py-8 gap-20 ml-4 md:flex"
+      className="fixed left-6 md:left-8 top-0 w-auto z-50 bg-transparent flex flex-col items-start justify-between py-8 gap-12 md:gap-40 md:flex"
       style={{ display: isDesktop ? 'flex' : 'none' }}
     >
 

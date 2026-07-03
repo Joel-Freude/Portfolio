@@ -3,8 +3,24 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Home, ArrowLeft } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export default function NotFound() {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  const handleGoBack = () => {
+    if (typeof window !== 'undefined') {
+      window.history.back();
+    }
+  };
+
+  if (!isMounted) {
+    return null;
+  }
   return (
     <div className="min-h-screen w-full flex flex-col items-center justify-center bg-zinc-950 px-4">
       <motion.div
@@ -57,7 +73,7 @@ export default function NotFound() {
             Back to Home
           </Link>
           <button
-            onClick={() => window.history.back()}
+            onClick={handleGoBack}
             className="flex items-center gap-2 px-6 py-3 border border-zinc-700 text-zinc-300 font-sans rounded-lg hover:bg-zinc-900 transition-colors"
           >
             <ArrowLeft size={20} />
