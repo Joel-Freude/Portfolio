@@ -9,6 +9,7 @@ import PolygonBall from "../components/PolygonBall";
 
 export default function Education() {
   const [isMounted, setIsMounted] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
   const getDelay = useAnimationDelay();
   const [data, setData] = useState<any>(null);
   const [hoveredInstitution, setHoveredInstitution] = useState<string>("");
@@ -19,6 +20,10 @@ export default function Education() {
 
   useEffect(() => {
     setIsMounted(true);
+    const checkDesktop = () => setIsDesktop(window.innerWidth >= 768);
+    checkDesktop();
+    window.addEventListener('resize', checkDesktop);
+    return () => window.removeEventListener('resize', checkDesktop);
   }, []);
 
   useEffect(() => {
@@ -120,6 +125,7 @@ export default function Education() {
                   src={inst.image} 
                   alt={inst.name} 
                   className="w-full h-[200px] md:h-auto object-cover transition-transform duration-300 group-hover:scale-110"
+                  style={isDesktop && inst.height ? { height: inst.height } : undefined}
                 />
                 <div className="text-left text-black p-3 md:p-4">
                     <h4 className="font-bold font-serif text-sm md:text-lg">{inst.name}</h4>
