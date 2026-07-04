@@ -145,7 +145,7 @@ export default function Navbar() {
       initial={{ x: -100, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="fixed left-6 md:left-8 top-0 w-auto z-50 bg-transparent flex flex-col items-start justify-between py-8 gap-12 md:gap-40 md:flex"
+      className="fixed left-6 md:left-8 top-0 w-auto z-50 bg-transparent flex flex-col items-start justify-between py-8 gap-12 md:gap-[8vw] md:flex"
       style={{ display: isDesktop ? 'flex' : 'none' }}
     >
 

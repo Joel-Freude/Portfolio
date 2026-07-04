@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useAnimationDelay } from "@/app/components/useAnimationDelay";
 import PolygonBall from "../components/PolygonBall";
 import ScrollingLines from "../components/ScrollingLines";
+import DownloadCVButton from "../components/DownloadCVButton";
 
 export default function About() {
   const getDelay = useAnimationDelay();
@@ -163,6 +164,7 @@ export default function About() {
 
   </div>
 </div>
+          <DownloadCVButton />
           <div className="flex flex-row gap-4 md:gap-6 md:gap-8">
             <motion.div
             className="relative w-12 h-12 md:w-16 md:h-16 cursor-pointer"
@@ -263,7 +265,7 @@ export default function About() {
         transition={{ duration: 0.6, ease: "easeOut", delay: getDelay(3) }}
         className="w-full max-w-8xl flex flex-col md:flex-row bg-white relative overflow-hidden "
       >
-        <div className="absolute md:right-[80vw] line w-50 h-50 block z-0">
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 md:left-auto md:right-[80vw] md:top-auto md:translate-x-0 md:translate-y-0 line w-50 h-50 block z-0">
             <ScrollingLines animationY={[-100, -300, -100]} stroke="#c5c5c5" />
         </div>
        <div className="flex flex-col py-[10vh] pt-20 md:pt-[10vh] z-10 order-2 md:order-1 px-4 md:px-0">
@@ -342,7 +344,7 @@ export default function About() {
            animate={{ opacity: 1, scale: 1 }}
            exit={{ opacity: 0, scale: 1.05 }}
            transition={{ duration: 0.4, ease: "easeOut" }}
-           className="w-full md:w-[50vw] h-[30vh] md:h-[90vh] object-cover order-1 md:order-2"
+           className="w-full md:w-[50vw] h-[30vh] md:h-[90vh] object-cover order-1 md:order-2 z-10"
          />
        </AnimatePresence>
       </motion.section>
