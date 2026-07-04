@@ -239,7 +239,7 @@ export default function Home() {
       </motion.div>
       
 
-      <div className=" absolute z-0 lg:w-[100%] lg:h-[98%] w-[200%] h-[108%] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+      <div className=" absolute z-0 lg:w-[100%] lg:h-[98%] w-[100%] h-[108%] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
         <PolygonBall sphereSize={isMobile ? 3 : 5}/>
       </div>
       
