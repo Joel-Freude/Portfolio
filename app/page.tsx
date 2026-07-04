@@ -127,11 +127,13 @@ export default function Home() {
       }
     );
 
-    observers.forEach(({ ref }) => {
-      if (ref.current) {
-        intersectionObserver.observe(ref.current);
-      }
-    });
+    if (isMounted) {
+      observers.forEach(({ ref }) => {
+        if (ref.current) {
+          intersectionObserver.observe(ref.current);
+        }
+      });
+    }
 
     return () => {
       observers.forEach(({ ref }) => {
@@ -140,7 +142,7 @@ export default function Home() {
         }
       });
     };
-  }, []);
+  }, [isMounted]);
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
