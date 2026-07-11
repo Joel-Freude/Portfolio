@@ -50,6 +50,18 @@ export default function About() {
         { icon: <FaServer className="text-zinc-600" size={18} />, name: "Server Management" },
         { icon: <Globe className="text-zinc-600" size={18} />, name: "Routing & Switching" },
       ]
+    },
+    {
+      id: 3,
+      title: "Mobile Dev",
+      image: "/images/Mobile Dev.jpg",
+      iconGradient: "from-orange-500 to-red-500",
+      skills: [
+        { icon: <Smartphone className="text-zinc-600" size={18} />, name: "Cross-platform mobile application development using React Native and Flutter" },
+        { icon: <Cpu className="text-zinc-600" size={18} />, name: "Native mobile app development for iOS and Android platforms" },
+        { icon: <Code className="text-zinc-600" size={18} />, name: "Mobile UI/UX design and implementation with modern frameworks" },
+        { icon: <Database className="text-zinc-600" size={18} />, name: "Integration with backend APIs and local database management" },
+      ]
     }
   ];
 

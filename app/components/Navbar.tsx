@@ -96,7 +96,6 @@ export default function Navbar() {
         setElementPositions(prev => ({ ...prev, pageLabel: labelOverWhite }));
       }
 
-      // Check each nav item position against all white sections
       const navItemElements = document.querySelectorAll('[data-element^="nav-item"]');
       const newNavItems = [false, false, false, false];
       navItemElements.forEach((item, index) => {
@@ -145,7 +144,7 @@ export default function Navbar() {
       initial={{ x: -100, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="fixed left-6 md:left-8 top-0 w-auto z-50 bg-transparent flex flex-col items-start justify-between py-8 gap-12 md:gap-[8vw] md:flex"
+      className="fixed left-6 md:left-8 top-0 w-auto z-50 bg-transparent flex flex-col items-start justify-between py-8 gap-2 md:gap-[4vw] md:flex"
       style={{ display: isDesktop ? 'flex' : 'none' }}
     >
 

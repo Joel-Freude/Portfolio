@@ -8,24 +8,28 @@
           "name": "University of Yaounde I",
           "period": "2016-2017",
           "image": "/images/Universities/UY1.jpg",
+          "description": "After obtaining my GCE Advanced Level, I needed a guidance to choose the right course and find my part. I did Chemistry course in this particular university for one year and I wasn't really fun of it",
           "height": "420px"
         },
         {
           "name": "Higher Institute of Science Technology and Ethics",
           "period": "2018-2020",
           "image": "/images/Universities/IUSTE.jpg",
+          "description": "After one year at University of Yaounde I, I decided to change my university and look for a better opportunity. I joined the Higher Institute of Science Technology and Ethics and did Computer Science for two years specially the Industrial Computing course. During the intership for the preparation for my BTS, I acquired the skills of IT supports that helps me till today for my computer troubleshooting.",
           "height": "780px"
         },
         {
           "name": "Siantou Higher Institute",
           "period": "2020-2021",
           "image": "/images/Universities/SIANTOU.jpg",
+          "description": "After two years at Higher Institute of Science Technology and Ethics, I decided to change my university to continue my third year Industrial Computing course. I joined the Siantou Higher Institute and together with the intenship done in Globetech SARL, I've acquired more skills in IT especially the electronic troubleshooting skill.",
           "height": "780px"
         },
         {
           "name": "Primetec Academy",
           "period": "2023-2025",
           "image": "/images/Universities/PRIMETEC.jpg",
+          "description":"I joined Primetec Academy to start a new IT course which is Network Administration and Security. I've acquired more skills in IT especially the network administration and security skills in two years. ",
           "height": "420px"
         }
       ]
@@ -74,6 +78,7 @@
               "date": "05 Jul 2024",
               "image": "/images/Cisco/1.png"
             },
+            
             {
               "name": "Network Defense",
               "description":"This certificate validates the ability to implement and manage network security measures to protect against unauthorized access and cyber threats.",
@@ -97,6 +102,12 @@
               "description":"This certificate validates the ability to configure and manage network devices to ensure secure and reliable network operation.",
               "date": "20 Sep 2024",
               "image": "/images/Cisco/5.png"
+            },
+            {
+              "name": "Ethical Hacker",
+              "description":"This certificate validates the ability to identify and exploit vulnerabilities in systems and networks from an ethical perspective to help organizations improve their security posture.",
+              "date": "25 Oct 2025",
+              "image": "/images/Cisco/6.png"
             }
           ]
         }

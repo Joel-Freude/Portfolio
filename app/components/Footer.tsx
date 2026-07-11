@@ -18,9 +18,9 @@ export default function Footer() {
     <footer className="w-full bg-zinc-950 text-zinc-300 py-8 md:py-16 px-4 md:px-8 mt-auto">
       <div className="max-w-7xl mx-auto">
         {/* Main Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 md:gap-16 lg:gap-32 mb-8 md:mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 md:gap-40 lg:gap-32 mb-8 md:mb-16 w-[120vw]">
           {/* Contact*/}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-1 ">
             <h2 className="text-2xl md:text-4xl font-bold text-white mb-2 md:mb-4 font-serif">
               Joel Freude.
             </h2>
@@ -33,7 +33,7 @@ export default function Footer() {
                 placeholder="ENTER YOUR EMAIL"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 px-3 md:px-4 py-2 md:py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-xs md:text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-orange-400 font-sans"
+                className="flex-1 px-3 w-40 md:px-4 py-2 md:py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-xs md:text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-orange-400 font-sans"
               />
               <button
                 type="submit"
