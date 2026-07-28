@@ -1,19 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { Resend } from 'resend';
 
 export async function POST(request: NextRequest) {
   try {
-    const apiKey = process.env.RESEND_API_KEY;
+    const apiKey = process.env.OPENMAIL_API_KEY;
     
     if (!apiKey) {
       return NextResponse.json(
-        { error: 'Resend API key is not configured' },
+        { error: 'OpenMail API key is not configured' },
         { status: 500 }
       );
     }
 
-    const resend = new Resend(apiKey);
-    
     const body = await request.json();
     const { name, email, subject, message } = body;
 
@@ -24,22 +21,40 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const data = await resend.emails.send({
-      from: 'Portfolio Contact <onboarding@resend.dev>',
-      to: 'fofie_joel@yahoo.fr',
-      subject: `Portfolio Contact: ${subject}`,
-      html: `
-        <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Subject:</strong> ${subject}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message}</p>
-      `,
-      replyTo: email,
+    const data = await fetch('https://api.openmail.com/v1/emails', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        from: 'Portfolio Contact <onboarding@openmail.com>',
+        to: 'fofie_joel@yahoo.fr',
+        subject: `Portfolio Contact: ${subject}`,
+        html: `
+          <h2>New Contact Form Submission</h2>
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Subject:</strong> ${subject}</p>
+          <p><strong>Message:</strong></p>
+          <p>${message}</p>
+        `,
+        replyTo: email,
+      }),
     });
 
-    return NextResponse.json({ success: true, data });
+    if (!data.ok) {
+      const error = await data.text();
+      console.error('OpenMail API error:', error);
+      console.error('Status:', data.status);
+      return NextResponse.json(
+        { error: 'Failed to send email', details: error },
+        { status: 500 }
+      );
+    }
+
+    const result = await data.json();
+    return NextResponse.json({ success: true, data: result });
   } catch (error) {
     console.error('Error sending email:', error);
     return NextResponse.json(

@@ -57,14 +57,14 @@ export default function Contact() {
       <div className="hidden md:flex w-full">
         <img src="/images/Moi.jpg" alt="my image" className="opacity-20 w-[50%] h-full object-cover" />
         <div className="contact flex flex-col gap-6 w-[50%] px-20 mb-[10%] pt-50 z-100">
-          <div className=" absolute z-0 lg:w-[100%] lg:h-[98%] w-[200%] h-[108%] left-1/3 bottom-[50vh] ">
+          <div className=" absolute -z-1 lg:w-[100%] lg:h-[108%] w-[50%] h-[108%] left-1/3 bottom-[50vh] ">
             <PolygonBall sphereSize={1.5} verticalEnabled={true} verticalAmplitude={0.2} verticalSpeed={0.1}/>
           </div>
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="z-10"
+            className="z-100"
           >
             <h1 className="text-5xl font-bold font-sans text-zinc-300 mb-2">Get In Touch</h1>
             <p className="text-zinc-500 font-sans">I'd love to hear from you. Send me a message!</p>
