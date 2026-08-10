@@ -1,6 +1,6 @@
 # Portfolio Website
 
-A modern, animated portfolio website built with Next.js, featuring smooth animations, dynamic navigation, and interactive elements.
+My professional modern, animated portfolio website exhibiting my professional background and my hobbies. It describes my professional passions, academic background, online certificates and personal projects from scratch
 
 ## Features
 
