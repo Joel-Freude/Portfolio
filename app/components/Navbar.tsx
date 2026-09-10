@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { locales } from "@/i18n/locales";
+import { useTranslations } from "next-intl";
 
 function getInitials(name: string): string {
   return name
@@ -26,6 +27,8 @@ export default function Navbar() {
   });
   const pathname = usePathname();
   const locale = locales.includes(pathname.split("/")[1] as any) ? pathname.split("/")[1] : "en";
+  const t = useTranslations('nav');
+  const tl = useTranslations('pageLabels');
 
   useEffect(() => {
     setIsMounted(true);
@@ -120,19 +123,19 @@ export default function Navbar() {
   }, []);
   
   const getPageLabel = () => {
-    if (pathname === "/" || pathname === `/${locale}`) return "HOME";
-    if (pathname.includes("/about")) return "ABOUT";
-    if (pathname.includes("/education")) return "EDUCATION";
-    if (pathname.includes("/projects")) return "PROJECTS";
-    if (pathname.includes("/contact")) return "CONTACT";
-    return "HOME";
+    if (pathname === "/" || pathname === `/${locale}`) return tl('home');
+    if (pathname.includes("/about")) return tl('about');
+    if (pathname.includes("/education")) return tl('education');
+    if (pathname.includes("/projects")) return tl('projects');
+    if (pathname.includes("/contact")) return tl('contact');
+    return tl('home');
   };
    
   const navItems = [
-    { icon: <User style={{ color: elementPositions.navItems[0] ? '#52525b' : '#ffffff' }} />, href: `/${locale}/about`, label: "About" },
-    { icon: <GraduationCap style={{ color: elementPositions.navItems[1] ? '#52525b' : '#ffffff' }} />, href: `/${locale}/education`, label: "education" },
-    { icon: <Briefcase style={{ color: elementPositions.navItems[2] ? '#52525b' : '#ffffff' }} />, href: `/${locale}/projects`, label: "Projects" },
-    { icon: <Mail style={{ color: elementPositions.navItems[3] ? '#52525b' : '#ffffff' }} />, href: `/${locale}/contact`, label: "Contact" },
+    { icon: <User style={{ color: elementPositions.navItems[0] ? '#52525b' : '#ffffff' }} />, href: `/${locale}/about`, label: t('about') },
+    { icon: <GraduationCap style={{ color: elementPositions.navItems[1] ? '#52525b' : '#ffffff' }} />, href: `/${locale}/education`, label: t('education') },
+    { icon: <Briefcase style={{ color: elementPositions.navItems[2] ? '#52525b' : '#ffffff' }} />, href: `/${locale}/projects`, label: t('projects') },
+    { icon: <Mail style={{ color: elementPositions.navItems[3] ? '#52525b' : '#ffffff' }} />, href: `/${locale}/contact`, label: t('contact') },
   ];
 
   const fullName = "FOFIE JOUNEWE JOEL FREUDE";

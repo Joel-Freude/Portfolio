@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { locales } from "@/i18n/locales";
+import { useTranslations } from "next-intl";
 
 function getInitials(name: string): string {
   return name
@@ -20,22 +21,24 @@ export default function MobileNavbar() {
   const [isHovered, setIsHovered] = useState(false);
   const pathname = usePathname();
   const locale = locales.includes(pathname.split("/")[1] as any) ? pathname.split("/")[1] : "en";
+  const t = useTranslations('nav');
+  const tl = useTranslations('pageLabels');
 
   const getPageLabel = () => {
-    if (pathname === "/" || pathname === `/${locale}`) return "HOME";
-    if (pathname.includes("/about")) return "ABOUT";
-    if (pathname.includes("/education")) return "EDUCATION";
-    if (pathname.includes("/projects")) return "PROJECTS";
-    if (pathname.includes("/contact")) return "CONTACT";
-    return "HOME";
+    if (pathname === "/" || pathname === `/${locale}`) return tl('home');
+    if (pathname.includes("/about")) return tl('about');
+    if (pathname.includes("/education")) return tl('education');
+    if (pathname.includes("/projects")) return tl('projects');
+    if (pathname.includes("/contact")) return tl('contact');
+    return tl('home');
   };
 
   const navItems = [
-    { icon: <Home size={24} />, href: `/${locale}`, label: "Home" },
-    { icon: <User size={24} />, href: `/${locale}/about`, label: "About" },
-    { icon: <GraduationCap size={24} />, href: `/${locale}/education`, label: "Education" },
-    { icon: <Briefcase size={24} />, href: `/${locale}/projects`, label: "Projects" },
-    { icon: <Mail size={24} />, href: `/${locale}/contact`, label: "Contact" },
+    { icon: <Home size={24} />, href: `/${locale}`, label: t('home') },
+    { icon: <User size={24} />, href: `/${locale}/about`, label: t('about') },
+    { icon: <GraduationCap size={24} />, href: `/${locale}/education`, label: t('education') },
+    { icon: <Briefcase size={24} />, href: `/${locale}/projects`, label: t('projects') },
+    { icon: <Mail size={24} />, href: `/${locale}/contact`, label: t('contact') },
   ];
 
   const fullName = "FOFIE JOUNEWE JOEL FREUDE";

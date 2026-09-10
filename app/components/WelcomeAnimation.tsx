@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
 export default function WelcomeAnimation({ onAnimationComplete }: { onAnimationComplete: () => void }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -8,8 +9,9 @@ export default function WelcomeAnimation({ onAnimationComplete }: { onAnimationC
   const [visibleWordCount, setVisibleWordCount] = useState(0);
   const [showName, setShowName] = useState(false);
   const [fadeWordsYellow, setFadeWordsYellow] = useState(false);
+  const t = useTranslations('welcome');
 
-  const words = ["Welcome", "to", "my", "Portfolio"];
+  const words = [t('welcome'), t('to'), t('my'), t('portfolio')];
 
   useEffect(() => {
     setIsVisible(true);

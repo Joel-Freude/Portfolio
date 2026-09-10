@@ -445,5 +445,18 @@
     "phone": "+237 650812141",
     "newsletterPlaceholder": "ENTREZ VOTRE EMAIL",
     "copyright": "© 2026 FOFIE JOUNEWE JOEL FREUDE. Tous droits réservés."
+  },
+  "pageLabels": {
+    "home": "ACCUEIL",
+    "about": "À PROPOS",
+    "education": "ÉDUCATION",
+    "projects": "PROJETS",
+    "contact": "CONTACT"
+  },
+  "welcome": {
+    "welcome": "Bienvenue",
+    "to": "dans",
+    "my": "mon",
+    "portfolio": "Portfolio"
   }
 }

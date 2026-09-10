@@ -5,11 +5,14 @@ import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { locales } from "@/i18n/locales";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
   const pathname = usePathname();
   const locale = locales.includes(pathname.split("/")[1] as any) ? pathname.split("/")[1] : "en";
+  const t = useTranslations('footer');
+  const tn = useTranslations('nav');
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
@@ -28,12 +31,12 @@ export default function Footer() {
               Joel Freude.
             </h2>
             <p className="text-xs md:text-sm text-zinc-400 mb-4 md:mb-6 font-sans">
-              Contact me for your next project
+              {t('tagline')}
             </p>
             <form onSubmit={handleSubscribe} className="flex gap-2">
               <input
                 type="email"
-                placeholder="ENTER YOUR EMAIL"
+                placeholder={t('newsletterPlaceholder')}
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="flex-1 px-3 w-40 md:px-4 py-2 md:py-3 bg-zinc-800 border border-zinc-700 rounded-lg text-xs md:text-sm text-white placeholder-zinc-500 focus:outline-none focus:border-orange-400 font-sans"
@@ -49,58 +52,58 @@ export default function Footer() {
 
           <div className="grid grid-cols-2 gap-8 md:gap-16 lg:gap-30 lg:ml-0">
             {/* Navigation Links */}
-              <div>
-                <h4 className="text-base md:text-lg font-semibold text-white mb-4 md:mb-6 font-serif">Navigation</h4>
+             <div>
+                <h4 className="text-base md:text-lg font-semibold text-white mb-4 md:mb-6 font-serif">{t('navigation')}</h4>
                  <ul className="space-y-2 md:space-y-3 font-sans">
                    <li>
                      <Link href={`/${locale}`} className="text-xs md:text-sm hover:text-white transition-colors font-medium">
-                       Home
+                       {tn('home')}
                      </Link>
                    </li>
                    <li>
                      <Link href={`/${locale}/about`} className="text-xs md:text-sm hover:text-white transition-colors">
-                       About
+                       {tn('about')}
                      </Link>
                    </li>
                    <li>
                      <Link href={`/${locale}/education`} className="text-xs md:text-sm hover:text-white transition-colors">
-                       Education
+                       {tn('education')}
                      </Link>
                    </li>
                    <li>
                      <Link href={`/${locale}/projects`} className="text-xs md:text-sm hover:text-white transition-colors">
-                       Projects
+                       {tn('projects')}
                      </Link>
                    </li>
                    
                    <li>
                      <Link href={`/${locale}/contact`} className="text-xs md:text-sm hover:text-white transition-colors">
-                       Contact
+                       {tn('contact')}
                      </Link>
                    </li>
                  </ul>
-              </div>
+               </div>
 
 
             {/* Contact Info */}
               <div>
-                <h4 className="text-base md:text-lg font-semibold text-white mb-4 md:mb-6 font-serif">Contact</h4>
+                <h4 className="text-base md:text-lg font-semibold text-white mb-4 md:mb-6 font-serif">{t('contactInfo')}</h4>
                 <div className="space-y-3 md:space-y-4">
                   <div className="flex items-start gap-2 md:gap-3">
                     <MapPin className="w-4 h-4 md:w-5 md:h-5 text-orange-400 mt-1 flex-shrink-0 font-sans" />
                     <div>
-                      <p className="text-xs md:text-sm text-zinc-400 font-sans">Yaoundé, Cameroon</p>
+                      <p className="text-xs md:text-sm text-zinc-400 font-sans">{t('location')}</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-2 md:gap-3">
                     <Mail className="w-4 h-4 md:w-5 md:h-5 text-orange-400 flex-shrink-0 font-sans" />
                     <a href="mailto:contact@example.com" className="text-xs md:text-sm text-zinc-400 hover:text-white transition-colors font-sans">
-                      fofie_joel&#64;yahoo.fr
+                      {t('email')}
                     </a>
                   </div>
                   <div className="flex items-center gap-2 md:gap-3">
                     <Phone className="w-4 h-4 md:w-5 md:h-5 text-orange-400 flex-shrink-0 font-sans" />
-                    <p className="text-xs md:text-sm text-zinc-400 font-sans">+237 650812141</p>
+                    <p className="text-xs md:text-sm text-zinc-400 font-sans">{t('phone')}</p>
                   </div>
                 </div>
               </div>
@@ -147,7 +150,7 @@ export default function Footer() {
             {/* Copyright */}
             <div className="flex items-center gap-4">
               <p className="text-xs md:text-sm text-zinc-500 flex items-center gap-2 font-sans text-center md:text-left">
-                © {new Date().getFullYear()} FOFIE JOUNEWE JOEL FREUDE. All rights reserved.
+                {t('copyright', { year: new Date().getFullYear() })}
               </p>
             </div>
           </div>

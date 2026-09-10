@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
 import { PageLabelAnimation } from "./WelcomeAnimation";
+import { useTranslations } from "next-intl";
 
 // Shared transition config
 const SLIDE_DISTANCE = 60;
@@ -17,6 +18,7 @@ export default function PageTransition({ children }: { children: React.ReactNode
   const prevPathnameRef = useRef(pathname);
   const [phase, setPhase] = useState<Phase>("entering");
   const [displayedChildren, setDisplayedChildren] = useState(children);
+  const tl = useTranslations('pageLabels');
 
   const getPageLabel = (path: string) => {
     const segments = path.split("/");
@@ -24,13 +26,13 @@ export default function PageTransition({ children }: { children: React.ReactNode
     const cleanPath = segments.slice(2).join("/") || "home";
     
     const map: Record<string, string> = {
-      "home": "HOME",
-      "about": "ABOUT",
-      "education": "EDUCATION",
-      "projects": "PROJECTS",
-      "contact": "CONTACT",
+      "home": tl('home'),
+      "about": tl('about'),
+      "education": tl('education'),
+      "projects": tl('projects'),
+      "contact": tl('contact'),
     };
-    return map[cleanPath] ?? "HOME";
+    return map[cleanPath] ?? tl('home');
   };
 
   useEffect(() => {

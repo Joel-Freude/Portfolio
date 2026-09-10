@@ -329,5 +329,18 @@
         }
       }
     }
+  },
+  "pageLabels": {
+    "home": "HOME",
+    "about": "ABOUT",
+    "education": "EDUCATION",
+    "projects": "PROJECTS",
+    "contact": "CONTACT"
+  },
+  "welcome": {
+    "welcome": "Welcome",
+    "to": "to",
+    "my": "my",
+    "portfolio": "Portfolio"
   }
 }
