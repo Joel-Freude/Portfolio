@@ -1,0 +1,296 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "education": "Education",
+    "projects": "Projects",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Welcome",
+    "subtitle": "Portfolio",
+    "description": "Full Stack Developer & UI/UX Designer",
+    "tagline": "What we offer",
+    "greeting": "Hello, I'm {name}",
+    "jobTitles": {
+      "networkAdministrator": "Network Administrator",
+      "webDesigner": "Web Designer",
+      "mobileAppDev": "Mobile App Dev"
+    },
+    "passion": "Passionate about creating digital experiences that matter and resolve real-world problems.",
+    "approachTitle": "My Approach",
+    "approachParagraph1": "I blend technical expertise with creative problem-solving to build solutions that actually work for users and businesses. Every project starts with understanding the core problem.",
+    "approachParagraph2": "From network architecture to mobile applications, I approach every project with a user-centered mindset, clean code standards, and attention to detail.",
+    "buildingWithPurpose": "Building with Purpose",
+    "servicesTitle": "My Services",
+    "contactButton": "Contact Me",
+    "backToTop": "BACK TO TOP",
+    "from": "From",
+    "fcfa": "FCFA",
+    "explore": "Explore",
+    "more": "+{count} more",
+    "subservices": "Subservices",
+    "minFcfa": "Min FCFA",
+    "steps": {
+      "contact": "Contact",
+      "service": "Service",
+      "share": "Share"
+    },
+    "yourDetails": "Your details",
+    "pleaseEnterDetails": "Please enter your details to continue",
+    "fullName": "Full Name",
+    "emailAddress": "Email Address",
+    "phoneNumber": "Phone Number",
+    "city": "City",
+    "continueToServices": "Continue to Services →",
+    "selectServices": "Select Services",
+    "chooseServices": "Choose the services you need",
+    "service": "Service",
+    "priceFcfa": "Price (FCFA)",
+    "add": "Add",
+    "total": "Total",
+    "generateQuote": "Generate Quote",
+    "sendQuote": "Send your quote",
+    "chooseHowToReach": "Choose how to reach us",
+    "pdfQuoteReady": "PDF Quote Ready",
+    "preparedFor": "Prepared for {name}",
+    "download": "Download",
+    "sendVia": "Send via",
+    "sendViaWhatsApp": "Send via WhatsApp",
+    "pdfAutoDownloads": "PDF downloads automatically",
+    "sendViaEmail": "Send via Email",
+    "sending": "Sending...",
+    "whatsappInfo": "WhatsApp opens in a new tab. Email sends directly to",
+    "services": {
+      "IT Maintenance": {
+        "name": "IT Maintenance",
+        "description": "Comprehensive IT support and maintenance to keep your systems running smoothly, secure, and up to date.",
+        "subservices": {
+          "0": "Full Hardware Diagnostic & Report",
+          "1": "Software Diagnostic & Troubleshooting",
+          "2": "OS Installation & Configuration",
+          "3": "OS Security & Functional Updates",
+          "4": "Driver Installation & Optimization",
+          "5": "Virus & Malware Removal",
+          "6": "Data Backup & Recovery",
+          "7": "Application Setup & Configuration",
+          "8": "Performance Tuning & Cleanup"
+        }
+      },
+      "Web Design": {
+        "name": "Web Design",
+        "description": "Stunning, responsive websites crafted with modern design principles for great user experience and real results.",
+        "subservices": {
+          "0": "Brand Identity & Strategy",
+          "1": "Logo Design & Style Guide",
+          "2": "UI/UX Wireframing",
+          "3": "Responsive Web Design (Mobile & Desktop)",
+          "4": "Landing Page Design",
+          "5": "E-commerce Interface Design",
+          "6": "Design-to-Code Handoff (Figma/Zeplin)",
+          "7": "Prototype & User Flow Design"
+        }
+      },
+      "Network Administration": {
+        "name": "Network Administration",
+        "description": "Secure, high-performance network infrastructure design, deployment, and ongoing management for your business.",
+        "subservices": {
+          "0": "Network Architecture Design",
+          "1": "Network Simulation & Modeling",
+          "2": "Router & Switch Configuration",
+          "3": "Firewall Setup & Security Hardening",
+          "4": "VPN Configuration & Remote Access",
+          "5": "Network Monitoring & Alerting Setup",
+          "6": "Wi-Fi Planning & Access Point Deployment",
+          "7": "Network Audit & Vulnerability Assessment"
+        }
+      }
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "About",
+    "tagline": "About Me",
+    "description": "I am a computer passionate who love to create innovative digital solutions with thoughtful design, clean code and user-centered approach to satisfy the needs of users and businesses that seek to make a positive impact.",
+    "hobbies": "Hobbies",
+    "hobbyChess": "Chess",
+    "hobbyDrawing": "Drawing",
+    "hobbyReading": "Reading",
+    "hobbiesList": {
+      "chess": "Chess",
+      "drawing": "Drawing",
+      "reading": "Reading"
+    },
+    "techStack": "TechStack",
+    "associatedSkills": "Associated Skills",
+    "itSupportTitle": "IT Support",
+    "itSupportDescription": "I specialize in providing comprehensive IT support solutions, ensuring your technology infrastructure runs smoothly and efficiently. I'm good with known Operating systems (Windows, MacOS and Linux) and other main hardware diagnostics and maintenance.",
+    "webDesignerTitle": "Web Designer",
+    "webDesignerDescription": "I use my design skills to create visually stunning and user-friendly websites with modern design principles. I specialize in creating responsive layouts, smooth animations, and intuitive user experiences that engage and delight visitors.",
+    "networkAdminTitle": "Network Admin",
+    "networkAdminDescription": "I design, implement, deploy, and secure robust network infrastructures for small, medium and large enterprises. I ensure optimal performance, security, and reliability for enterprise networks through expert configuration and monitoring.",
+    "mobileDevTitle": "Mobile Dev",
+    "mobileDevDescription": "I develop cross-platform and native mobile applications that deliver seamless user experiences. I am proficient in React Native, Flutter, and mobile design best practices for iOS and Android.",
+    "otherInterests": "Other center of Interests",
+    "otherInterestsDescription": "Beyond technology, I'm passionate about exploring diverse fields that enrich my creativity and my perspective about life",
+    "psychology": "Psychology",
+    "psychologyDescription": "Understanding human behavior and mental processes to help my in my daily life and understand my humanity",
+    "medicine": "Medecine",
+    "medicineDescription": "Understanding the concepts of the living human anatomy and how to enhance my survival skills",
+    "music": "Music",
+    "musicDescription": "Exploring different genres, attending concerts, and discovering new artists",
+    "interests": {
+      "psychology": {
+        "title": "Psychology",
+        "description": "Understanding human behavior and mental processes to help my in my daily life and understand my humanity"
+      },
+      "medicine": {
+        "title": "Medicine",
+        "description": "Understanding the concepts of the living human anatomy and how to enhance my survival skills"
+      },
+      "music": {
+        "title": "Music",
+        "description": "Exploring different genres, attending concerts, and discovering new artists"
+      }
+    },
+    "skillDescriptions": {
+      "itSupport": "I specialize in providing comprehensive IT support solutions, ensuring your technology infrastructure runs smoothly and efficiently. I'm good with what concern known Operating systems(Windows, MacOS and Linux) and other main hardware diagnostics and maintenance.",
+      "webDesigner": "I use my design skills to create my visually stunning and user-friendly websites with modern design principles. I specialize in creating responsive layouts, smooth animations, and intuitive user experiences that engage and delight visitors giving an amazing visual experience to my network audience.",
+      "networkAdmin": "I design, implement, deploy, and secure robust network infrastructures for small, medium and large enterprises. I ensure optimal performance, security, and reliability for enterprise networks through expert configuration and monitoring in order to guarantee confidentiality, integrity and availability.",
+      "mobileDev": "I design, implement, and optimize cross-platform and native mobile applications for iOS and Android using modern frameworks. I focus on performance, usability, and maintainability to deliver mobile experiences that feel native and responsive."
+    }
+  },
+  "footer": {
+    "tagline": "Contact me for your next project",
+    "navigation": "Navigation",
+    "contactInfo": "Contact",
+    "location": "Yaoundé, Cameroon",
+    "email": "fofie_joel@yahoo.fr",
+    "phone": "+237 650812141",
+    "newsletterPlaceholder": "ENTER YOUR EMAIL",
+    "copyright": "© {year} FOFIE JOUNEWE JOEL FREUDE. All rights reserved."
+  },
+  "education": {
+    "title": "Education",
+    "description": "My academic journey",
+    "school": "SCHOOL",
+    "universityLevel": "University Level",
+    "certifications": "Certifications",
+    "category": "Category"
+  },
+  "projects": {
+    "title": "Projects",
+    "description": "Check out my work",
+    "webDesign": "Web Design Projects",
+    "mobileDev": "Mobile Development Projects",
+    "more": "more",
+    "backToProjects": "← Back to Projects",
+    "technologies": "Technologies Used",
+    "status": "Status",
+    "projectLink": "Project Link"
+  },
+  "services": {
+    "title": "Services",
+    "description": "What I offer"
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Get in touch",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "sendMessage": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "Failed to send message. Please try again.",
+    "placeholders": {
+      "name": "Your name",
+      "email": "your@email.com",
+      "subject": "What's this about?",
+      "message": "Your message..."
+    }
+  },
+  "ServicesSection": {
+    "tagline": "What we offer",
+    "title": "Our Services",
+    "description": "Select a service below to explore our offerings and create your custom package.",
+    "subservices": "Services",
+    "minFcfa": "Min FCFA",
+    "from": "From",
+    "fcfa": "FCFA",
+    "explore": "Explore",
+    "more": "+{count} more",
+    "yourDetails": "Your details",
+    "pleaseEnterDetails": "Please enter your details to continue",
+    "fullName": "Full Name",
+    "emailAddress": "Email Address",
+    "phoneNumber": "Phone Number",
+    "city": "City",
+    "continueToServices": "Continue to Services →",
+    "selectServices": "Select Services",
+    "chooseServices": "Choose the services you need",
+    "service": "Service",
+    "priceFcfa": "Price (FCFA)",
+    "add": "Add",
+    "total": "Total",
+    "generateQuote": "Generate Quote",
+    "sendQuote": "Send your quote",
+    "chooseHowToReach": "Choose how to reach us",
+    "pdfQuoteReady": "PDF Quote Ready",
+    "preparedFor": "Prepared for {name}",
+    "download": "Download",
+    "sendVia": "Send via",
+    "sendViaWhatsApp": "Send via WhatsApp",
+    "pdfAutoDownloads": "PDF downloads automatically",
+    "sendViaEmail": "Send via Email",
+    "sending": "Sending...",
+    "whatsappInfo": "WhatsApp opens in a new tab. Email sends directly to",
+    "services": {
+      "IT Maintenance": {
+        "name": "IT Maintenance",
+        "description": "Comprehensive IT support and maintenance to keep your systems running smoothly, secure, and up to date.",
+        "subservices": {
+          "0": "Full Hardware Diagnostic & Report",
+          "1": "Software Diagnostic & Troubleshooting",
+          "2": "OS Installation & Configuration",
+          "3": "OS Security & Functional Updates",
+          "4": "Driver Installation & Optimization",
+          "5": "Virus & Malware Removal",
+          "6": "Data Backup & Recovery",
+          "7": "Application Setup & Configuration",
+          "8": "Performance Tuning & Cleanup"
+        }
+      },
+      "Web Design": {
+        "name": "Web Design",
+        "description": "Stunning, responsive websites crafted with modern design principles for great user experience and real results.",
+        "subservices": {
+          "0": "Brand Identity & Strategy",
+          "1": "Logo Design & Style Guide",
+          "2": "UI/UX Wireframing",
+          "3": "Responsive Web Design (Mobile & Desktop)",
+          "4": "Landing Page Design",
+          "5": "E-commerce Interface Design",
+          "6": "Design-to-Code Handoff (Figma/Zeplin)",
+          "7": "Prototype & User Flow Design"
+        }
+      },
+      "Network Administration": {
+        "name": "Network Administration",
+        "description": "Secure, high-performance network infrastructure design, deployment, and ongoing management for your business.",
+        "subservices": {
+          "0": "Network Architecture Design",
+          "1": "Network Simulation & Modeling",
+          "2": "Router & Switch Configuration",
+          "3": "Firewall Setup & Security Hardening",
+          "4": "VPN Configuration & Remote Access",
+          "5": "Network Monitoring & Alerting Setup",
+          "6": "Wi-Fi Planning & Access Point Deployment",
+          "7": "Network Audit & Vulnerability Assessment"
+        }
+      }
+    }
+  }
+}

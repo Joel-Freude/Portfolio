@@ -5,8 +5,12 @@ import { useAnimationDelay } from "@/app/components/useAnimationDelay";
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import CustomCursor from "@/app/components/CustomCursor";
+import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 
 export default function ProjectDetail() {
+  const t = useTranslations('projects');
+  const locale = useLocale();
   const getDelay = useAnimationDelay();
   const params = useParams();
   const [project, setProject] = useState<any>(null);
@@ -52,11 +56,11 @@ export default function ProjectDetail() {
         >
           {/* Back Button */}
           <motion.a
-            href="/projects"
+            href={`/${locale}/projects`}
             className="inline-flex items-center gap-2 text-zinc-400 hover:text-white transition-colors mb-6 md:mb-8 text-sm md:text-base"
             whileHover={{ x: -5 }}
           >
-            ← Back to Projects
+            {t('backToProjects')}
           </motion.a>
 
           {/* Project Header */}
@@ -77,13 +81,13 @@ export default function ProjectDetail() {
 
           {/* Description */}
           <div className="mb-8 md:mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold font-serif text-zinc-400 mb-3 md:mb-4">Description</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-serif text-zinc-400 mb-3 md:mb-4">{t('description')}</h2>
             <p className="text-sm md:text-lg font-sans text-zinc-600 leading-relaxed">{project.description}</p>
           </div>
 
           {/* Technologies */}
           <div className="mb-8 md:mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold font-serif text-zinc-400 mb-3 md:mb-4">Technologies Used</h2>
+            <h2 className="text-2xl md:text-3xl font-bold font-serif text-zinc-400 mb-3 md:mb-4">{t('technologies')}</h2>
             <div className="flex flex-wrap gap-2 md:gap-3">
               {project.technologies.map((tech: string, idx: number) => (
                 <motion.span
@@ -102,7 +106,7 @@ export default function ProjectDetail() {
           {/* Status (for Mobile Dev) */}
           {project.status && (
             <div className="mb-8 md:mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold font-serif text-zinc-400 mb-3 md:mb-4">Status</h2>
+              <h2 className="text-2xl md:text-3xl font-bold font-serif text-zinc-400 mb-3 md:mb-4">{t('status')}</h2>
               <p className="text-sm md:text-lg font-sans text-orange-400">{project.status}</p>
             </div>
           )}
@@ -110,7 +114,7 @@ export default function ProjectDetail() {
           {/* Link (for Web Design) */}
           {project.link && project.link.trim() !== "" && (
             <div className="mb-8 md:mb-12">
-              <h2 className="text-2xl md:text-3xl font-bold font-serif text-zinc-400 mb-3 md:mb-4">Project Link</h2>
+              <h2 className="text-2xl md:text-3xl font-bold font-serif text-zinc-400 mb-3 md:mb-4">{t('projectLink')}</h2>
               <motion.a
                 href={project.link}
                 target="_blank"

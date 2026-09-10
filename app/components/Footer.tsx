@@ -3,13 +3,16 @@
 import { Mail, Heart, ArrowRight, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { locales } from "@/i18n/locales";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
+  const pathname = usePathname();
+  const locale = locales.includes(pathname.split("/")[1] as any) ? pathname.split("/")[1] : "en";
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle newsletter subscription
     console.log("Subscribed:", email);
     setEmail("");
   };
@@ -48,34 +51,34 @@ export default function Footer() {
             {/* Navigation Links */}
               <div>
                 <h4 className="text-base md:text-lg font-semibold text-white mb-4 md:mb-6 font-serif">Navigation</h4>
-                <ul className="space-y-2 md:space-y-3 font-sans">
-                  <li>
-                    <Link href="/" className="text-xs md:text-sm hover:text-white transition-colors font-medium">
-                      Home
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/about" className="text-xs md:text-sm hover:text-white transition-colors">
-                      About
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/education" className="text-xs md:text-sm hover:text-white transition-colors">
-                      Education
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/projects" className="text-xs md:text-sm hover:text-white transition-colors">
-                      Projects
-                    </Link>
-                  </li>
-                  
-                  <li>
-                    <Link href="/contact" className="text-xs md:text-sm hover:text-white transition-colors">
-                      Contact
-                    </Link>
-                  </li>
-                </ul>
+                 <ul className="space-y-2 md:space-y-3 font-sans">
+                   <li>
+                     <Link href={`/${locale}`} className="text-xs md:text-sm hover:text-white transition-colors font-medium">
+                       Home
+                     </Link>
+                   </li>
+                   <li>
+                     <Link href={`/${locale}/about`} className="text-xs md:text-sm hover:text-white transition-colors">
+                       About
+                     </Link>
+                   </li>
+                   <li>
+                     <Link href={`/${locale}/education`} className="text-xs md:text-sm hover:text-white transition-colors">
+                       Education
+                     </Link>
+                   </li>
+                   <li>
+                     <Link href={`/${locale}/projects`} className="text-xs md:text-sm hover:text-white transition-colors">
+                       Projects
+                     </Link>
+                   </li>
+                   
+                   <li>
+                     <Link href={`/${locale}/contact`} className="text-xs md:text-sm hover:text-white transition-colors">
+                       Contact
+                     </Link>
+                   </li>
+                 </ul>
               </div>
 
 
@@ -142,9 +145,11 @@ export default function Footer() {
             </div>
 
             {/* Copyright */}
-            <p className="text-xs md:text-sm text-zinc-500 flex items-center gap-2 font-sans text-center md:text-left">
-              © {new Date().getFullYear()} FOFIE JOUNEWE JOEL FREUDE. All rights reserved.
-            </p>
+            <div className="flex items-center gap-4">
+              <p className="text-xs md:text-sm text-zinc-500 flex items-center gap-2 font-sans text-center md:text-left">
+                © {new Date().getFullYear()} FOFIE JOUNEWE JOEL FREUDE. All rights reserved.
+              </p>
+            </div>
           </div>
         </div>
       </div>

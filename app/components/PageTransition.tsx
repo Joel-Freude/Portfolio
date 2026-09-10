@@ -19,14 +19,18 @@ export default function PageTransition({ children }: { children: React.ReactNode
   const [displayedChildren, setDisplayedChildren] = useState(children);
 
   const getPageLabel = (path: string) => {
+    const segments = path.split("/");
+    const locale = segments[1] || "en";
+    const cleanPath = segments.slice(2).join("/") || "home";
+    
     const map: Record<string, string> = {
-      "/": "HOME",
-      "/about": "ABOUT",
-      "/education": "EDUCATION",
-      "/projects": "PROJECTS",
-      "/contact": "CONTACT",
+      "home": "HOME",
+      "about": "ABOUT",
+      "education": "EDUCATION",
+      "projects": "PROJECTS",
+      "contact": "CONTACT",
     };
-    return map[path] ?? "HOME";
+    return map[cleanPath] ?? "HOME";
   };
 
   useEffect(() => {

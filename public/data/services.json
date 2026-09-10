@@ -1,0 +1,46 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "name": "IT Maintenance",
+      "image": "/images/IT-M.jpg",
+      "description": "Comprehensive IT support and maintenance services to keep your systems running smoothly.",
+      "subservices": [
+        "System Diagnostics",
+        "Hardware Repair",
+        "Software Updates",
+        "Network Configuration",
+        "Data Recovery"
+      ],
+      "prices": [15000, 25000, 10000, 20000, 30000]
+    },
+    {
+      "id": 2,
+      "name": "Web Design",
+      "image": "/images/W-D.jpg",
+      "description": "Beautiful, responsive websites that captivate your audience and drive results.",
+      "subservices": [
+        "UI/UX Design",
+        "Responsive Development",
+        "SEO Optimization",
+        "E-commerce Solutions",
+        "Content Management"
+      ],
+      "prices": [50000, 80000, 30000, 120000, 25000]
+    },
+    {
+      "id": 3,
+      "name": "Network Administration",
+      "image": "/images/N-A.jpg",
+      "description": "Secure and efficient network infrastructure setup and management.",
+      "subservices": [
+        "Network Security",
+        "Server Management",
+        "Cloud Integration",
+        "VPN Configuration",
+        "Monitoring Solutions"
+      ],
+      "prices": [35000, 60000, 45000, 25000, 40000]
+    }
+  ]
+}

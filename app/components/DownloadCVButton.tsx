@@ -4,15 +4,17 @@ import { Paperclip } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { locales } from "@/i18n/locales";
 
 export default function DownloadCVButton() {
   const [isWhiteBackground, setIsWhiteBackground] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const pathname = usePathname();
+  const locale = locales.includes(pathname.split("/")[1] as any) ? pathname.split("/")[1] : "en";
 
   useEffect(() => {
-    setIsWhiteBackground(pathname === '/education');
-  }, [pathname]);
+    setIsWhiteBackground(pathname === `/${locale}/education`);
+  }, [pathname, locale]);
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
@@ -21,7 +23,7 @@ export default function DownloadCVButton() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  if (pathname !== '/about') {
+  if (pathname !== `/${locale}/about`) {
     return null;
   }
 

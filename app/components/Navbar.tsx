@@ -5,6 +5,8 @@ import { User, Briefcase, Mail, GraduationCap } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { locales } from "@/i18n/locales";
 
 function getInitials(name: string): string {
   return name
@@ -23,6 +25,7 @@ export default function Navbar() {
     navItems: [false, false, false, false]
   });
   const pathname = usePathname();
+  const locale = locales.includes(pathname.split("/")[1] as any) ? pathname.split("/")[1] : "en";
 
   useEffect(() => {
     setIsMounted(true);
@@ -117,19 +120,19 @@ export default function Navbar() {
   }, []);
   
   const getPageLabel = () => {
-    if (pathname === "/") return "HOME";
-    if (pathname === "/about") return "ABOUT";
-    if (pathname === "/education") return "EDUCATION";
-    if (pathname === "/projects") return "PROJECTS";
-    if (pathname === "/contact") return "CONTACT";
+    if (pathname === "/" || pathname === `/${locale}`) return "HOME";
+    if (pathname.includes("/about")) return "ABOUT";
+    if (pathname.includes("/education")) return "EDUCATION";
+    if (pathname.includes("/projects")) return "PROJECTS";
+    if (pathname.includes("/contact")) return "CONTACT";
     return "HOME";
   };
-  
+   
   const navItems = [
-    { icon: <User style={{ color: elementPositions.navItems[0] ? '#52525b' : '#ffffff' }} />, href: "/about", label: "About" },
-    { icon: <GraduationCap style={{ color: elementPositions.navItems[1] ? '#52525b' : '#ffffff' }} />, href: "/education", label: "education" },
-    { icon: <Briefcase style={{ color: elementPositions.navItems[2] ? '#52525b' : '#ffffff' }} />, href: "/projects", label: "Projects" },
-    { icon: <Mail style={{ color: elementPositions.navItems[3] ? '#52525b' : '#ffffff' }} />, href: "/contact", label: "Contact" },
+    { icon: <User style={{ color: elementPositions.navItems[0] ? '#52525b' : '#ffffff' }} />, href: `/${locale}/about`, label: "About" },
+    { icon: <GraduationCap style={{ color: elementPositions.navItems[1] ? '#52525b' : '#ffffff' }} />, href: `/${locale}/education`, label: "education" },
+    { icon: <Briefcase style={{ color: elementPositions.navItems[2] ? '#52525b' : '#ffffff' }} />, href: `/${locale}/projects`, label: "Projects" },
+    { icon: <Mail style={{ color: elementPositions.navItems[3] ? '#52525b' : '#ffffff' }} />, href: `/${locale}/contact`, label: "Contact" },
   ];
 
   const fullName = "FOFIE JOUNEWE JOEL FREUDE";
@@ -140,16 +143,21 @@ export default function Navbar() {
   }
 
   return (
-    <motion.nav
-      initial={{ x: -100, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      className="fixed left-6 md:left-8 top-0 w-auto z-50 bg-transparent flex flex-col items-start justify-between py-8 gap-2 md:gap-[4vw] md:flex"
-      style={{ display: isDesktop ? 'flex' : 'none' }}
-    >
+    <>
+      <div className="fixed top-8 right-6 md:right-8 z-50 hidden md:block">
+        <LanguageSwitcher />
+      </div>
+
+      <motion.nav
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="fixed left-6 md:left-8 top-0 w-auto z-40 bg-transparent flex flex-col items-start justify-between py-8 gap-2 md:gap-[4vw] md:flex"
+        style={{ display: isDesktop ? 'flex' : 'none' }}
+      >
 
       <Link
-        href="/"
+        href={`/${locale}`}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         className="h-[400px] flex items-start -mt-2 relative ml-2 cursor-pointer"
@@ -192,8 +200,8 @@ export default function Navbar() {
         ))}
       </div>
 
-      
-      
+
     </motion.nav>
+    </>
   );
 }

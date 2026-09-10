@@ -5,9 +5,11 @@ import { useAnimationDelay } from "@/app/components/useAnimationDelay";
 import { useState, useEffect, useRef } from "react";
 import CustomCursor from "@/app/components/CustomCursor";
 import ScrollingLines from "@/app/components/ScrollingLines";
-import PolygonBall from "../components/PolygonBall";
+import PolygonBall from "../../components/PolygonBall";
+import { useTranslations } from "next-intl";
 
 export default function Education() {
+  const t = useTranslations('education');
   const [isMounted, setIsMounted] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
   const getDelay = useAnimationDelay();
@@ -92,11 +94,11 @@ export default function Education() {
               <PolygonBall sphereSize={1.5} color="#efefef" verticalEnabled={true} verticalAmplitude={0.2}/>
           </div>
        <div className=" flex items-center relative left-[0vw] gap-2 md:gap-4 pt-20 md:pt-40 px-4 md:px-0">
-        <hr className="border border-zinc-300 w-20 md:w-80"/>
-         <h2 className="text-base md:text-xl font-bold font-sans text-zinc-300 text-center">
-          SCHOOL
-        </h2>
-       </div>
+         <hr className="border border-zinc-300 w-20 md:w-80"/>
+          <h2 className="text-base md:text-xl font-bold font-sans text-zinc-300 text-center">
+           {t('school')}
+         </h2>
+        </div>
 
         {/* University Level Section */}
         <motion.section

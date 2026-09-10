@@ -3,9 +3,11 @@
 import { motion } from "framer-motion";
 import { useAnimationDelay } from "@/app/components/useAnimationDelay";
 import { useState } from "react";
-import PolygonBall from "../components/PolygonBall";
+import PolygonBall from "../../components/PolygonBall";
+import { useTranslations } from "next-intl";
 
 export default function Contact() {
+  const t = useTranslations('contact');
   const getDelay = useAnimationDelay();
   const [formData, setFormData] = useState({
     name: "",
@@ -66,8 +68,8 @@ export default function Contact() {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="z-100"
           >
-            <h1 className="text-5xl font-bold font-sans text-zinc-300 mb-2">Get In Touch</h1>
-            <p className="text-zinc-500 font-sans">I'd love to hear from you. Send me a message!</p>
+            <h1 className="text-5xl font-bold font-sans text-zinc-300 mb-2">{t('title')}</h1>
+            <p className="text-zinc-500 font-sans">{t('subtitle')}</p>
           </motion.div>
 
           <motion.form
@@ -79,7 +81,7 @@ export default function Contact() {
           >
             <div className="flex gap-6">
               <div className="flex-1">
-                <label className="block text-zinc-400 text-sm font-sans mb-2">Name</label>
+                <label className="block text-zinc-400 text-sm font-sans mb-2">{t('name')}</label>
                 <input
                   type="text"
                   name="name"
@@ -87,11 +89,11 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-zinc-900 border border-zinc-800 rounded-lg text-zinc-300 font-sans focus:outline-none focus:border-orange-400 transition-colors"
-                  placeholder="Your name"
+                  placeholder={t('placeholders.name')}
                 />
               </div>
               <div className="flex-1">
-                <label className="block text-zinc-400 text-sm font-sans mb-2">Email</label>
+                <label className="block text-zinc-400 text-sm font-sans mb-2">{t('email')}</label>
                 <input
                   type="email"
                   name="email"
@@ -99,13 +101,13 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 bg-zinc-900 border border-zinc-800 rounded-lg text-zinc-300 font-sans focus:outline-none focus:border-orange-400 transition-colors"
-                  placeholder="your@email.com"
+                  placeholder={t('placeholders.email')}
                 />
               </div>
             </div>
 
             <div>
-              <label className="block text-zinc-400 text-sm font-sans mb-2">Subject</label>
+              <label className="block text-zinc-400 text-sm font-sans mb-2">{t('subject')}</label>
               <input
                 type="text"
                 name="subject"
@@ -113,12 +115,12 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 className="w-full px-4 py-3 bg-zinc-900 border border-zinc-800 rounded-lg text-zinc-300 font-sans focus:outline-none focus:border-orange-400 transition-colors"
-                placeholder="What's this about?"
+                placeholder={t('placeholders.subject')}
               />
             </div>
 
             <div>
-              <label className="block text-zinc-400 text-sm font-sans mb-2">Message</label>
+              <label className="block text-zinc-400 text-sm font-sans mb-2">{t('message')}</label>
               <textarea
                 name="message"
                 value={formData.message}
@@ -126,7 +128,7 @@ export default function Contact() {
                 required
                 rows={6}
                 className="w-full px-4 py-3 bg-zinc-900 border border-zinc-800 rounded-lg text-zinc-300 font-sans focus:outline-none focus:border-orange-400 transition-colors resize-none"
-                placeholder="Your message..."
+                placeholder={t('placeholders.message')}
               />
             </div>
 
@@ -137,13 +139,13 @@ export default function Contact() {
               disabled={isSubmitting}
               className="px-8 py-4 bg-orange-400 text-black font-bold font-sans rounded-lg hover:bg-orange-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {isSubmitting ? 'Sending...' : 'Send Message'}
+              {isSubmitting ? t('sending') : t('sendMessage')}
             </motion.button>
             {submitStatus === 'success' && (
-              <p className="text-green-400 font-sans">Message sent successfully!</p>
+              <p className="text-green-400 font-sans">{t('success')}</p>
             )}
             {submitStatus === 'error' && (
-              <p className="text-red-400 font-sans">Failed to send message. Please try again.</p>
+              <p className="text-red-400 font-sans">{t('error')}</p>
             )}
           </motion.form>
         </div>
@@ -162,8 +164,8 @@ export default function Contact() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <h1 className="text-5xl font-bold font-sans text-zinc-300 mb-2 text-center lg:text-start">Get In Touch</h1>
-            <p className="text-zinc-500 font-sans text-center lg:text-start">I'd love to hear from you. Send me a message!</p>
+            <h1 className="text-5xl font-bold font-sans text-zinc-300 mb-2 text-center lg:text-start">{t('title')}</h1>
+            <p className="text-zinc-500 font-sans text-center lg:text-start">{t('subtitle')}</p>
           </motion.div>
 
           <motion.form
@@ -174,7 +176,7 @@ export default function Contact() {
             className="flex flex-col gap-4"
           >
             <div>
-              <label className="block text-zinc-400 text-sm font-sans mb-2">Name</label>
+              <label className="block text-zinc-400 text-sm font-sans mb-2">{t('name')}</label>
               <input
                 type="text"
                 name="name"
@@ -182,12 +184,12 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 className="w-full px-4 py-3 bg-zinc-900/90 border border-zinc-800 rounded-lg text-zinc-300 font-sans focus:outline-none focus:border-orange-400 transition-colors"
-                placeholder="Your name"
+                placeholder={t('placeholders.name')}
               />
             </div>
 
             <div>
-              <label className="block text-zinc-400 text-sm font-sans mb-2">Email</label>
+              <label className="block text-zinc-400 text-sm font-sans mb-2">{t('email')}</label>
               <input
                 type="email"
                 name="email"
@@ -195,12 +197,12 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 className="w-full px-4 py-3 bg-zinc-900/90 border border-zinc-800 rounded-lg text-zinc-300 font-sans focus:outline-none focus:border-orange-400 transition-colors"
-                placeholder="your@email.com"
+                placeholder={t('placeholders.email')}
               />
             </div>
 
             <div>
-              <label className="block text-zinc-400 text-sm font-sans mb-2">Subject</label>
+              <label className="block text-zinc-400 text-sm font-sans mb-2">{t('subject')}</label>
               <input
                 type="text"
                 name="subject"
@@ -208,12 +210,12 @@ export default function Contact() {
                 onChange={handleChange}
                 required
                 className="w-full px-4 py-3 bg-zinc-900/90 border border-zinc-800 rounded-lg text-zinc-300 font-sans focus:outline-none focus:border-orange-400 transition-colors"
-                placeholder="What's this about?"
+                placeholder={t('placeholders.subject')}
               />
             </div>
 
             <div>
-              <label className="block text-zinc-400 text-sm font-sans mb-2">Message</label>
+              <label className="block text-zinc-400 text-sm font-sans mb-2">{t('message')}</label>
               <textarea
                 name="message"
                 value={formData.message}
@@ -221,7 +223,7 @@ export default function Contact() {
                 required
                 rows={5}
                 className="w-full px-4 py-3 bg-zinc-900/90 border border-zinc-800 rounded-lg text-zinc-300 font-sans focus:outline-none focus:border-orange-400 transition-colors resize-none"
-                placeholder="Your message..."
+                placeholder={t('placeholders.message')}
               />
             </div>
 
@@ -232,13 +234,13 @@ export default function Contact() {
               disabled={isSubmitting}
               className="px-8 py-4 bg-orange-400 text-black font-bold font-sans rounded-lg hover:bg-orange-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {isSubmitting ? 'Sending...' : 'Send Message'}
+              {isSubmitting ? t('sending') : t('sendMessage')}
             </motion.button>
             {submitStatus === 'success' && (
-              <p className="text-green-400 font-sans">Message sent successfully!</p>
+              <p className="text-green-400 font-sans">{t('success')}</p>
             )}
             {submitStatus === 'error' && (
-              <p className="text-red-400 font-sans">Failed to send message. Please try again.</p>
+              <p className="text-red-400 font-sans">{t('error')}</p>
             )}
           </motion.form>
         </div>

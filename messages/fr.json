@@ -1,0 +1,412 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "education": "Éducation",
+    "projects": "Projets",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Bienvenue",
+    "subtitle": "Portfolio",
+    "description": "Développeur Full Stack & Designer UI/UX",
+    "tagline": "Ce que nous offrons",
+    "greeting": "Bonjour, je m'appelle {name}",
+    "jobTitles": {
+      "networkAdministrator": "Administrateur Réseau",
+      "webDesigner": "Web Designer",
+      "mobileAppDev": "Développeur d'Applications Mobiles"
+    },
+    "passion": "Passionné par la création d'expériences numériques qui comptent et résolvent des problèmes réels.",
+    "approachTitle": "Mon Approche",
+    "approachParagraph1": "Je mélange expertise technique et résolution créative de problèmes pour construire des solutions qui fonctionnent réellement pour les utilisateurs et les entreprises. Chaque projet commence par la compréhension du problème central.",
+    "approachParagraph2": "De l'architecture réseau aux applications mobiles, j'aborde chaque projet avec un état d'esprit centré sur l'utilisateur, des normes de code propres et une attention aux détails.",
+    "buildingWithPurpose": "Construire avec un But",
+    "servicesTitle": "Mes Services",
+    "contactButton": "Contactez-moi",
+    "backToTop": "RETOUR EN HAUT",
+    "from": "À partir de",
+    "fcfa": "FCFA",
+    "explore": "Explorer",
+    "more": "+{count} de plus",
+    "services": {
+      "IT Maintenance": {
+        "name": "Maintenance Informatique",
+        "description": "Support et maintenance informatique complets pour garder vos systèmes fluides, sécurisés et à jour.",
+        "subservices": {
+          "0": "Diagnostic matériel complet & rapport",
+          "1": "Diagnostic logiciel & dépannage",
+          "2": "Installation & configuration du système d'exploitation",
+          "3": "Mises à jour de sécurité & fonctionnelles du système",
+          "4": "Installation & optimisation des pilotes",
+          "5": "Suppression des virus & logiciels malveillants",
+          "6": "Sauvegarde & récupération de données",
+          "7": "Installation & configuration d'applications",
+          "8": "Optimisation des performances & nettoyage"
+        }
+      },
+      "Web Design": {
+        "name": "Design Web",
+        "description": "Sites web époustouflants et réactifs, conçus selon des principes modernes pour une expérience utilisateur exceptionnelle.",
+        "subservices": {
+          "0": "Identité de marque & stratégie",
+          "1": "Design de logo & guide de style",
+          "2": "Wireframing UI/UX",
+          "3": "Design web responsive (Mobile & Desktop)",
+          "4": "Design de page d'atterrissage",
+          "5": "Design d'interface e-commerce",
+          "6": "Transition design-code (Figma/Zeplin)",
+          "7": "Design de prototype & flux utilisateur"
+        }
+      },
+      "Network Administration": {
+        "name": "Administration Réseau",
+        "description": "Conception, déploiement et gestion sécurisée d'infrastructures réseau performantes pour votre entreprise.",
+        "subservices": {
+          "0": "Conception d'architecture réseau",
+          "1": "Simulation & modélisation réseau",
+          "2": "Configuration de routeurs & commutateurs",
+          "3": "Configuration de pare-feu & durcissement de sécurité",
+          "4": "Configuration VPN & accès à distance",
+          "5": "Configuration de surveillance réseau & alertes",
+          "6": "Planification Wi-Fi & déploiement de points d'accès",
+          "7": "Audit réseau & évaluation des vulnérabilités"
+        }
+      }
+    },
+    "subservices": "Sous-services",
+    "minFcfa": "Min FCFA",
+    "steps": {
+      "contact": "Contact",
+      "service": "Services",
+      "share": "Devis"
+    },
+    "yourDetails": "Vos coordonnées",
+    "pleaseEnterDetails": "Veuillez entrer vos coordonnées pour continuer",
+    "fullName": "Nom complet",
+    "emailAddress": "Adresse e-mail",
+    "phoneNumber": "Numéro de téléphone",
+    "city": "Ville",
+    "continueToServices": "Continuer vers les services →",
+    "selectServices": "Sélectionner les services",
+    "chooseServices": "Choisissez les services dont vous avez besoin",
+    "service": "Service",
+    "priceFcfa": "Prix (FCFA)",
+    "add": "Ajouter",
+    "total": "Total",
+    "generateQuote": "Générer le devis",
+    "sendQuote": "Envoyer votre devis",
+    "chooseHowToReach": "Choisissez comment nous contacter",
+    "pdfQuoteReady": "Devis PDF prêt",
+    "preparedFor": "Préparé pour {name}",
+    "download": "Télécharger",
+    "sendVia": "Envoyer via",
+    "sendViaWhatsApp": "Envoyer via WhatsApp",
+    "pdfAutoDownloads": "Le PDF se télécharge automatiquement",
+    "sendViaEmail": "Envoyer par e-mail",
+    "sending": "Envoi en cours...",
+    "whatsappInfo": "WhatsApp s'ouvre dans un nouvel onglet. L'e-mail est envoyé directement à",
+    "whatsappMessage": "Bonjour FreudeDev ! 👋\n\nJe m'appelle {name} et j'aimerais demander un devis pour *{serviceName}*.\n\n*Services sélectionnés :*\n{servicesList}\n\n*Total :* {total} FCFA\n\n📧 {email}\n📞 {phone}\n\nJ'ai également téléchargé le devis PDF. Veuillez me répondre dès que possible !",
+    "pdfError": "Échec de la génération du devis PDF.",
+    "emailSuccess": "Devis envoyé ! Vérifiez votre boîte de réception à",
+    "pdfTitle": "Devis FreudeDev",
+    "pdfTotal": "Total",
+    "paymentInstructions": "Instructions de Paiement",
+    "paymentInstructionsText": "Pour procéder à votre devis, veuillez effectuer le paiement via l'une des méthodes suivantes :\n\n",
+    "paymentConfirmationText": "Une fois le paiement confirmé, nous commencerons immédiatement le travail sur vos services sélectionnés.",
+    "conditionsNotes": "Conditions et Termes/Notes",
+    "addressedToClient": "Adressé au client/entreprise"
+  },
+  "about": {
+    "title": "À Propos",
+    "subtitle": "À Propos",
+    "tagline": "À Propos",
+    "description": "Je suis un passionné d'informatique qui aime créer des solutions numériques innovantes avec une conception réfléchie, un code propre et une approche centrée sur l'utilisateur pour satisfaire les besoins des utilisateurs et des entreprises qui cherchent à avoir un impact positif.",
+    "hobbies": "Loisirs",
+    "hobbyChess": "Échecs",
+    "hobbyDrawing": "Dessin",
+    "hobbyReading": "Lecture",
+    "hobbiesList": {
+      "chess": "Échecs",
+      "drawing": "Dessin",
+      "reading": "Lecture"
+    },
+    "techStack": "Stack Technique",
+    "associatedSkills": "Compétences Associées",
+    "itSupportTitle": "Support Informatique",
+    "itSupportDescription": "Je suis spécialisé dans la fourniture de solutions de support informatique complètes, garantissant que votre infrastructure technologique fonctionne de manière fluide et efficace. Je maîtrise les systèmes d'exploitation connus (Windows, MacOS et Linux) et autres diagnostics et maintenance matériels principaux.",
+    "webDesignerTitle": "Web Designer",
+    "webDesignerDescription": "J'utilise mes compétences en conception pour créer des sites web visuellement époustouflants et conviviaux avec des principes de conception modernes. Je suis spécialisé dans la création de mises en page réactives, d'animations fluides et d'expériences utilisateur intuitives qui captivent et ravissent les visiteurs.",
+    "networkAdminTitle": "Administrateur Réseau",
+    "networkAdminDescription": "Je conçois, implémente, déploie et sécurise des infrastructures réseau robustes pour les petites, moyennes et grandes entreprises. Je garantis des performances optimales, la sécurité et la fiabilité des réseaux d'entreprise grâce à une configuration et une surveillance expertes.",
+    "mobileDevTitle": "Développeur Mobile",
+    "mobileDevDescription": "Je développe des applications mobiles multiplateformes et natives qui offrent des expériences utilisateur fluides. Je maîtrise React Native, Flutter et les meilleures pratiques de conception mobile pour iOS et Android.",
+    "otherInterests": "Autres Centres d'Intérêt",
+    "otherInterestsDescription": "Au-delà de la technologie, je suis passionné par l'exploration de domaines divers qui enrichissent ma créativité et ma perspective sur la vie.",
+    "psychology": "Psychologie",
+    "psychologyDescription": "Comprendre le comportement humain et les processus mentaux pour m'aider dans ma vie quotidienne et comprendre mon humanité.",
+    "medicine": "Médecine",
+    "medicineDescription": "Comprendre les concepts de l'anatomie humaine vivante et comment améliorer mes compétences de survie.",
+    "music": "Musique",
+    "musicDescription": "Explorer différents genres, assister à des concerts et découvrir de nouveaux artistes.",
+    "interests": {
+      "psychology": {
+        "title": "Psychologie",
+        "description": "Comprendre le comportement humain et les processus mentaux pour m'aider dans ma vie quotidienne et comprendre mon humanité."
+      },
+      "medicine": {
+        "title": "Médecine",
+        "description": "Comprendre les concepts de l'anatomie humaine vivante et comment améliorer mes compétences de survie."
+      },
+      "music": {
+        "title": "Musique",
+        "description": "Explorer différents genres, assister à des concerts et découvrir de nouveaux artistes."
+      }
+    },
+    "skillDescriptions": {
+      "itSupport": "Je suis spécialisé dans la fourniture de solutions de support informatique complètes, garantissant que votre infrastructure technologique fonctionne de manière fluide et efficace. Je maîtrise les systèmes d'exploitation connus (Windows, MacOS et Linux) et autres diagnostics et maintenance matériels principaux.",
+      "webDesigner": "J'utilise mes compétences en conception pour créer des sites web visuellement époustouflants et conviviaux avec des principes de conception modernes. Je suis spécialisé dans la création de mises en page réactives, d'animations fluides et d'expériences utilisateur intuitives qui captivent et ravissent les visiteurs.",
+      "networkAdmin": "Je conçois, implémente, déploie et sécurise des infrastructures réseau robustes pour les petites, moyennes et grandes entreprises. Je garantis des performances optimales, la sécurité et la fiabilité des réseaux d'entreprise grâce à une configuration et une surveillance expertes.",
+      "mobileDev": "Je développe des applications mobiles multiplateformes et natives qui offrent des expériences utilisateur fluides. Je maîtrise React Native, Flutter et les meilleures pratiques de conception mobile pour iOS et Android."
+    }
+  },
+  "projects": {
+    "title": "Projets",
+    "back": "Retour",
+    "description": "Description",
+    "technologiesUsed": "Technologies Utilisées",
+    "status": "Statut",
+    "projectLink": "Lien du Projet",
+    "webDesign": "Projets de Web Design",
+    "mobileDev": "Projets de Développement Mobile",
+    "more": "plus",
+    "viewProject": "Voir le projet",
+    "noProjects": "Aucun projet pour le moment",
+    "loading": "Chargement des projets...",
+    "webDesignProjects": {
+      "Food Folio": {
+        "description": "Projet visant à concevoir un design pour un restaurant multinational servant et livrant toutes sortes de plats culturels pour tous les restaurants connectés."
+      },
+      "VitaCura": {
+        "description": "Modèle web d'une application hospitalière centrale visant à collecter les demandes et les retours des différents services cliniques pour faciliter les soins hospitaliers."
+      },
+      "UrbanVista": {
+        "description": "Modèle web d'une entreprise immobilière visant à simplifier la livraison immobilière numérique pour les locataires à la recherche d'un meilleur endroit."
+      },
+      "Vigoradum": {
+        "description": "Modèle pour une enquête fitness visant à collecter des données et retours sur différents athlètes pour améliorer le développement d'une application fitness."
+      },
+      "ArchiMax": {
+        "description": "Services architecturaux et de construction haut de gamme à petit budget."
+      }
+    },
+    "mobileDevProjects": {
+      "Apex Mobile App": {
+        "description": "Application mobile Flutter disponible sur tous les smartphones Android et iOS améliorant les compétences sociales et physiques personnelles de manière ludique."
+      },
+      "Cypher Mobile and Desktop App": {
+        "description": "Application de localisation d'appareils personnels vous aidant à localiser votre appareil en temps réel pour prévenir le vol et la criminalité. Disponible sur toutes les plateformes."
+      },
+      "Maka Real estate app": {
+        "description": "Application immobilière permettant de rechercher et gérer des propriétés facilement."
+      }
+    }
+  },
+  "ServicesSection": {
+    "title": "Services",
+    "tagline": "Ce que nous offrons",
+    "description": "Sélectionnez un service ci-dessous pour explorer nos offres et créer votre package personnalisé.",
+    "service": "SERVICE",
+    "subservices": "Services",
+    "minFcfa": "Min FCFA",
+    "from": "À partir de",
+    "fcfa": "FCFA",
+    "explore": "Explorer",
+    "more": "+{count} de plus",
+    "yourDetails": "Vos coordonnées",
+    "pleaseEnterDetails": "Veuillez entrer vos coordonnées pour continuer",
+    "fullName": "Nom complet",
+    "emailAddress": "Adresse e-mail",
+    "phoneNumber": "Numéro de téléphone",
+    "city": "Ville",
+    "continueToServices": "Continuer vers les services →",
+    "selectServices": "Sélectionner les services",
+    "chooseServices": "Choisissez les services dont vous avez besoin",
+    "generateQuote": "Générer le devis",
+    "total": "Total",
+    "sendQuote": "Envoyer votre devis",
+    "chooseHowToReach": "Choisissez comment nous contacter",
+    "pdfQuoteReady": "Devis PDF prêt",
+    "preparedFor": "Préparé pour {name}",
+    "download": "Télécharger",
+    "sendVia": "Envoyer via",
+    "sendViaWhatsApp": "Envoyer via WhatsApp",
+    "pdfAutoDownloads": "Le PDF se télécharge automatiquement",
+    "sendViaEmail": "Envoyer par e-mail",
+    "sending": "Envoi en cours...",
+    "whatsappInfo": "WhatsApp s'ouvre dans un nouvel onglet. L'e-mail est envoyé directement à",
+    "whatsappMessage": "Bonjour FreudeDev ! 👋\n\nJe m'appelle {name} et j'aimerais demander un devis pour *{serviceName}*.\n\n*Services sélectionnés :*\n{servicesList}\n\n*Total :* {total} FCFA\n\n📧 {email}\n📞 {phone}\n\nJ'ai également téléchargé le devis PDF. Veuillez me répondre dès que possible !",
+    "steps": {
+      "contact": "Coordonnées",
+      "service": "Services",
+      "share": "Devis"
+    },
+    "pdfError": "Échec de la génération du devis PDF.",
+    "emailSuccess": "Devis envoyé ! Vérifiez votre boîte de réception à",
+    "pdfTitle": "Devis FreudeDev",
+    "pdfTotal": "Total",
+    "paymentInstructions": "Instructions de Paiement",
+    "paymentInstructionsText": "Pour procéder à votre devis, veuillez effectuer le paiement via l'une des méthodes suivantes :\n\n",
+    "paymentConfirmationText": "Une fois le paiement confirmé, nous commencerons immédiatement le travail sur vos services sélectionnés.",
+    "conditionsNotes": "Conditions et Termes/Notes",
+    "addressedToClient": "Adressé au client/entreprise",
+    "services": {
+      "IT Maintenance": {
+        "name": "Maintenance Informatique",
+        "description": "Support et maintenance informatique complets pour garder vos systèmes fluides, sécurisés et à jour.",
+        "subservices": {
+          "0": "Diagnostic matériel complet & rapport",
+          "1": "Diagnostic logiciel & dépannage",
+          "2": "Installation & configuration du système d'exploitation",
+          "3": "Mises à jour de sécurité & fonctionnelles du système",
+          "4": "Installation & optimisation des pilotes",
+          "5": "Suppression des virus & logiciels malveillants",
+          "6": "Sauvegarde & récupération de données",
+          "7": "Installation & configuration d'applications",
+          "8": "Optimisation des performances & nettoyage"
+        }
+      },
+      "Web Design": {
+        "name": "Design Web",
+        "description": "Sites web époustouflants et réactifs, conçus selon des principes modernes pour une expérience utilisateur exceptionnelle.",
+        "subservices": {
+          "0": "Identité de marque & stratégie",
+          "1": "Design de logo & guide de style",
+          "2": "Wireframing UI/UX",
+          "3": "Design web responsive (Mobile & Desktop)",
+          "4": "Design de page d'atterrissage",
+          "5": "Design d'interface e-commerce",
+          "6": "Transition design-code (Figma/Zeplin)",
+          "7": "Design de prototype & flux utilisateur"
+        }
+      },
+      "Network Administration": {
+        "name": "Administration Réseau",
+        "description": "Conception, déploiement et gestion sécurisée d'infrastructures réseau performantes pour votre entreprise.",
+        "subservices": {
+          "0": "Conception d'architecture réseau",
+          "1": "Simulation & modélisation réseau",
+          "2": "Configuration de routeurs & commutateurs",
+          "3": "Configuration de pare-feu & durcissement de sécurité",
+          "4": "Configuration VPN & accès à distance",
+          "5": "Configuration de surveillance réseau & alertes",
+          "6": "Planification Wi-Fi & déploiement de points d'accès",
+          "7": "Audit réseau & évaluation des vulnérabilités"
+        }
+      }
+    }
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Contactez-nous",
+    "description": "Je serais ravi d'avoir de vos nouvelles. Envoyez-moi un message !",
+    "name": "Nom",
+    "email": "E-mail",
+    "subject": "Sujet",
+    "message": "Message",
+    "sendMessage": "Envoyer le Message",
+    "sending": "Envoi en cours...",
+    "success": "Message envoyé avec succès !",
+    "error": "Échec de l'envoi du message. Veuillez réessayer.",
+    "placeholders": {
+      "name": "Votre nom",
+      "email": "votre@email.com",
+      "subject": "De quoi s'agit-il ?",
+      "message": "Votre message..."
+    }
+  },
+  "education": {
+    "title": "Éducation",
+    "subtitle": "Mon parcours académique",
+    "university": "Université",
+    "certifications": "Certifications",
+    "loading": "Chargement des données...",
+    "frontendDevelopment": "Développement Frontend",
+    "cybersecurity": "Cybersécurité",
+    "academicJourney": {
+      "title": "Mon Parcours Académique",
+      "universityLevel": {
+        "title": "Université",
+        "institutions": {
+          "University of Yaounde I": {
+            "description": "Après avoir obtenu mon GCE Advanced Level, j'avais besoin d'orientation pour choisir le bon cours et trouver ma voie. J'ai fait un cours de chimie dans cette université pendant un an et je n'étais pas vraiment passionné."
+          },
+          "Higher Institute of Science Technology and Ethics": {
+            "description": "Après un an à l'Université de Yaounde I, j'ai décidé de changer d'université et de chercher une meilleure opportunité. J'ai rejoint l'Institut Supérieur des Sciences, Technologies et Éthiques et j'ai fait l'informatique pendant deux ans, spécialement le cours d'Informatique Industrielle. Durant le stage pour la préparation de mon BTS, j'ai acquis des compétences en support informatique qui m'aident encore aujourd'hui pour le dépannage informatique."
+          },
+          "Siantou Higher Institute": {
+            "description": "Après deux ans à l'Institut Supérieur des Sciences, Technologies et Éthiques, j'ai décidé de changer d'université pour continuer ma troisième année de cours d'Informatique Industrielle. J'ai rejoint l'Institut Supérieur Siantou et grâce au stage effectué chez Globetech SARL, j'ai acquis plus de compétences en informatique, notamment en dépannage électronique."
+          },
+          "Primetec Academy": {
+            "description": "J'ai rejoint Primetec Academy pour commencer un nouveau cours informatique : Administration Réseau et Sécurité. J'ai acquis plus de compétences en informatique, notamment en administration et sécurité réseau pendant deux ans."
+          }
+        }
+      },
+      "certifications": {
+        "title": "Certifications",
+        "categories": {
+          "Frontend Development": {
+            "category": "Développement Frontend",
+            "period": "2020-2022",
+            "certificates": {
+              "HTML Basics": {
+                "description": "Ce certificat valide la capacité à créer et structurer du contenu web en utilisant HTML, le langage de balisage standard pour créer des pages web."
+              },
+              "CSS Basics": {
+                "description": "Ce certificat valide la capacité à styliser et mettre en page du contenu web en utilisant CSS, le langage pour décrire la présentation des pages web."
+              },
+              "JavaScript Basics": {
+                "description": "Ce certificat valide la capacité à ajouter de l'interactivité et un comportement dynamique aux pages web en utilisant JavaScript, le langage pour le développement web."
+              },
+              "Full Stack and Frontend Development": {
+                "description": "Ce certificat valide la capacité à créer et maintenir des applications web en utilisant à la fois les technologies frontend comme HTML, CSS et JavaScript avec les technologies backend."
+              }
+            }
+          },
+          "Cybersecurity": {
+            "category": "Cybersécurité",
+            "period": "2024-2025",
+            "certificates": {
+              "Introduction in CyberSecurity": {
+                "description": "Ce certificat valide la capacité à comprendre et appliquer les concepts, principes et pratiques fondamentaux de la cybersécurité pour protéger les systèmes d'information et les données."
+              },
+              "Network Defense": {
+                "description": "Ce certificat valide la capacité à mettre en œuvre et gérer des mesures de sécurité réseau pour protéger contre les accès non autorisés et les menaces cybernétiques."
+              },
+              "Network Addressing and Troubleshooting": {
+                "description": "Ce certificat valide la capacité à configurer et dépanner l'adressage réseau et les problèmes de connectivité pour garantir un fonctionnement réseau fiable."
+              },
+              "Network Support and Security": {
+                "description": "Ce certificat valide la capacité à fournir des services de support et de sécurité réseau pour protéger contre les menaces cybernétiques et garantir la fiabilité du réseau."
+              },
+              "Network Devices and Configuration": {
+                "description": "Ce certificat valide la capacité à configurer et gérer des périphériques réseau pour garantir un fonctionnement réseau sécurisé et fiable."
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "footer": {
+    "tagline": "Contactez-moi pour votre prochain projet",
+    "navigation": "Navigation",
+    "contactInfo": "Contact",
+    "location": "Yaoundé, Cameroun",
+    "email": "fofie_joel@yahoo.fr",
+    "phone": "+237 650812141",
+    "newsletterPlaceholder": "ENTREZ VOTRE EMAIL",
+    "copyright": "© 2026 FOFIE JOUNEWE JOEL FREUDE. Tous droits réservés."
+  }
+}

@@ -5,6 +5,8 @@ import { User, Briefcase, Mail, GraduationCap, Menu, X, Home } from "lucide-reac
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { locales } from "@/i18n/locales";
 
 function getInitials(name: string): string {
   return name
@@ -17,22 +19,23 @@ export default function MobileNavbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const pathname = usePathname();
+  const locale = locales.includes(pathname.split("/")[1] as any) ? pathname.split("/")[1] : "en";
 
   const getPageLabel = () => {
-    if (pathname === "/") return "HOME";
-    if (pathname === "/about") return "ABOUT";
-    if (pathname === "/education") return "EDUCATION";
-    if (pathname === "/projects") return "PROJECTS";
-    if (pathname === "/contact") return "CONTACT";
+    if (pathname === "/" || pathname === `/${locale}`) return "HOME";
+    if (pathname.includes("/about")) return "ABOUT";
+    if (pathname.includes("/education")) return "EDUCATION";
+    if (pathname.includes("/projects")) return "PROJECTS";
+    if (pathname.includes("/contact")) return "CONTACT";
     return "HOME";
   };
 
   const navItems = [
-    { icon: <Home size={24} />, href: "/", label: "Home" },
-    { icon: <User size={24} />, href: "/about", label: "About" },
-    { icon: <GraduationCap size={24} />, href: "/education", label: "Education" },
-    { icon: <Briefcase size={24} />, href: "/projects", label: "Projects" },
-    { icon: <Mail size={24} />, href: "/contact", label: "Contact" },
+    { icon: <Home size={24} />, href: `/${locale}`, label: "Home" },
+    { icon: <User size={24} />, href: `/${locale}/about`, label: "About" },
+    { icon: <GraduationCap size={24} />, href: `/${locale}/education`, label: "Education" },
+    { icon: <Briefcase size={24} />, href: `/${locale}/projects`, label: "Projects" },
+    { icon: <Mail size={24} />, href: `/${locale}/contact`, label: "Contact" },
   ];
 
   const fullName = "FOFIE JOUNEWE JOEL FREUDE";
@@ -49,7 +52,7 @@ export default function MobileNavbar() {
       >
         {/* Logo */}
         <Link
-          href="/"
+          href={`/${locale}`}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
           className="relative cursor-pointer"
@@ -71,13 +74,16 @@ export default function MobileNavbar() {
         {/* Page Label */}
         <span className="text-zinc-100 font-sans text-sm">{getPageLabel()}</span>
 
-        {/* Hamburger Button */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="text-zinc-100 hover:text-zinc-300 transition-colors"
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Language Switcher + Hamburger Button */}
+        <div className="flex items-center gap-3">
+          <LanguageSwitcher />
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-zinc-100 hover:text-zinc-300 transition-colors"
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </motion.nav>
 
       {/* Mobile Menu Overlay */}

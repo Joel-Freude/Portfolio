@@ -6,11 +6,13 @@ import { SiNextdotjs, SiTypescript, SiTailwindcss, SiPostgresql, SiMongodb, SiMy
 import { ChessKing, Piano, Palette, Code, Database, Layout, Server, Cpu, Smartphone, Globe, Monitor, Settings, Wrench, BookOpen, Music, Camera, Gamepad2, Stethoscope } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useAnimationDelay } from "@/app/components/useAnimationDelay";
-import PolygonBall from "../components/PolygonBall";
-import ScrollingLines from "../components/ScrollingLines";
-import DownloadCVButton from "../components/DownloadCVButton";
+import PolygonBall from "../../components/PolygonBall";
+import ScrollingLines from "../../components/ScrollingLines";
+import DownloadCVButton from "../../components/DownloadCVButton";
+import { useTranslations } from 'next-intl';
 
 export default function About() {
+  const t = useTranslations('about');
   const getDelay = useAnimationDelay();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isCardFlipped, setIsCardFlipped] = useState(false);
@@ -65,6 +67,16 @@ export default function About() {
     }
   ];
 
+  const skillDescriptionKey = (title: string) => {
+    switch (title) {
+      case "IT Support": return "skillDescriptions.itSupport";
+      case "Web Designer": return "skillDescriptions.webDesigner";
+      case "Network Admin": return "skillDescriptions.networkAdmin";
+      case "Mobile Dev": return "skillDescriptions.mobileDev";
+      default: return "";
+    }
+  };
+
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev + 1) % skillCards.length);
     setIsCardFlipped(false);
@@ -88,14 +100,13 @@ export default function About() {
         >
           <div className=" relative bottom-[10vh] -left-[15vw] flex items-center gap-4">
             <hr className="border-0.5 border-zinc-500 w-80 "/>
-            <h1 className="text-xl font-sans text-zinc-500">About</h1>
+            <h1 className="text-xl font-sans text-zinc-500">{t('tagline')}</h1>
         </div>
           <h2 className="text-4xl md:text-5xl lg:text-8xl font-bold text-zinc-100 mb-4 md:mb-8 text-center md:text-left" style={{ fontFamily: "var(--font-gued)" }}>
-            About Me
+            {t('title')}
           </h2>
           <p className="text-base md:text-lg md:text-xl text-zinc-400 leading-relaxed text-center md:text-left px-2 md:px-0" style={{ fontFamily: "var(--font-vlorentine)" }}>
-            I am a computer passionate who love to create innovative digital solutions with thoughful design, clean code and user-centered approach to satisfy
-            the needs of users and businesses that seek to make a positive impact.
+            {t('description')}
           </p>
           <motion.div
             initial={{ opacity: 0, x: -150 }}
@@ -104,12 +115,12 @@ export default function About() {
             className="mt-4 md:mt-8 "
           >
             <h1 className="text-lg md:text-xl md:text-2xl font-bold text-zinc-100 mb-3 md:mb-4 text-center md:text-left" style={{ fontFamily: "var(--font-gued)" }}>
-              Hobbies
+              {t('hobbies')}
             </h1>
             <ul className="list-disc list-inside text-zinc-400 font-sans text-center md:text-left text-sm md:text-base">
-              <li className="flex items-center gap-2 mb-2 justify-center md:justify-start"><ChessKing size={24} className="w-5 h-5 md:w-8 md:h-8" /> Chess</li>
-              <li className="flex items-center gap-2 mb-2 justify-center md:justify-start"><Palette size={24} className="w-5 h-5 md:w-8 md:h-8" /> Drawing</li>
-              <li className="flex items-center gap-2 mb-2 justify-center md:justify-start"><BookOpen size={24} className="w-5 h-5 md:w-8 md:h-8" />Reading </li>
+              <li className="flex items-center gap-2 mb-2 justify-center md:justify-start"><ChessKing size={24} className="w-5 h-5 md:w-8 md:h-8" /> {t('hobbiesList.chess')}</li>
+              <li className="flex items-center gap-2 mb-2 justify-center md:justify-start"><Palette size={24} className="w-5 h-5 md:w-8 md:h-8" /> {t('hobbiesList.drawing')}</li>
+              <li className="flex items-center gap-2 mb-2 justify-center md:justify-start"><BookOpen size={24} className="w-5 h-5 md:w-8 md:h-8" />{t('hobbiesList.reading')} </li>
             </ul>
           </motion.div>
         </motion.div>
@@ -284,14 +295,15 @@ export default function About() {
           <div className="flex flex-col md:flex-row items-center gap-4 md:gap-64">
             <div className="flex items-center gap-4">
               <hr className="border-0.5 border-zinc-500 w-20 md:w-40 "/>
-              <h1 className="text-base md:text-xl font-sans text-zinc-500">TechStack</h1>
+              <h1 className="text-base md:text-xl font-sans text-zinc-500">{t('techStack')}</h1>
             </div>
             <div className="flex items-center gap-4 ml-0 md:ml-4">
               <button
                 onClick={prevSlide}
                 className="p-2 rounded-full bg-zinc-200 hover:bg-zinc-300 transition-colors"
               >
-                <FaChevronLeft className="text-zinc-700" size={16} />
+                <FaChevronLeft className="md:hidden" size={16} />
+                <FaChevronLeft className="hidden md:block" size={16} />
               </button>
               <div className="flex gap-2">
                 {skillCards.map((_, idx) => (
@@ -306,7 +318,8 @@ export default function About() {
                 onClick={nextSlide}
                 className="p-2 rounded-full bg-zinc-200 hover:bg-zinc-300 transition-colors"
               >
-                <FaChevronRight className="text-zinc-700" size={16} />
+                <FaChevronRight className="md:hidden" size={16} />
+                <FaChevronRight className="hidden md:block" size={16} />
               </button>
             </div>
           </div>
@@ -323,9 +336,7 @@ export default function About() {
                 <h1 className="font-serif text-5xl md:text-8xl font-bold text-center">{skillCards[currentIndex].title}</h1>
               </div>
               <p className="text-zinc-400 font-sans text-sm md:text-xl">
-                {skillCards[currentIndex].title === "IT Support" && "I specialize in providing comprehensive IT support solutions, ensuring your technology infrastructure runs smoothly and efficiently. I'm good with what concern known Operating systems(Windows, MacOS and Linux) and other main hardware diagnostics and maintenance."}
-                {skillCards[currentIndex].title === "Web Designer" && "I use my design skills to create my visually stunning and user-friendly websites with modern design principles. I specialize in creating responsive layouts, smooth animations, and intuitive user experiences that engage and delight visitors giving an amazing visual experience to my network audience."}
-                {skillCards[currentIndex].title === "Network Admin" && "I design, implement, deploy, and secure robust network infrastructures for small, medium and large enterprises. I ensure optimal performance, security, and reliability for enterprise networks through expert configuration and monitoring in order to garantee confidentiality, intergrity and avalaibility."}
+                {t(skillDescriptionKey(skillCards[currentIndex].title))}
               </p>
             </motion.div>
           </AnimatePresence>
@@ -338,7 +349,7 @@ export default function About() {
               transition={{ duration: 0.4, ease: "easeOut", delay: 0.1 }}
               className="mt-4 md:mt-8 pl-4 md:pl-64 pr-4 md:pr-32 "
             >
-              <h1 className="text-base md:text-xl font-serif font-bold mb-2 md:mb-4">Associated Skills</h1>
+              <h1 className="text-base md:text-xl font-serif font-bold mb-2 md:mb-4">{t('associatedSkills')}</h1>
               <ul className="space-y-1 md:space-y-2 font-sans text-zinc-500 text-sm md:text-base">
                 {skillCards[currentIndex].skills.map((skill, idx) => (
                   <li key={idx} className="flex items-center gap-2">{skill.icon} {skill.name}</li>
@@ -374,11 +385,11 @@ export default function About() {
 
         <div className="gap-12 md:gap-24 px-4 md:px-12 flex flex-col items-center">
           <div className="relative flex items-center gap-4">
-                <p className="font-serif text-zinc-700 text-sm md:text-base">Other center of Tnterests</p>
+                <p className="font-serif text-zinc-700 text-sm md:text-base">{t('otherInterests')}</p>
                 <hr className="border border-zinc-700 w-20 md:w-40"/>
           </div>
           <p className="text-center text-zinc-400 max-w-2xl text-xl md:text-4xl px-0 font-serif">
-              Beyond technology, I'm passionate about exploring diverse fields that enrich my creativity and my perspective about life
+              {t('otherInterestsDescription')}
           </p>
 
           <div className="space-y-6 grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x border border-zinc-800 w-full md:w-auto md:mx-24">
@@ -394,10 +405,10 @@ export default function About() {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-zinc-100 mb-2" style={{ fontFamily: "var(--font-gued)" }}>
-                    Psychology
+                    {t('interests.psychology.title')}
                   </h3>
                   <p className="text-zinc-400 text-sm md:text-base" style={{ fontFamily: "var(--font-vlorentine)" }}>
-                    Understanding human behavior and mental processes to help my in my daily life and understand my humanity
+                    {t('interests.psychology.description')}
                   </p>
                 </div>
               </div>
@@ -415,10 +426,10 @@ export default function About() {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-zinc-100 mb-2" style={{ fontFamily: "var(--font-gued)" }}>
-                    Medecine
+                    {t('interests.medicine.title')}
                   </h3>
                   <p className="text-zinc-400 text-sm md:text-base" style={{ fontFamily: "var(--font-vlorentine)" }}>
-                    Understanding the concepts of the living human anatomy and how to enhance my survival skills
+                    {t('interests.medicine.description')}
                   </p>
                 </div>
               </div>
@@ -436,10 +447,10 @@ export default function About() {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-zinc-100 mb-2" style={{ fontFamily: "var(--font-gued)" }}>
-                    Music
+                    {t('interests.music.title')}
                   </h3>
                   <p className="text-zinc-400 text-sm md:text-base" style={{ fontFamily: "var(--font-vlorentine)" }}>
-                    Exploring different genres, attending concerts, and discovering new artists
+                    {t('interests.music.description')}
                   </p>
                 </div>
               </div>
@@ -449,4 +460,5 @@ export default function About() {
       </motion.section>
     </div>
   );
+
 }

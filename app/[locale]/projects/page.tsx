@@ -5,8 +5,12 @@ import { useAnimationDelay } from "@/app/components/useAnimationDelay";
 import { useState, useEffect } from "react";
 import { ChevronUp, ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
 import CustomCursor from "@/app/components/CustomCursor";
+import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 
 export default function Projects() {
+  const t = useTranslations('projects');
+  const locale = useLocale();
   const getDelay = useAnimationDelay();
   const [webDesignIndex, setWebDesignIndex] = useState(0);
   const [mobileDevIndex, setMobileDevIndex] = useState(0);
@@ -35,7 +39,7 @@ export default function Projects() {
     setCurrentIndex(index);
   };
 
- 
+  
 
   return (
     <div>
@@ -43,17 +47,17 @@ export default function Projects() {
       <div className=" flex items-center relative left-[0vw] gap-4 pt-20 md:pt-40 px-4 md:px-0">
         <hr className="border border-zinc-500 w-40 md:w-80"/>
          <h2 className=" font-bold font-sans text-zinc-400 text-center text-xl md:text-2xl">
-          PROJECTS
+          {t('title')}
         </h2>
       </div>
       <div className="pl-4 md:pl-40 pr-4 md:pr-40 my-10 md:my-20 flex-col flex gap-10 md:gap-20">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-20 px-4 md:px-40">
           <div className="w-full md:w-[60%] h-[300px] md:h-[500px] relative order-1 md:order-2">
             <motion.a
-              href={`/projects/${data.webDesign[webDesignIndex].name.toLowerCase().replace(/\s+/g, '-')}`}
+              href={`/${locale}/projects/${data.webDesign[webDesignIndex].name.toLowerCase().replace(/\s+/g, '-')}`}
               className="relative w-full h-full overflow-hidden rounded-lg group cursor-pointer block"
               onMouseEnter={() => {
-                setHoveredText("more");
+                setHoveredText(t("more"));
                 setCursorColor("black");
               }}
               onMouseLeave={() => {
@@ -85,16 +89,16 @@ export default function Projects() {
                   whileHover={{ scale: 1, opacity: 1 }}
                   className="text-black text-xl md:text-2xl font-bold font-sans"
                 >
-                  more
+                  {t('more')}
                 </motion.span>
               </motion.div>
             </motion.a>
           </div>
           <div className="flex flex-col w-full md:w-[40%] gap-4 order-2 md:order-1">
-            <h1 className="text-xl md:text-2xl font-bold font-sans text-zinc-300 text-3xl md:text-5xl">Web Design Projects</h1>
+            <h1 className="text-xl md:text-2xl font-bold font-sans text-zinc-300 text-3xl md:text-5xl">{t('webDesign')}</h1>
             {data.webDesign[webDesignIndex] && (
               <motion.a
-                href={`/projects/${data.webDesign[webDesignIndex].name.toLowerCase().replace(/\s+/g, '-')}`}
+                href={`/${locale}/projects/${data.webDesign[webDesignIndex].name.toLowerCase().replace(/\s+/g, '-')}`}
                 className="text-xl md:text-3xl font-bold font-serif text-zinc-400 hover:text-orange-400 transition-colors"
                 whileHover={{ x: 10 }}
               >
@@ -134,10 +138,10 @@ export default function Projects() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-20 px-4 md:px-40">
           <div className="w-full md:w-[60%] h-[300px] md:h-[500px] relative order-1 md:order-1">
             <motion.a
-              href={`/projects/${data.mobileDev[mobileDevIndex].name.toLowerCase().replace(/\s+/g, '-')}`}
+              href={`/${locale}/projects/${data.mobileDev[mobileDevIndex].name.toLowerCase().replace(/\s+/g, '-')}`}
               className="relative w-full h-full overflow-hidden rounded-lg group cursor-pointer block"
               onMouseEnter={() => {
-                setHoveredText("more");
+                setHoveredText(t("more"));
                 setCursorColor("black");
               }}
               onMouseLeave={() => {
@@ -169,16 +173,16 @@ export default function Projects() {
                   whileHover={{ scale: 1, opacity: 1 }}
                   className="text-black text-xl md:text-2xl font-bold font-sans"
                 >
-                  more
+                  {t('more')}
                 </motion.span>
               </motion.div>
             </motion.a>
           </div>
           <div className="flex flex-col w-full md:w-[40%] gap-4 order-2 md:order-2">
-            <h1 className="text-xl md:text-2xl font-bold font-sans text-zinc-300 text-3xl md:text-5xl">Mobile Dev Projects</h1>
+            <h1 className="text-xl md:text-2xl font-bold font-sans text-zinc-300 text-3xl md:text-5xl">{t('mobileDev')}</h1>
             {data.mobileDev[mobileDevIndex] && (
               <motion.a
-                href={`/projects/${data.mobileDev[mobileDevIndex].name.toLowerCase().replace(/\s+/g, '-')}`}
+                href={`/${locale}/projects/${data.mobileDev[mobileDevIndex].name.toLowerCase().replace(/\s+/g, '-')}`}
                 className="text-xl md:text-3xl font-bold font-serif text-zinc-400 hover:text-orange-400 transition-colors"
                 whileHover={{ x: 10 }}
               >
