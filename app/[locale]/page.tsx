@@ -304,6 +304,7 @@ async function generateQuotePDF(
 
 export default function Home() {
   const t = useTranslations('home');
+  const tServices = useTranslations('ServicesSection');
   const [animationComplete, setAnimationComplete] = useState(false);
   const [showAnimation, setShowAnimation] = useState(false);
 
@@ -330,6 +331,7 @@ export default function Home() {
   const [pdfBlob, setPdfBlob] = useState<Blob | null>(null);
   const [pdfBase64, setPdfBase64] = useState<string>("");
   const [glowVisible, setGlowVisible] = useState<boolean>(false);
+  const [selectedMethodologyService, setSelectedMethodologyService] = useState<string>("IT Maintenance");
 
   const modalRef    = useRef<HTMLDivElement | null>(null);
   const modalBoxRef = useRef<HTMLDivElement | null>(null);
@@ -617,7 +619,7 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen w-full grid grid-rows-3">
+    <main className="min-h-screen w-full grid grid-rows-[auto_auto_auto]">
       <Toaster
         position="top-right"
         toastOptions={{
@@ -649,16 +651,16 @@ export default function Home() {
         initial={{ opacity: 0, y: 30 }}
         animate={animationComplete ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
         transition={{ duration: 0.6, ease: "easeOut", delay: h1Delay }}
-        className="relative w-full flex items-center justify-center min-h-[20vh] md:min-h-[80vh] overflow-hidden"
+        className="relative w-full flex items-center justify-center min-h-[40vh] md:min-h-[100vh] overflow-hidden"
       >
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={animationComplete ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: bodyDelay }}
-          className="relative z-10 flex flex-col items-center text-center px-4 md:px-8 pt-4 md:pt-32"
+          className="relative z-10 flex flex-col items-center text-center px-4 md:px-8 md:pt-32 pt-64 pb-50 md:pt-96 gap-4 md:gap-6"
         >
           <h1
-            className="text-5xl md:text-6xl lg:text-8xl font-bold text-zinc-100 mb-4 md:mb-6 px-4 md:px-64"
+            className="text-6xl md:text-6xl lg:text-8xl font-bold text-zinc-100 px-4 md:px-64"
             style={{ fontFamily: "var(--font-gued)" }}
           >
             {t('greeting', { name: fullName })}
@@ -672,12 +674,12 @@ export default function Home() {
           >
             {t('passion')}
           </motion.p>
-          <div className="relative text-xl md:text-2xl lg:text-3xl text-zinc-400 mb-4 md:mb-8 overflow-hidden" style={{ fontFamily: "var(--font-vlorentine)" }}>
+          <div className="relative text-xl md:text-2xl lg:text-3xl text-zinc-400 overflow-hidden" style={{ fontFamily: "var(--font-vlorentine)" }}>
             <AnimatePresence mode="wait">
               <motion.p
                 key={currentJobIndex}
                 initial={{ opacity: 0 }}
-                animate={animationComplete ? { opacity: 1 } : { opacity: 0 }}
+            animate={animationComplete ? { opacity: 1 } : { opacity: 0 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
                 className="text-center"
@@ -691,18 +693,26 @@ export default function Home() {
         </motion.div>
 
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <PolygonBall sphereSize={isMobile ? 3 : 5} />
+          <PolygonBall sphereSize={isMobile ? 4 : 5} />
         </div>
       </motion.section>
 
       {/* My Approach Section */}
       <motion.section
         className="w-full max-w-9xl px-4 md:px-20 py-20 md:mt-12 bg-white relative overflow-hidden"
+        style={{
+          backgroundImage: 'url("https://www.tstc.edu/wp-content/uploads/2025/09/Computer-Networking-1200x800.jpg")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
       >
+        <div className="absolute inset-0 bg-black/60 md:hidden"></div>
+        <div className="absolute inset-0 bg-white md:block hidden"></div>
         <div className="absolute left-[80vw] md:left-[80vw] line w-50 h-50 hidden md:block">
           <ScrollingLines />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 relative z-10">
           {/* Left Column - Text */}
           <div className="space-y-6">
             <motion.h2
@@ -710,7 +720,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={elementVisibility.heading ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="text-5xl md:text-6xl lg:text-8xl font-bold text-zinc-900 text-center md:text-left"
+              className="text-5xl md:text-6xl lg:text-8xl font-bold text-white md:text-zinc-900 text-center md:text-left"
               style={{ fontFamily: "var(--font-gued)" }}
             >
               {t('approachTitle')}
@@ -720,7 +730,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={elementVisibility.paragraph1 ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="text-base md:text-lg lg:text-xl text-zinc-600 leading-relaxed text-center md:text-left"
+              className="text-base md:text-lg lg:text-xl text-white md:text-zinc-600 leading-relaxed text-center md:text-left"
               style={{ fontFamily: "var(--font-vlorentine)" }}
             >
               {t('approachParagraph1')}
@@ -730,26 +740,70 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={elementVisibility.paragraph2 ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="text-base md:text-lg lg:text-xl text-zinc-400 leading-relaxed text-center md:text-left"
+              className="text-base md:text-lg lg:text-xl text-white md:text-zinc-400 leading-relaxed text-center md:text-left"
               style={{ fontFamily: "var(--font-vlorentine)" }}
             >
               {t('approachParagraph2')}
             </motion.p>
 
-            {/* Circular Profile Element */}
+            {/* Methodology Selector */}
             <motion.div
               ref={profileRef}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={elementVisibility.profile ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={elementVisibility.profile ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="flex flex-col items-center md:items-start mt-8"
+              className="mt-8"
             >
-              <div className="w-20 h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 rounded-full bg-zinc-800 border-2 border-zinc-700 flex items-center justify-center mb-3">
-                <span className="text-zinc-400 text-xl md:text-2xl lg:text-3xl">👨‍💻</span>
+              <p className="text-white md:text-zinc-600 text-lg mb-4 font-medium" style={{ fontFamily: "var(--font-gued)" }}>{t('selectService')}</p>
+              <div className="flex flex-wrap gap-3 mb-8">
+                {["IT Maintenance", "Web Design", "Network Administration"].map((service) => (
+                  <button
+                    key={service}
+                    onClick={() => setSelectedMethodologyService(service)}
+                    className={`px-6 py-3 rounded-full border text-base font-medium transition-all duration-300 ${
+                      selectedMethodologyService === service
+                        ? "bg-white text-zinc-900 border-white md:bg-zinc-900 md:border-zinc-900 md:text-white"
+                        : "bg-transparent border-white text-white hover:bg-white/20 md:bg-white md:border-zinc-300 md:text-zinc-600 md:hover:border-zinc-400"
+                    }`}
+                    style={{ fontFamily: "var(--font-gued)" }}
+                  >
+                    {t(`methodology.${service}.title`)}
+                  </button>
+                ))}
               </div>
-              <p className="text-xs md:text-sm lg:text-base text-zinc-500 font-sans text-center md:text-left">
-                {t('buildingWithPurpose')}
-              </p>
+
+              {/* Methodology Content */}
+              <motion.div
+                key={selectedMethodologyService}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
+                className="bg-white/10 backdrop-blur-md border border-white/30 rounded-xl p-6 md:p-8 md:bg-zinc-50 md:border-zinc-200"
+              >
+                <h4 className="text-2xl md:text-3xl font-bold text-white md:text-zinc-900 mb-4" style={{ fontFamily: "var(--font-gued)" }}>
+                  {t(`methodology.${selectedMethodologyService}.title`)}
+                </h4>
+                <p className="text-white/90 md:text-zinc-600 text-base md:text-lg leading-relaxed mb-6" style={{ fontFamily: "var(--font-vlorentine)" }}>
+                  {t(`methodology.${selectedMethodologyService}.description`)}
+                </p>
+                <div className="space-y-3">
+                  <p className="text-white/80 md:text-zinc-500 text-base uppercase tracking-wider font-medium" style={{ fontFamily: "var(--font-gued)" }}>Key Steps:</p>
+                  <ul className="space-y-2">
+                    {[
+                      t(`methodology.${selectedMethodologyService}.steps.0`),
+                      t(`methodology.${selectedMethodologyService}.steps.1`),
+                      t(`methodology.${selectedMethodologyService}.steps.2`),
+                      t(`methodology.${selectedMethodologyService}.steps.3`),
+                      t(`methodology.${selectedMethodologyService}.steps.4`)
+                    ].filter(Boolean).map((step: string, index: number) => (
+                      <li key={index} className="flex items-start gap-3 text-white/90 md:text-zinc-600 text-base md:text-lg" style={{ fontFamily: "var(--font-vlorentine)" }}>
+                        <span className="text-white md:text-zinc-900 mt-1">•</span>
+                        <span>{step}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
             </motion.div>
           </div>
 
@@ -759,7 +813,7 @@ export default function Home() {
             initial={{ opacity: 0, x: 30 }}
             animate={elementVisibility.image ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="w-full"
+            className="w-full hidden md:block"
           >
             <div className="aspect-[3/4] md:aspect-[3/3] overflow-hidden bg-zinc-800 border border-zinc-700 relative">
               <img
@@ -791,7 +845,7 @@ export default function Home() {
                </h2>
              </div>
             <p className="hidden md:block max-w-xs text-zinc-500 text-sm text-right leading-relaxed" style={{ fontFamily: "var(--font-vlorentine)" }}>
-              {t('description')}
+              {tServices('description')}
             </p>
           </div>
 

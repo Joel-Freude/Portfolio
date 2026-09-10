@@ -23,6 +23,43 @@
     "approachParagraph1": "Je mélange expertise technique et résolution créative de problèmes pour construire des solutions qui fonctionnent réellement pour les utilisateurs et les entreprises. Chaque projet commence par la compréhension du problème central.",
     "approachParagraph2": "De l'architecture réseau aux applications mobiles, j'aborde chaque projet avec un état d'esprit centré sur l'utilisateur, des normes de code propres et une attention aux détails.",
     "buildingWithPurpose": "Construire avec un But",
+    "methodologyTitle": "Ma Méthodologie",
+    "selectService": "Sélectionnez un service",
+    "methodology": {
+      "IT Maintenance": {
+        "title": "Maintenance Informatique",
+        "description": "Pour la maintenance informatique, j'adopte une approche proactive : diagnostic complet pour identifier les problèmes racines, réparation matérielle précise, mises à jour logicielles régulières pour la sécurité, configuration réseau optimisée, et récupération de données avec des protocoles de sauvegarde fiables. Chaque intervention est documentée pour assurer la continuité du service.",
+        "steps": {
+          "0": "Diagnostic complet et rapport détaillé",
+          "1": "Réparation matérielle précise",
+          "2": "Mises à jour logicielles régulières",
+          "3": "Configuration réseau optimisée",
+          "4": "Récupération de données sécurisée"
+        }
+      },
+      "Web Design": {
+        "title": "Design Web",
+        "description": "En design web, je commence par la recherche utilisateur et la création de personas, suivie du wireframing et de la prototypage. Je développe des interfaces responsive avec une attention particulière à l'accessibilité, optimise le SEO technique dès la conception, et intègre des solutions e-commerce intuitives. Chaque projet passe par des tests utilisateurs rigoureux avant livraison.",
+        "steps": {
+          "0": "Recherche utilisateur et personas",
+          "1": "Wireframing et prototypage",
+          "2": "Développement responsive",
+          "3": "Optimisation SEO technique",
+          "4": "Tests utilisateurs rigoureux"
+        }
+      },
+      "Network Administration": {
+        "title": "Administration Réseau",
+        "description": "Pour l'administration réseau, je privilégie une approche de défense en profondeur : audit de sécurité initial, segmentation réseau pour isoler les ressources critiques, implémentation de politiques de sécurité robustes, surveillance continue avec des alertes proactives, et documentation complète de l'infrastructure. Je m'assure que chaque couche du réseau est optimisée pour la performance et la résilience.",
+        "steps": {
+          "0": "Audit de sécurité initial",
+          "1": "Segmentation réseau",
+          "2": "Politiques de sécurité robustes",
+          "3": "Surveillance continue",
+          "4": "Documentation complète"
+        }
+      }
+    },
     "servicesTitle": "Mes Services",
     "contactButton": "Contactez-moi",
     "backToTop": "RETOUR EN HAUT",
@@ -132,7 +169,7 @@
       "drawing": "Dessin",
       "reading": "Lecture"
     },
-    "techStack": "Stack Technique",
+    "techStack": "Mes Competences Technique",
     "associatedSkills": "Compétences Associées",
     "itSupportTitle": "Support Informatique",
     "itSupportDescription": "Je suis spécialisé dans la fourniture de solutions de support informatique complètes, garantissant que votre infrastructure technologique fonctionne de manière fluide et efficace. Je maîtrise les systèmes d'exploitation connus (Windows, MacOS et Linux) et autres diagnostics et maintenance matériels principaux.",
@@ -215,7 +252,7 @@
   },
   "ServicesSection": {
     "title": "Services",
-    "tagline": "Ce que nous offrons",
+    "tagline": "Pour vous satisfaire",
     "description": "Sélectionnez un service ci-dessous pour explorer nos offres et créer votre package personnalisé.",
     "service": "SERVICE",
     "subservices": "Services",

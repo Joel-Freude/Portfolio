@@ -23,6 +23,43 @@
     "approachParagraph1": "I blend technical expertise with creative problem-solving to build solutions that actually work for users and businesses. Every project starts with understanding the core problem.",
     "approachParagraph2": "From network architecture to mobile applications, I approach every project with a user-centered mindset, clean code standards, and attention to detail.",
     "buildingWithPurpose": "Building with Purpose",
+    "methodologyTitle": "My Methodology",
+    "selectService": "Select a service",
+    "methodology": {
+      "IT Maintenance": {
+        "title": "IT Maintenance",
+        "description": "For IT maintenance, I adopt a proactive approach: comprehensive diagnostics to identify root causes, precise hardware repair, regular software updates for security, optimized network configuration, and data recovery with reliable backup protocols. Each intervention is documented to ensure service continuity.",
+        "steps": {
+          "0": "Comprehensive diagnostics and detailed reporting",
+          "1": "Precise hardware repair",
+          "2": "Regular software updates",
+          "3": "Optimized network configuration",
+          "4": "Secure data recovery"
+        }
+      },
+      "Web Design": {
+        "title": "Web Design",
+        "description": "In web design, I start with user research and persona creation, followed by wireframing and prototyping. I develop responsive interfaces with special attention to accessibility, optimize technical SEO from the design stage, and integrate intuitive e-commerce solutions. Each project goes through rigorous user testing before delivery.",
+        "steps": {
+          "0": "User research and personas",
+          "1": "Wireframing and prototyping",
+          "2": "Responsive development",
+          "3": "Technical SEO optimization",
+          "4": "Rigorous user testing"
+        }
+      },
+      "Network Administration": {
+        "title": "Network Administration",
+        "description": "For network administration, I prioritize a defense-in-depth approach: initial security audit, network segmentation to isolate critical resources, implementation of robust security policies, continuous monitoring with proactive alerts, and complete infrastructure documentation. I ensure each network layer is optimized for performance and resilience.",
+        "steps": {
+          "0": "Initial security audit",
+          "1": "Network segmentation",
+          "2": "Robust security policies",
+          "3": "Continuous monitoring",
+          "4": "Complete documentation"
+        }
+      }
+    },
     "servicesTitle": "My Services",
     "contactButton": "Contact Me",
     "backToTop": "BACK TO TOP",
