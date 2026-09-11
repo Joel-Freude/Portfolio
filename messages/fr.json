@@ -23,6 +23,25 @@
     "approachParagraph1": "Je mélange expertise technique et résolution créative de problèmes pour construire des solutions qui fonctionnent réellement pour les utilisateurs et les entreprises. Chaque projet commence par la compréhension du problème central.",
     "approachParagraph2": "De l'architecture réseau aux applications mobiles, j'aborde chaque projet avec un état d'esprit centré sur l'utilisateur, des normes de code propres et une attention aux détails.",
     "buildingWithPurpose": "Construire avec un But",
+    "whyChooseMeEyebrow": "Excellence Technique",
+    "whyChooseMeHeadline": "Pourquoi Choisir Mes Services",
+    "whyChooseMeSubtext": "Je combine expertise technique, approche centrée client et innovation créative pour transformer vos défis technologiques en opportunités de croissance.",
+    "whyChooseMeFeatures": {
+      "expertise": {
+        "title": "Expertise Polyvalente",
+        "description": "Du matériel au logiciel, du réseau au design - une compétence complète"
+      },
+      "client": {
+        "title": "Approche Client",
+        "description": "Communication transparente et entretien continu pour votre satisfaction"
+      },
+      "quality": {
+        "title": "Qualité Garantie",
+        "description": "Tests rigoureux et documentation complète pour des résultats durables"
+      }
+    },
+    "whyChooseMeCTA": "Démarrer un Projet",
+    "whyChooseMeSecondary": "Voir mes services →",
     "methodologyTitle": "Ma Méthodologie",
     "selectService": "Sélectionnez un service",
     "methodology": {
@@ -30,33 +49,33 @@
         "title": "Maintenance Informatique",
         "description": "Pour la maintenance informatique, j'adopte une approche proactive : diagnostic complet pour identifier les problèmes racines, réparation matérielle précise, mises à jour logicielles régulières pour la sécurité, configuration réseau optimisée, et récupération de données avec des protocoles de sauvegarde fiables. Chaque intervention est documentée pour assurer la continuité du service.",
         "steps": {
-          "0": "Diagnostic complet et rapport détaillé",
-          "1": "Réparation matérielle précise",
-          "2": "Mises à jour logicielles régulières",
+          "0": "Diagnostic materiel et logiciel avec un rapport détaillé",
+          "1": "Consultation avec le client pour un suivi avant et après service",
+          "2": "Installations et mise à jour du système garantie",
           "3": "Configuration réseau optimisée",
-          "4": "Récupération de données sécurisée"
+          "4": "Entretien journalier avec le client pour des eventuelle problème"
         }
       },
       "Web Design": {
         "title": "Design Web",
         "description": "En design web, je commence par la recherche utilisateur et la création de personas, suivie du wireframing et de la prototypage. Je développe des interfaces responsive avec une attention particulière à l'accessibilité, optimise le SEO technique dès la conception, et intègre des solutions e-commerce intuitives. Chaque projet passe par des tests utilisateurs rigoureux avant livraison.",
         "steps": {
-          "0": "Recherche utilisateur et personas",
-          "1": "Wireframing et prototypage",
-          "2": "Développement responsive",
-          "3": "Optimisation SEO technique",
-          "4": "Tests utilisateurs rigoureux"
+          "0": "Recherche & Découverte de l'identité numerique",
+          "1": "Etablissement d'une bonne strategie accompagné de l'achitecture",
+          "2": "Design visuel par echantillion avec le rapport final",
+          "3": "Test et Validation avant le deploiement",
+          "4": ""
         }
       },
       "Network Administration": {
         "title": "Administration Réseau",
         "description": "Pour l'administration réseau, je privilégie une approche de défense en profondeur : audit de sécurité initial, segmentation réseau pour isoler les ressources critiques, implémentation de politiques de sécurité robustes, surveillance continue avec des alertes proactives, et documentation complète de l'infrastructure. Je m'assure que chaque couche du réseau est optimisée pour la performance et la résilience.",
         "steps": {
-          "0": "Audit de sécurité initial",
-          "1": "Segmentation réseau",
-          "2": "Politiques de sécurité robustes",
-          "3": "Surveillance continue",
-          "4": "Documentation complète"
+          "0": "Visite du site avant deploiement",
+          "1": "Conception architectural du réseau avec simulation",
+          "2": "Listing des étapes d'inplantation du réseau",
+          "3": "Gestion de la sécurité du réseau",
+          "4": "Documentation complète avec recommandation de l'entretien du réseau"
         }
       }
     },

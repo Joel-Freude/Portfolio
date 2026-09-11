@@ -829,6 +829,105 @@ export default function Home() {
         </div>
       </motion.section>
 
+      {/* Why Choose Me Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 30 }}
+        animate={animationComplete ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: bodyDelay + 0.8 }}
+        className="w-full max-w-9xl px-4 md:px-20 py-20 bg-black relative overflow-hidden md:bg-black"
+        style={{
+          backgroundImage: 'url("https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
+        {/* Mobile gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80 md:hidden"></div>
+        
+        {/* Desktop black background overlay */}
+        <div className="absolute inset-0 bg-black md:block hidden"></div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center relative z-10">
+          {/* Left - Image (Desktop only) */}
+          <div className="hidden md:block">
+            <div className=" overflow-hidden border border-zinc-800">
+              <img
+                src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+                alt="Technology workspace"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Right - Content */}
+          <div className="max-w-3xl">
+            {/* Eyebrow Label */}
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: bodyDelay + 0.9 }}
+              className="text-orange-400 text-sm font-medium uppercase tracking-wider mb-4"
+              style={{ fontFamily: "var(--font-vlorentine)" }}
+            >
+              {t('whyChooseMeEyebrow')}
+            </motion.p>
+
+            {/* H1 Headline */}
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: bodyDelay + 1.0 }}
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-zinc-100 mb-6"
+              style={{ fontFamily: "var(--font-gued)" }}
+            >
+              {t('whyChooseMeHeadline')}
+            </motion.h2>
+
+            {/* Subtext Paragraph */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: bodyDelay + 1.1 }}
+              className="text-zinc-400 text-base leading-relaxed mb-12"
+              style={{ fontFamily: "var(--font-vlorentine)" }}
+            >
+              {t('whyChooseMeSubtext')}
+            </motion.p>
+
+            {/* Feature List */}
+            <div className="space-y-6 mb-12">
+              {[
+                { key: 'expertise', icon: <Wrench className="w-6 h-6" />, color: 'text-blue-400' },
+                { key: 'client', icon: <Globe className="w-6 h-6" />, color: 'text-green-400' },
+                { key: 'quality', icon: <Network className="w-6 h-6" />, color: 'text-purple-400' }
+              ].map((item, index) => (
+                <motion.div
+                  key={item.key}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, ease: "easeOut", delay: bodyDelay + 1.2 + (index * 0.1) }}
+                  className="flex items-center gap-4"
+                >
+                  <div className={`${item.color} bg-zinc-800 rounded-lg p-2`}>
+                    {item.icon}
+                  </div>
+                  <div>
+                    <span className="text-zinc-100 font-bold" style={{ fontFamily: "var(--font-gued)" }}>
+                      {t(`whyChooseMeFeatures.${item.key}.title`)}:
+                    </span>
+                    <span className="text-zinc-400 ml-2" style={{ fontFamily: "var(--font-vlorentine)" }}>
+                      {t(`whyChooseMeFeatures.${item.key}.description`)}
+                    </span>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            
+          </div>
+        </div>
+      </motion.section>
+
       {/* Services Section */}
       <motion.section
         initial={{ opacity: 0, y: 50 }}

@@ -23,6 +23,25 @@
     "approachParagraph1": "I blend technical expertise with creative problem-solving to build solutions that actually work for users and businesses. Every project starts with understanding the core problem.",
     "approachParagraph2": "From network architecture to mobile applications, I approach every project with a user-centered mindset, clean code standards, and attention to detail.",
     "buildingWithPurpose": "Building with Purpose",
+    "whyChooseMeEyebrow": "Technical Excellence",
+    "whyChooseMeHeadline": "Why Choose My Services",
+    "whyChooseMeSubtext": "I combine technical expertise, client-centered approach, and creative innovation to transform your technological challenges into growth opportunities.",
+    "whyChooseMeFeatures": {
+      "expertise": {
+        "title": "Versatile Expertise",
+        "description": "From hardware to software, network to design - complete expertise"
+      },
+      "client": {
+        "title": "Client Approach",
+        "description": "Transparent communication and continuous follow-up for your satisfaction"
+      },
+      "quality": {
+        "title": "Quality Guaranteed",
+        "description": "Rigorous testing and complete documentation for lasting results"
+      }
+    },
+    "whyChooseMeCTA": "Start a Project",
+    "whyChooseMeSecondary": "View my services →",
     "methodologyTitle": "My Methodology",
     "selectService": "Select a service",
     "methodology": {
